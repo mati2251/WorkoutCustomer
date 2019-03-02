@@ -1,0 +1,4 @@
+#Sat Mar 02 13:53:56 CET 2019
+base.0=/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/transforms/dexMerger/debug/9
+path.0=classes.dex
+renamed.0=classes.dex
