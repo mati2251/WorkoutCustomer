@@ -9,6 +9,16 @@
             android:roundIcon="@mipmap/ic_logo_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".CalendaraActivity">
+        </activity>
+        <activity android:name=".HomeActivity">
+        </activity>
+        <activity android:name=".Screen">
+        </activity>
+        <activity android:name=".ScreenSlide">
+        </activity>
+        <activity android:name=".ScreenSlidePageFragment">
+        </activity>
         <activity
                 android:name=".MenuActivity"
                 android:label="@string/title_activity_menu">

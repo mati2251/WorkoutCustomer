@@ -1117,6 +1117,7 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id fragment_container
 id ghost_view
 id gone
 id group_divider
@@ -1314,6 +1315,10 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_calendar
+layout fragment_home
+layout fragment_notify
+layout fragment_settings
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1385,6 +1390,7 @@ string character_counter_content_description
 string character_counter_pattern
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string logo
 string mtrl_chip_close_icon_content_description
