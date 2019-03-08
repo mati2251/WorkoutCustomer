@@ -4,17 +4,7 @@
             "outputFile": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/f468b4a90ce6e2f28c63f7443d16c2fd/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/66f76880575afb0befba1e624006ec79/res/values-v24/values-v24.xml",
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/0a76ee233803e24ab53ff1a3e58acceb/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
+                    }
+                },
+                {
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/0e0a6d79a145f27aaca1253b02947318/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]
