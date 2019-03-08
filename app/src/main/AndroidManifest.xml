@@ -9,7 +9,9 @@
             android:roundIcon="@mipmap/ic_logo_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MenuActivity">
+        <activity
+                android:name=".MenuActivity"
+                android:label="@string/title_activity_menu">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -2,4 +2,5 @@
     <string name="app_name">Workout Customer</string>
     <string name="name">Workout Customer</string>
     <string name="logo">logo</string>
+    <string name="title_activity_menu">MenuActivity</string>
 </resources>

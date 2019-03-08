@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_home"
+            android:icon="@drawable/logo"
+            android:title="workout"/>
+
+    <item
+            android:id="@+id/navigation_calendary"
+            android:icon="@drawable/ic_calendary"
+            android:title="calendar"/>
+
+    <item
+            android:id="@+id/navigation_notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="notifications"/>
+    <item
+            android:id="@+id/navigation_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="settings"/>
+
+</menu>
