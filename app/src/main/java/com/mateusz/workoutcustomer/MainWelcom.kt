@@ -5,6 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 
+/**
+ * MainActivity is splash screen
+ *
+ * It show only on 0.7 seconds layout activity_welcom and switch to MenuActivity
+ * @author Mateusz Karłowski
+ */
+
+
 class MainActivity :  AppCompatActivity() {
 
 
