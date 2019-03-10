@@ -1012,7 +1012,9 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_add
 drawable ic_calendary
+drawable ic_history
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1116,6 +1118,7 @@ id fill_horizontal
 id fill_vertical
 id filled
 id fixed
+id floatingActionButton
 id forever
 id fragment_container
 id ghost_view
@@ -1150,8 +1153,8 @@ id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id navigation
-id navigation_calendary
 id navigation_header_container
+id navigation_history
 id navigation_home
 id navigation_notifications
 id navigation_settings
@@ -1172,6 +1175,8 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id recyclerView
+id relativeLayout2
 id right
 id right_icon
 id right_side
@@ -1250,6 +1255,7 @@ id useLogo
 id view_offset_helper
 id visible
 id withText
+id workout_title
 id wrap
 id wrap_content
 integer abc_config_activityDefaultDur
@@ -1315,7 +1321,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout fragment_calendar
+layout fragment_history
 layout fragment_home
 layout fragment_notify
 layout fragment_settings
@@ -1340,6 +1346,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout workout_item
 menu navigation
 mipmap ic_llogo_layer
 mipmap ic_logo
@@ -1904,6 +1911,7 @@ style Widget_MaterialComponents_TextInputLayout_OutlinedBox
 style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense
 style Widget_MaterialComponents_Toolbar
 style Widget_Support_CoordinatorLayout
+style word_title
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

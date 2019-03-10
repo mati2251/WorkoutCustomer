@@ -25,7 +25,7 @@ class MenuActivity : FragmentActivity() , BottomNavigationView.OnNavigationItemS
             R.id.navigation_home -> {
                 fragment = HomeFragment()
             }
-            R.id.navigation_calendary -> {
+            R.id.navigation_history -> {
                 fragment = CalendarFragment()
             }
             R.id.navigation_notifications -> {
