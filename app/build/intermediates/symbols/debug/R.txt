@@ -1175,7 +1175,7 @@ int id progress_circular 0x7f0a0082
 int id progress_horizontal 0x7f0a0083
 int id radio 0x7f0a0084
 int id recyclerView 0x7f0a0085
-int id relativeLayout2 0x7f0a0086
+int id relativeLayout 0x7f0a0086
 int id right 0x7f0a0087
 int id right_icon 0x7f0a0088
 int id right_side 0x7f0a0089

@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.3.0"
-    timestamp="1552248603579"
+    timestamp="1552296859680"
     token="-8647645327148440721"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -65,7 +65,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1552248603579"
+        timestamp="1552296859680"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
