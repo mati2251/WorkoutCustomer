@@ -28,12 +28,4 @@ class HomeFragment() : Fragment() {
         recyclerView.adapter = workoutAdapter
         return recyclerView
     }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        /*fab.setOnClickListener {
-            list.add("clicked workout")
-            workoutAdapter.notifyItemInserted(list.size)
-        }*/
-    }
 }

@@ -6,4 +6,7 @@
 
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
               android:textSize="30dp" android:id="@+id/workout_title"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/workout_description"/>
 </LinearLayout>

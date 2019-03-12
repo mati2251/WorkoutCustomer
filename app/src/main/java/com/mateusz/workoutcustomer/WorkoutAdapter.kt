@@ -1,8 +1,6 @@
 package com.mateusz.workoutcustomer
 
 import android.content.Context
-import android.support.design.widget.FloatingActionButton
-import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +11,7 @@ import java.util.*
 
 class WorkoutAdapter(context: Context, list: LinkedList<String>) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
     private var mInflater = LayoutInflater.from(context)
-    var mWordList : LinkedList<String> = list
+    private var mWordList : LinkedList<String> = list
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): WorkoutAdapter.WorkoutViewHolder {
         var itemView = mInflater.inflate( R.layout.workout_item, parent,false)
@@ -23,6 +21,7 @@ class WorkoutAdapter(context: Context, list: LinkedList<String>) : RecyclerView.
     override fun onBindViewHolder(holder : WorkoutViewHolder, positon: Int) {
         var currentStinrg = mWordList.get(positon)
         holder.mWorkoutTitile.text=currentStinrg
+        holder.mWorkoutDescripton.text="Description"
     }
 
     override fun getItemCount(): Int {
@@ -32,5 +31,13 @@ class WorkoutAdapter(context: Context, list: LinkedList<String>) : RecyclerView.
     inner class WorkoutViewHolder (viewItem : View, workoutAdapter : WorkoutAdapter) : RecyclerView.ViewHolder(viewItem){
         var mAdapter: WorkoutAdapter = workoutAdapter
         var mWorkoutTitile : TextView = viewItem.findViewById(R.id.workout_title)
+        var mWorkoutDescripton : TextView = viewItem.findViewById(R.id.workout_description)
     }
+
+    fun addElement(){
+        mWordList.add("clicked workout")
+        this.notifyItemInserted(mWordList.size)
+
+    }
+
 }

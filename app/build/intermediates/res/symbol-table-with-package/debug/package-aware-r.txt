@@ -1255,6 +1255,7 @@ id useLogo
 id view_offset_helper
 id visible
 id withText
+id workout_description
 id workout_title
 id wrap
 id wrap_content

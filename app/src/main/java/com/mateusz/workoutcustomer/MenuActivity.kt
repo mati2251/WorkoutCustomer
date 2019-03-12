@@ -60,8 +60,12 @@ class MenuActivity : FragmentActivity() , BottomNavigationView.OnNavigationItemS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        loadFragment(HomeFragment())
+        var fragment : HomeFragment = HomeFragment()
+        loadFragment(fragment)
         fab = findViewById(R.id.floatingActionButton)
+        fab.setOnClickListener {
+            fragment.workoutAdapter.addElement()
+        }
         val navigation = findViewById<BottomNavigationView>(R.id.navigation)
         navigation.setOnNavigationItemSelectedListener(this)
     }
