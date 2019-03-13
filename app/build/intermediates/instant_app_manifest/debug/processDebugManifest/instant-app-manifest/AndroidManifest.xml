@@ -30,10 +30,10 @@
         <activity android:name="com.mateusz.workoutcustomer.ScreenSlidePageFragment" >
         </activity>
         <activity
-            android:name="com.mateusz.workoutcustomer.MenuActivity"
+            android:name="com.mateusz.workoutcustomer.menu.MenuActivity"
             android:label="@string/title_activity_menu" >
         </activity>
-        <activity android:name="com.mateusz.workoutcustomer.MainActivity" >
+        <activity android:name="com.mateusz.workoutcustomer.menu.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,6 +45,11 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.mateusz.workoutcustomer.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.mateusz.workoutcustomer.com.android.tools.ir.server.InstantRunContentProvider"

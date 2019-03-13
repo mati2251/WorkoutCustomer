@@ -20,10 +20,10 @@
         <activity android:name=".ScreenSlidePageFragment">
         </activity>
         <activity
-                android:name=".MenuActivity"
+                android:name=".menu.MenuActivity"
                 android:label="@string/title_activity_menu">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".menu.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
