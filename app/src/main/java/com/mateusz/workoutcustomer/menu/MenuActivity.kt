@@ -1,5 +1,7 @@
 package com.mateusz.workoutcustomer.menu
 
+import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.FloatingActionButton
@@ -7,6 +9,7 @@ import android.support.v4.app.FragmentActivity
 import android.support.v4.app.Fragment
 import android.view.MenuItem
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.database.WorkoutViewModel
 
 /**
  * A class MenuActivity is Main Activity in my App

@@ -1,5 +1,6 @@
 package com.mateusz.workoutcustomer.menu
 
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment;
@@ -8,25 +9,31 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.database.Workout
+import com.mateusz.workoutcustomer.database.WorkoutAdapter
+import com.mateusz.workoutcustomer.database.WorkoutViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.*
 
 
 
 class HomeFragment() : Fragment() {
     lateinit var workoutAdapter : WorkoutAdapter
-    lateinit var fab : FloatingActionButton
-    var list : LinkedList<String> = LinkedList()
+    private lateinit var workoutViewModel: WorkoutViewModel
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        for(i in 0..5){
-            list.add("Workout $i")
-        }
         var recyclerView : RecyclerView = RecyclerView(requireContext())
         recyclerView.layoutManager = LinearLayoutManager(context)
-        workoutAdapter = WorkoutAdapter(this.requireContext(), list)
+        workoutAdapter = WorkoutAdapter(this.requireContext())
+        workoutViewModel = ViewModelProviders.of(this).get(WorkoutViewModel::class.java)
+        var workout = Workout(10,"lele", "kleklwe")
+        workoutViewModel.insert(workout)
+        //workoutAdapter.setList(workoutViewModel.allWords.value)
         recyclerView.adapter = workoutAdapter
-        workoutAdapter.loadDB(this.requireContext())
         return recyclerView
     }
 }

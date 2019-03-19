@@ -1,5 +1,6 @@
 package com.mateusz.workoutcustomer.database
 
+import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
@@ -13,6 +14,6 @@ interface WorkoutDao {
     @Query("DELETE FROM workout_table")
     fun deleteAll()
 
-    @Query("SELECT * from workout_table ORDER BY id, title, description ASC")
-    fun getAllWords() : List<Workout>
+    @Query("SELECT * from workout_table ORDER BY _id, title, description ASC")
+    fun getAllWords() : LiveData<List<Workout>>
 }

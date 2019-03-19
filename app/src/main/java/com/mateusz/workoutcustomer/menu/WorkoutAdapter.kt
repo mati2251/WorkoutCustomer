@@ -1,4 +1,4 @@
-package com.mateusz.workoutcustomer.menu
+package com.mateusz.workoutcustomer.database
 
 import android.arch.persistence.room.Room
 import android.content.Context
@@ -8,15 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
-import com.mateusz.workoutcustomer.database.AppDatabase
-import com.mateusz.workoutcustomer.database.Workout
 import java.util.*
 
 
-class WorkoutAdapter(context: Context, list: LinkedList<String>) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
+class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
     private var mInflater = LayoutInflater.from(context)
-    private var mWordList : LinkedList<String> = list
-    private lateinit var mWorkout : List<Workout>
+    private var mWorkout : List<Workout>? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): WorkoutViewHolder {
         var itemView = mInflater.inflate(R.layout.workout_item, parent,false)
@@ -24,13 +21,13 @@ class WorkoutAdapter(context: Context, list: LinkedList<String>) : RecyclerView.
     }
 
     override fun onBindViewHolder(holder : WorkoutViewHolder, positon: Int) {
-        var currentStinrg = mWordList.get(positon)
+        var currentStinrg = mWorkout?.get(positon)?.title
         holder.mWorkoutTitile.text=currentStinrg
         holder.mWorkoutDescripton.text="Description"
     }
 
     override fun getItemCount(): Int {
-        return mWordList.size
+        return mWorkout!!.size
     }
 
     inner class WorkoutViewHolder (viewItem : View, workoutAdapter : WorkoutAdapter) : RecyclerView.ViewHolder(viewItem){
@@ -40,17 +37,14 @@ class WorkoutAdapter(context: Context, list: LinkedList<String>) : RecyclerView.
     }
 
     fun addElement(){
-        mWordList.add("clicked workout")
-        this.notifyItemInserted(mWordList.size)
+        /*mWordList.add("clicked workout")
+        this.notifyItemInserted(mWordList.size)*/
 
     }
 
-    fun loadDB(context: Context){
-        val db = Room.databaseBuilder(context,
-            AppDatabase::class.java, "database-name"
-        ).build()
-        mWorkout = db.workoutDao().getAllWords()
-
+    fun setList(list: List<Workout>?){
+        mWorkout = list
+        notifyDataSetChanged()
     }
 
 }
