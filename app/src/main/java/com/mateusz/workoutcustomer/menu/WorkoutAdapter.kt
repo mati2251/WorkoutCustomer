@@ -13,7 +13,7 @@ import java.util.*
 
 class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
     private var mInflater = LayoutInflater.from(context)
-    private var mWorkout : List<Workout>? = null
+    lateinit var mWorkout : List<Workout>
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): WorkoutViewHolder {
         var itemView = mInflater.inflate(R.layout.workout_item, parent,false)
@@ -27,7 +27,12 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
     }
 
     override fun getItemCount(): Int {
-        return mWorkout!!.size
+        if(::mWorkout.isInitialized){
+            return mWorkout.size
+        }
+        else{
+            return 0
+        }
     }
 
     inner class WorkoutViewHolder (viewItem : View, workoutAdapter : WorkoutAdapter) : RecyclerView.ViewHolder(viewItem){
@@ -39,12 +44,11 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
     fun addElement(){
         /*mWordList.add("clicked workout")
         this.notifyItemInserted(mWordList.size)*/
-
     }
 
-    fun setList(list: List<Workout>?){
+    fun setList(list: List<Workout>){
         mWorkout = list
-        notifyDataSetChanged()
+        this.notifyDataSetChanged()
     }
 
 }

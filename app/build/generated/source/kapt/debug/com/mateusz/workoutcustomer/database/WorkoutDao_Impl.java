@@ -30,7 +30,7 @@ public class WorkoutDao_Impl implements WorkoutDao {
     this.__insertionAdapterOfWorkout = new EntityInsertionAdapter<Workout>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `workout_table`(`_id`,`title`,`description`) VALUES (?,?,?)";
+        return "INSERT OR REPLACE INTO `workout_table`(`_id`,`title`,`description`) VALUES (?,?,?)";
       }
 
       @Override

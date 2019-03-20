@@ -10,6 +10,7 @@ class WorkoutRepository (private val wordDao: WorkoutDao) {
     @WorkerThread
     suspend fun insert(workout: Workout){
         wordDao.insert(workout)
+        allWorkout = wordDao.getAllWords()
     }
 
 }

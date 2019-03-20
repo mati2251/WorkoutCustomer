@@ -17,7 +17,7 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
         get() = parentJob + Dispatchers.Main
     private val scope = CoroutineScope(coroutineContext)
     var repository : WorkoutRepository
-    val allWords : LiveData<List<Workout>>
+    var allWords : LiveData<List<Workout>>
 
     init{
         WorkoutDatabase.getDatabase(application, scope)

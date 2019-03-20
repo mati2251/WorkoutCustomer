@@ -52,10 +52,10 @@ abstract class WorkoutDatabase : RoomDatabase(){
                 }
             }
 
-            /*fun populateDatabase(workoutDao: WorkoutDao) {
+            fun populateDatabase(workoutDao: WorkoutDao) {
                 workoutDao.deleteAll()
 
-            }*/
+            }
         }
     }
 }
