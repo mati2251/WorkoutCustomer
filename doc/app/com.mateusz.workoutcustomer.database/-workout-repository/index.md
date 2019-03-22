@@ -16,5 +16,6 @@ Workout Reposority is class contain
 
 ### Functions
 
+| [deleteAll](delete-all.md) | `suspend fun deleteAll(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
 | [insert](insert.md) | `suspend fun insert(workout: `[`Workout`](../-workout/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Insert new element to database |
 

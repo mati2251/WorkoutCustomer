@@ -11,6 +11,10 @@ public abstract class WorkoutDatabase extends android.arch.persistence.room.Room
     private static volatile com.mateusz.workoutcustomer.database.WorkoutDatabase INSTANCE;
     public static final com.mateusz.workoutcustomer.database.WorkoutDatabase.Companion Companion = null;
     
+    /**
+     * * Abstract fun
+     *     * @return WorkoutDao
+     */
     @org.jetbrains.annotations.NotNull()
     public abstract com.mateusz.workoutcustomer.database.WorkoutDao workoutDao();
     
@@ -18,12 +22,12 @@ public abstract class WorkoutDatabase extends android.arch.persistence.room.Room
         super();
     }
     
-    /**
-     * * Singleton implementation and open database
-     */
     @kotlin.Metadata(mv = {1, 1, 13}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001:\u0001\nB\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0016\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tR\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u000b"}, d2 = {"Lcom/mateusz/workoutcustomer/database/WorkoutDatabase$Companion;", "", "()V", "INSTANCE", "Lcom/mateusz/workoutcustomer/database/WorkoutDatabase;", "getDatabase", "context", "Landroid/content/Context;", "scope", "Lkotlinx/coroutines/CoroutineScope;", "WorkoutDatabaseCallback", "app_release"})
     public static final class Companion {
         
+        /**
+         * * Singleton implementation and open database
+         */
         @org.jetbrains.annotations.NotNull()
         public final com.mateusz.workoutcustomer.database.WorkoutDatabase getDatabase(@org.jetbrains.annotations.NotNull()
         android.content.Context context, @org.jetbrains.annotations.NotNull()

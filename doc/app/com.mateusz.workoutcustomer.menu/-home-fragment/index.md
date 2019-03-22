@@ -10,6 +10,7 @@
 
 ### Properties
 
+| [fab](fab.md) | `lateinit var fab: FloatingActionButton` |
 | [workoutAdapter](workout-adapter.md) | `lateinit var workoutAdapter: `[`WorkoutAdapter`](../../com.mateusz.workoutcustomer.database/-workout-adapter/index.md) |
 
 ### Functions

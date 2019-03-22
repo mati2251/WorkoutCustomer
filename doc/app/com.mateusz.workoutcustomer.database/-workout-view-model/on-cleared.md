@@ -3,3 +3,6 @@
 # onCleared
 
 `protected open fun onCleared(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+
+Function stoped parentJob
+

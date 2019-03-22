@@ -17,6 +17,8 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.mateusz.workoutcustomer.creator.setTitleActivity" >
+        </activity>
         <activity android:name="com.mateusz.workoutcustomer.CalendaraActivity" >
         </activity>
         <activity android:name="com.mateusz.workoutcustomer.HomeActivity" >

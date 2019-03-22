@@ -16,6 +16,7 @@ Mateusz Karłowski
 ### Properties
 
 | [fab](fab.md) | `lateinit var fab: FloatingActionButton`<br>Function onNavigationItemSelected change fragments when user chosen option on BottomNavigationView |
+| [fragment](fragment.md) | `lateinit var fragment: Fragment` |
 
 ### Functions
 

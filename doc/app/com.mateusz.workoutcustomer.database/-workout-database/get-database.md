@@ -3,3 +3,6 @@
 # getDatabase
 
 `fun getDatabase(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`, scope: CoroutineScope): `[`WorkoutDatabase`](index.md)
+
+Singleton implementation and open database
+

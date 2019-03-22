@@ -17,6 +17,7 @@ WorkoutViewModel is class extend AndroidViewModel
 
 ### Functions
 
+| [deleteAll](delete-all.md) | `fun deleteAll(): Job` |
 | [insert](insert.md) | `fun insert(workout: `[`Workout`](../-workout/index.md)`): Job`<br>function **insert** insert Workout to database |
-| [onCleared](on-cleared.md) | `open fun onCleared(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [onCleared](on-cleared.md) | `open fun onCleared(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Function stoped parentJob |
 

@@ -3,3 +3,9 @@
 # workoutDao
 
 `abstract fun workoutDao(): `[`WorkoutDao`](../-workout-dao/index.md)
+
+Abstract fun
+
+**Return**
+WorkoutDao
+
