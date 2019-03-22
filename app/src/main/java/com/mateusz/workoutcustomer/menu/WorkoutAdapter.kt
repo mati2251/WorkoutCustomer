@@ -1,6 +1,5 @@
 package com.mateusz.workoutcustomer.database
 
-import android.arch.persistence.room.Room
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
-import java.util.*
 
 
 class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
@@ -21,9 +19,10 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
     }
 
     override fun onBindViewHolder(holder : WorkoutViewHolder, positon: Int) {
-        var currentStinrg = mWorkout?.get(positon)?.title
+        var currentStinrg = mWorkout[positon].title
         holder.mWorkoutTitile.text=currentStinrg
-        holder.mWorkoutDescripton.text="Description"
+        currentStinrg = mWorkout[positon].description
+        holder.mWorkoutDescripton.text = currentStinrg
     }
 
     override fun getItemCount(): Int {
@@ -39,11 +38,6 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
         var mAdapter: WorkoutAdapter = workoutAdapter
         var mWorkoutTitile : TextView = viewItem.findViewById(R.id.workout_title)
         var mWorkoutDescripton : TextView = viewItem.findViewById(R.id.workout_description)
-    }
-
-    fun addElement(){
-        /*mWordList.add("clicked workout")
-        this.notifyItemInserted(mWordList.size)*/
     }
 
     fun setList(list: List<Workout>){

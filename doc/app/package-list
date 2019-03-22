@@ -1,4 +1,5 @@
-$dokka.format:html
-$dokka.linkExtension:html
+$dokka.format:markdown
+$dokka.linkExtension:md
 
-com.mateusz.workoutcustomer
+com.mateusz.workoutcustomer.database
+com.mateusz.workoutcustomer.menu

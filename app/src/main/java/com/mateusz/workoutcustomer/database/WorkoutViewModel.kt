@@ -9,25 +9,47 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
+/**
+ * WorkoutViewModel is class extend AndroidViewModel
+ * @property repository is var repository
+ * @property allWorkout is all workout in database
+ * @constructor get repository and allWorkout
+ */
+
 open class WorkoutViewModel (application: Application) : AndroidViewModel(application){
 
     private var parentJob = Job()
-    // By default all the coroutines launched in this scope should be using the Main dispatcher
     private val coroutineContext: CoroutineContext
         get() = parentJob + Dispatchers.Main
     private val scope = CoroutineScope(coroutineContext)
     var repository : WorkoutRepository
-    var allWords : LiveData<List<Workout>>
+    var allWorkout : LiveData<List<Workout>>
 
     init{
         WorkoutDatabase.getDatabase(application, scope)
-        val workoutDao : WorkoutDao = WorkoutDatabase.getDatabase(application, scope).workoutDao()
+        var workoutDao : WorkoutDao = WorkoutDatabase.getDatabase(application, scope).workoutDao()
         repository = WorkoutRepository(workoutDao)
-        allWords = repository.allWorkout
+        allWorkout = repository.allWorkout
     }
+
+    /**
+     * function **insert** insert Workout to database
+     */
 
     fun insert(workout: Workout) = scope.launch(Dispatchers.IO) {
         repository.insert(workout)
     }
 
+    /**
+     * Function stoped parentJob
+     */
+
+    override fun onCleared() {
+        super.onCleared()
+        parentJob.cancel()
+    }
+
+    fun deleteAll() = scope.launch(Dispatchers.IO){
+        repository.deleteAll()
+    }
 }

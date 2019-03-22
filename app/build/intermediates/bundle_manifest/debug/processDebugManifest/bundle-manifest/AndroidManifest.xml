@@ -18,6 +18,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.mateusz.workoutcustomer.creator.setTitleActivity" >
+        </activity>
         <activity android:name="com.mateusz.workoutcustomer.CalendaraActivity" >
         </activity>
         <activity android:name="com.mateusz.workoutcustomer.HomeActivity" >

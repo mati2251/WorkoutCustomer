@@ -25,6 +25,8 @@ public class WorkoutDao_Impl implements WorkoutDao {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
 
+  private final SharedSQLiteStatement __preparedStmtOfRemoveById;
+
   public WorkoutDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfWorkout = new EntityInsertionAdapter<Workout>(__db) {
@@ -55,6 +57,13 @@ public class WorkoutDao_Impl implements WorkoutDao {
         return _query;
       }
     };
+    this.__preparedStmtOfRemoveById = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM workout_table WHERE _id LIKE ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -78,6 +87,21 @@ public class WorkoutDao_Impl implements WorkoutDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfDeleteAll.release(_stmt);
+    }
+  }
+
+  @Override
+  public void removeById(int index) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfRemoveById.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      _stmt.bindLong(_argIndex, index);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfRemoveById.release(_stmt);
     }
   }
 
@@ -127,5 +151,35 @@ public class WorkoutDao_Impl implements WorkoutDao {
         _statement.release();
       }
     }.getLiveData();
+  }
+
+  @Override
+  public Workout getFromId(int index) {
+    final String _sql = "SELECT * FROM workout_table WHERE _id LIKE ? ORDER BY _id, title, description ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindLong(_argIndex, index);
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("_id");
+      final int _cursorIndexOfTitle = _cursor.getColumnIndexOrThrow("title");
+      final int _cursorIndexOfDescription = _cursor.getColumnIndexOrThrow("description");
+      final Workout _result;
+      if(_cursor.moveToFirst()) {
+        final int _tmpId;
+        _tmpId = _cursor.getInt(_cursorIndexOfId);
+        final String _tmpTitle;
+        _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+        final String _tmpDescription;
+        _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+        _result = new Workout(_tmpId,_tmpTitle,_tmpDescription);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
   }
 }

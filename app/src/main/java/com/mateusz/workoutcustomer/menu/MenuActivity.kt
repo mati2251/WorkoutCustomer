@@ -1,7 +1,8 @@
 package com.mateusz.workoutcustomer.menu
 
+import android.app.Activity
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.FloatingActionButton
@@ -9,11 +10,11 @@ import android.support.v4.app.FragmentActivity
 import android.support.v4.app.Fragment
 import android.view.MenuItem
 import com.mateusz.workoutcustomer.R
-import com.mateusz.workoutcustomer.database.WorkoutViewModel
+import com.mateusz.workoutcustomer.creator.setTitleActivity
+import com.mateusz.workoutcustomer.database.Workout
 
 /**
  * A class MenuActivity is Main Activity in my App
- *
  * @author Mateusz Karłowski
  */
 
@@ -25,9 +26,10 @@ class MenuActivity : FragmentActivity() , BottomNavigationView.OnNavigationItemS
      */
 
     lateinit var fab : FloatingActionButton
+    private val newWorkoutActivityRequestCode = 1
+    lateinit var fragment : Fragment
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        var fragment : Fragment
         when (item.itemId) {
             R.id.navigation_home -> {
                 fragment = HomeFragment()
@@ -64,11 +66,14 @@ class MenuActivity : FragmentActivity() , BottomNavigationView.OnNavigationItemS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        var fragment : HomeFragment = HomeFragment()
+        fragment = HomeFragment()
         loadFragment(fragment)
         fab = findViewById(R.id.floatingActionButton)
         fab.setOnClickListener {
-            fragment.workoutAdapter.addElement()
+            if (fragment is HomeFragment){
+                var creatorIntent : Intent = Intent(this, setTitleActivity::class.java)
+                startActivityForResult(creatorIntent, newWorkoutActivityRequestCode)
+            }
         }
         val navigation = findViewById<BottomNavigationView>(R.id.navigation)
         navigation.setOnNavigationItemSelectedListener(this)
