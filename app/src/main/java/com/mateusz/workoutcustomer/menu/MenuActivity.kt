@@ -8,7 +8,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.mateusz.workoutcustomer.R
-import com.mateusz.workoutcustomer.creator.setTitleActivity
+import com.mateusz.workoutcustomer.creator.SetTitleActivity
 
 /**
  * A class MenuActivity is Main Activity in my App
@@ -68,7 +68,7 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
         fab = findViewById(R.id.floatingActionButton)
         fab.setOnClickListener {
             if (fragment is HomeFragment){
-                var creatorIntent : Intent = Intent(this, setTitleActivity::class.java)
+                var creatorIntent : Intent = Intent(this, SetTitleActivity::class.java)
                 startActivityForResult(creatorIntent, newWorkoutActivityRequestCode)
             }
         }

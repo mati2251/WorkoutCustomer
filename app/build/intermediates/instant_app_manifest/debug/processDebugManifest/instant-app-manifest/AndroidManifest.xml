@@ -19,11 +19,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.mateusz.workoutcustomer.creator.ExerciseActivity" >
+        </activity>
         <activity android:name="com.mateusz.workoutcustomer.menu.ViewActivity" >
         </activity>
         <activity android:name="com.mateusz.workoutcustomer.menu.ViewWorkout" >
         </activity>
-        <activity android:name="com.mateusz.workoutcustomer.creator.setTitleActivity" >
+        <activity android:name="com.mateusz.workoutcustomer.creator.SetTitleActivity" >
         </activity>
         <activity android:name="com.mateusz.workoutcustomer.menu.MenuActivity" >
         </activity>

@@ -11,7 +11,7 @@ import com.mateusz.workoutcustomer.database.Workout
 import com.mateusz.workoutcustomer.menu.MainActivity
 import com.mateusz.workoutcustomer.menu.MenuActivity
 
-class setTitleActivity : AppCompatActivity() {
+class SetTitleActivity : AppCompatActivity() {
 
     lateinit var titleEditText : EditText
     lateinit var descriptionEditText : EditText
@@ -23,11 +23,10 @@ class setTitleActivity : AppCompatActivity() {
         descriptionEditText = findViewById(R.id.desription_edit_text_set_activity)
     }
 
-    fun addNewWorkout(view : View){
+    fun next(view : View){
         var workout = Workout(MainActivity.workoutViewModel.allWorkout.value!!.size+1,titleEditText.text.toString(),descriptionEditText.text.toString())
         MainActivity.workoutViewModel.insert(workout)
-        var nextIntent = Intent(this, MenuActivity::class.java)
+        var nextIntent = Intent(this, ExerciseActivity::class.java)
         startActivity(nextIntent)
-        setResult(Activity.RESULT_OK)
     }
 }

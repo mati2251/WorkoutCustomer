@@ -1078,8 +1078,8 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
 id button2
+id button3
 id button5
 id buttonPanel
 id cancel_action
@@ -1117,6 +1117,11 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id exercise_description_edit_text
+id exercise_instruction_edit_text
+id exercise_instruction_text_view
+id exercise_title_edit_text
+id exercise_title_text_view
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1167,6 +1172,7 @@ id navigation_home
 id navigation_notifications
 id navigation_settings
 id never
+id next_button_set_activity
 id none
 id normal
 id notification_background
@@ -1183,6 +1189,8 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id radioButton
+id radioButton2
 id recyclerView
 id right
 id right_icon
@@ -1239,6 +1247,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1318,6 +1327,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_exercise
 layout activity_menu
 layout activity_set_title
 layout activity_view

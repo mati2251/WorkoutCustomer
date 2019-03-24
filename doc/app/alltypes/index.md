@@ -14,5 +14,5 @@
 | [com.mateusz.workoutcustomer.database.WorkoutDatabase](../com.mateusz.workoutcustomer.database/-workout-database/index.md) | class **WorkoutDatabase** is singleton for build and open database |
 | [com.mateusz.workoutcustomer.database.WorkoutRepository](../com.mateusz.workoutcustomer.database/-workout-repository/index.md) | Workout Reposority is class contain |
 | [com.mateusz.workoutcustomer.database.WorkoutViewModel](../com.mateusz.workoutcustomer.database/-workout-view-model/index.md) | WorkoutViewModel is class extend AndroidViewModel |
-| [com.mateusz.workoutcustomer.creator.setTitleActivity](../com.mateusz.workoutcustomer.creator/set-title-activity/index.md) |  |
+| [com.mateusz.workoutcustomer.creator.SetTitleActivity](../com.mateusz.workoutcustomer.creator/set-title-activity/index.md) |  |
 
