@@ -22,6 +22,7 @@ class MainActivity :  AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcom)
+        supportActionBar?.hide()
         workoutViewModel = ViewModelProviders.of(this).get(WorkoutViewModel::class.java)
         Handler().postDelayed({
             val homeIntent = Intent(this@MainActivity, MenuActivity::class.java)

@@ -30,9 +30,4 @@ class setTitleActivity : AppCompatActivity() {
         startActivity(nextIntent)
         setResult(Activity.RESULT_OK)
     }
-
-    companion object {
-        val TITTLE_WORKOUT = "com.mateusz.workout.title_workout"
-        val DESCRIPTION_WORKOUT = "com.mateusz.workout.description_workout"
-    }
 }

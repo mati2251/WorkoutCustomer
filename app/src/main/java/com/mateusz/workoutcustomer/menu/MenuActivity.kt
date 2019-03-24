@@ -1,17 +1,14 @@
 package com.mateusz.workoutcustomer.menu
 
-import android.app.Activity
-import android.arch.lifecycle.Observer
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.FloatingActionButton
-import android.support.v4.app.FragmentActivity
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.creator.setTitleActivity
-import com.mateusz.workoutcustomer.database.Workout
 
 /**
  * A class MenuActivity is Main Activity in my App
@@ -19,7 +16,7 @@ import com.mateusz.workoutcustomer.database.Workout
  */
 
 
-class MenuActivity : FragmentActivity() , BottomNavigationView.OnNavigationItemSelectedListener{
+class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItemSelectedListener{
 
     /**
      * Function onNavigationItemSelected change fragments when user chosen option on BottomNavigationView

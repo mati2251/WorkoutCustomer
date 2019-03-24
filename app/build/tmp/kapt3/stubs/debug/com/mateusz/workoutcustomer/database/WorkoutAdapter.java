@@ -2,11 +2,13 @@ package com.mateusz.workoutcustomer.database;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 1, 13}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\f\u0012\b\u0012\u00060\u0002R\u00020\u00000\u0001:\u0001\u001cB\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\b\u0010\u0010\u001a\u00020\u0011H\u0016J\u001c\u0010\u0012\u001a\u00020\u00132\n\u0010\u0014\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0015\u001a\u00020\u0011H\u0016J\u001c\u0010\u0016\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0011H\u0016J\u0014\u0010\u001a\u001a\u00020\u00132\f\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u000b0\nR\u0016\u0010\u0006\u001a\n \b*\u0004\u0018\u00010\u00070\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000R \u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\nX\u0086.\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000f\u00a8\u0006\u001d"}, d2 = {"Lcom/mateusz/workoutcustomer/database/WorkoutAdapter;", "Landroid/support/v7/widget/RecyclerView$Adapter;", "Lcom/mateusz/workoutcustomer/database/WorkoutAdapter$WorkoutViewHolder;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mInflater", "Landroid/view/LayoutInflater;", "kotlin.jvm.PlatformType", "mWorkout", "", "Lcom/mateusz/workoutcustomer/database/Workout;", "getMWorkout", "()Ljava/util/List;", "setMWorkout", "(Ljava/util/List;)V", "getItemCount", "", "onBindViewHolder", "", "holder", "positon", "onCreateViewHolder", "parent", "Landroid/view/ViewGroup;", "p1", "setList", "list", "WorkoutViewHolder", "app_debug"})
+@kotlin.Metadata(mv = {1, 1, 13}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\f\u0012\b\u0012\u00060\u0002R\u00020\u00000\u0001:\u0001\"B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\b\u0010\u0016\u001a\u00020\u0017H\u0016J\u001c\u0010\u0018\u001a\u00020\u00192\n\u0010\u001a\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u001b\u001a\u00020\u0017H\u0016J\u001c\u0010\u001c\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u0017H\u0016J\u0014\u0010 \u001a\u00020\u00192\f\u0010!\u001a\b\u0012\u0004\u0012\u00020\u00110\u0010R\u001a\u0010\u0006\u001a\u00020\u0007X\u0086.\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000bR\u0016\u0010\f\u001a\n \u000e*\u0004\u0018\u00010\r0\rX\u0082\u000e\u00a2\u0006\u0002\n\u0000R \u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00110\u0010X\u0086.\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015\u00a8\u0006#"}, d2 = {"Lcom/mateusz/workoutcustomer/database/WorkoutAdapter;", "Landroid/support/v7/widget/RecyclerView$Adapter;", "Lcom/mateusz/workoutcustomer/database/WorkoutAdapter$WorkoutViewHolder;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "cardView", "Landroid/support/v7/widget/CardView;", "getCardView", "()Landroid/support/v7/widget/CardView;", "setCardView", "(Landroid/support/v7/widget/CardView;)V", "mInflater", "Landroid/view/LayoutInflater;", "kotlin.jvm.PlatformType", "mWorkout", "", "Lcom/mateusz/workoutcustomer/database/Workout;", "getMWorkout", "()Ljava/util/List;", "setMWorkout", "(Ljava/util/List;)V", "getItemCount", "", "onBindViewHolder", "", "holder", "positon", "onCreateViewHolder", "parent", "Landroid/view/ViewGroup;", "p1", "setList", "list", "WorkoutViewHolder", "app_debug"})
 public final class WorkoutAdapter extends android.support.v7.widget.RecyclerView.Adapter<com.mateusz.workoutcustomer.database.WorkoutAdapter.WorkoutViewHolder> {
     private android.view.LayoutInflater mInflater;
     @org.jetbrains.annotations.NotNull()
     public java.util.List<com.mateusz.workoutcustomer.database.Workout> mWorkout;
+    @org.jetbrains.annotations.NotNull()
+    public android.support.v7.widget.CardView cardView;
     
     @org.jetbrains.annotations.NotNull()
     public final java.util.List<com.mateusz.workoutcustomer.database.Workout> getMWorkout() {
@@ -15,6 +17,15 @@ public final class WorkoutAdapter extends android.support.v7.widget.RecyclerView
     
     public final void setMWorkout(@org.jetbrains.annotations.NotNull()
     java.util.List<com.mateusz.workoutcustomer.database.Workout> p0) {
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final android.support.v7.widget.CardView getCardView() {
+        return null;
+    }
+    
+    public final void setCardView(@org.jetbrains.annotations.NotNull()
+    android.support.v7.widget.CardView p0) {
     }
     
     @org.jetbrains.annotations.NotNull()

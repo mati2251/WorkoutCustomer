@@ -1081,6 +1081,7 @@ id bottom
 id button
 id buttonPanel
 id cancel_action
+id cardView
 id center
 id center_horizontal
 id center_vertical
@@ -1144,6 +1145,7 @@ id largeLabel
 id left
 id line1
 id line3
+id linearLayout
 id listMode
 id list_item
 id logoImage
@@ -1180,7 +1182,6 @@ id progress_circular
 id progress_horizontal
 id radio
 id recyclerView
-id relativeLayout
 id right
 id right_icon
 id right_side
@@ -1246,6 +1247,7 @@ id titleDividerNoCustom
 id title_edit_text
 id title_template
 id title_text_view
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -1314,6 +1316,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_menu
 layout activity_set_title
+layout activity_view
 layout activity_welcom
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

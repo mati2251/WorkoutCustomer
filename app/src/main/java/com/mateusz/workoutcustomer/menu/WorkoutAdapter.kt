@@ -1,20 +1,29 @@
 package com.mateusz.workoutcustomer.database
 
 import android.content.Context
+import android.content.Intent
+import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.menu.ViewActivity
 
 
 class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
     private var mInflater = LayoutInflater.from(context)
     lateinit var mWorkout : List<Workout>
+    lateinit var cardView : CardView
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): WorkoutViewHolder {
         var itemView = mInflater.inflate(R.layout.workout_item, parent,false)
+        cardView = itemView.findViewById(R.id.cardView)
+        cardView.setOnClickListener {
+            var intentView : Intent = Intent(itemView.context ,ViewActivity::class.java)
+            itemView.context.startActivity(intentView)
+        }
         return WorkoutViewHolder(itemView, this )
     }
 
