@@ -4751,13 +4751,13 @@ public final class R {
     public static final int customPanel=0x7f0a0039;
     public static final int decor_content_parent=0x7f0a003a;
     public static final int default_activity_button=0x7f0a003b;
-    public static final int description_text_view=0x7f0a003c;
+    public static final int description_text_view_set_activity=0x7f0a003c;
     public static final int design_bottom_sheet=0x7f0a003d;
     public static final int design_menu_item_action_area=0x7f0a003e;
     public static final int design_menu_item_action_area_stub=0x7f0a003f;
     public static final int design_menu_item_text=0x7f0a0040;
     public static final int design_navigation_view=0x7f0a0041;
-    public static final int desription_edit_text=0x7f0a0042;
+    public static final int desription_edit_text_set_activity=0x7f0a0042;
     public static final int dimensions=0x7f0a0043;
     public static final int direct=0x7f0a0044;
     public static final int disableHome=0x7f0a0045;
@@ -4895,9 +4895,9 @@ public final class R {
     public static final int time=0x7f0a00c9;
     public static final int title=0x7f0a00ca;
     public static final int titleDividerNoCustom=0x7f0a00cb;
-    public static final int title_edit_text=0x7f0a00cc;
+    public static final int title_edit_text_set_activity=0x7f0a00cc;
     public static final int title_template=0x7f0a00cd;
-    public static final int title_text_view=0x7f0a00ce;
+    public static final int title_text_view_set_activition=0x7f0a00ce;
     public static final int toolbar=0x7f0a00cf;
     public static final int top=0x7f0a00d0;
     public static final int topPanel=0x7f0a00d1;
@@ -4914,10 +4914,10 @@ public final class R {
     public static final int view_offset_helper=0x7f0a00dc;
     public static final int visible=0x7f0a00dd;
     public static final int withText=0x7f0a00de;
-    public static final int workoutTitleDescription=0x7f0a00df;
-    public static final int workoutTitleView=0x7f0a00e0;
-    public static final int workout_description=0x7f0a00e1;
-    public static final int workout_title=0x7f0a00e2;
+    public static final int workout_description=0x7f0a00df;
+    public static final int workout_description_view_activity=0x7f0a00e0;
+    public static final int workout_title=0x7f0a00e1;
+    public static final int workout_title_view_activity=0x7f0a00e2;
     public static final int wrap=0x7f0a00e3;
     public static final int wrap_content=0x7f0a00e4;
   }

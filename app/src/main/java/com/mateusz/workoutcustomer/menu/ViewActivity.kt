@@ -14,8 +14,8 @@ class ViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view)
         var id = intent.getIntExtra(WorkoutAdapter.ID, 0)
         var workout : Workout = MainActivity.workoutViewModel.findWorkoutById(id)
-        var title : TextView = findViewById(R.id.workoutTitleView)
-        var description : TextView = findViewById(R.id.workoutTitleDescription)
+        var title : TextView = findViewById(R.id.workout_title_view_activity)
+        var description : TextView = findViewById(R.id.workout_description_view_activity)
         title.text = workout.title
         description.text = workout.description
     }

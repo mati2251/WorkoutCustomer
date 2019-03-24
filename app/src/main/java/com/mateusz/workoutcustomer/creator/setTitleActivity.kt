@@ -19,8 +19,8 @@ class setTitleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_set_title)
-        titleEditText = findViewById(R.id.title_edit_text)
-        descriptionEditText = findViewById(R.id.desription_edit_text)
+        titleEditText = findViewById(R.id.title_edit_text_set_activity)
+        descriptionEditText = findViewById(R.id.desription_edit_text_set_activity)
     }
 
     fun addNewWorkout(view : View){
