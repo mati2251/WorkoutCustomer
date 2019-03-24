@@ -152,34 +152,4 @@ public class WorkoutDao_Impl implements WorkoutDao {
       }
     }.getLiveData();
   }
-
-  @Override
-  public Workout getFromId(int index) {
-    final String _sql = "SELECT * FROM workout_table WHERE _id LIKE ? ORDER BY _id, title, description ASC";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
-    int _argIndex = 1;
-    _statement.bindLong(_argIndex, index);
-    final Cursor _cursor = __db.query(_statement);
-    try {
-      final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("_id");
-      final int _cursorIndexOfTitle = _cursor.getColumnIndexOrThrow("title");
-      final int _cursorIndexOfDescription = _cursor.getColumnIndexOrThrow("description");
-      final Workout _result;
-      if(_cursor.moveToFirst()) {
-        final int _tmpId;
-        _tmpId = _cursor.getInt(_cursorIndexOfId);
-        final String _tmpTitle;
-        _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-        final String _tmpDescription;
-        _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-        _result = new Workout(_tmpId,_tmpTitle,_tmpDescription);
-      } else {
-        _result = null;
-      }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
-  }
 }

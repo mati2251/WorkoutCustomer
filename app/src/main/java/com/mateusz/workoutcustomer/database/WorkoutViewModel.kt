@@ -52,4 +52,12 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
     fun deleteAll() = scope.launch(Dispatchers.IO){
         repository.deleteAll()
     }
+
+    fun findWorkoutById(index : Int): Workout {
+        allWorkout.value?.forEach { workout ->
+            if(workout.id==index)
+                return workout
+        }
+        return Workout(0, "Error", "Error")
+    }
 }

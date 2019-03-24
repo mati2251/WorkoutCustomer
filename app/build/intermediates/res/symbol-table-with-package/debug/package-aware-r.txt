@@ -1079,6 +1079,8 @@ id beginning
 id blocking
 id bottom
 id button
+id button2
+id button5
 id buttonPanel
 id cancel_action
 id cardView
@@ -1263,6 +1265,8 @@ id useLogo
 id view_offset_helper
 id visible
 id withText
+id workoutTitleDescription
+id workoutTitleView
 id workout_description
 id workout_title
 id wrap

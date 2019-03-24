@@ -33,9 +33,6 @@ interface WorkoutDao {
     @Query("SELECT * from workout_table ORDER BY _id, title, description ASC")
     fun getAllWords() : LiveData<List<Workout>>
 
-    @Query("SELECT * FROM workout_table WHERE _id LIKE :index ORDER BY _id, title, description ASC")
-    fun getFromId(index : Int) : Workout
-
     @Query("DELETE FROM workout_table WHERE _id LIKE :index")
     fun removeById(index : Int)
 }
