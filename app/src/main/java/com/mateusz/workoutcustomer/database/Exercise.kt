@@ -16,4 +16,4 @@ data class Exercise (@PrimaryKey
                      @ColumnInfo(name = "timeFormat") var timeFormat : String,
                      @ColumnInfo(name = "repeat") var repeat : Int,
                      @ColumnInfo(name = "pause") var pause : Int,
-                     @ColumnInfo(name = "pauseFormat") var pauseFormat : Int)
+                     @ColumnInfo(name = "pauseFormat") var pauseFormat : String)

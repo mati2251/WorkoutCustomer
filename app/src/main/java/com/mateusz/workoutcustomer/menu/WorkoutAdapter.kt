@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
-import com.mateusz.workoutcustomer.menu.ViewActivity
+import com.mateusz.workoutcustomer.viewer.ViewActivity
 
 
 class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
@@ -52,7 +52,7 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
         }
 
         override fun onClick(view: View){
-            var intentView : Intent = Intent(itemView.context ,ViewActivity::class.java)
+            var intentView : Intent = Intent(itemView.context , ViewActivity::class.java)
             intentView.putExtra(WorkoutAdapter.ID, id)
             itemView.context.startActivity(intentView)
         }

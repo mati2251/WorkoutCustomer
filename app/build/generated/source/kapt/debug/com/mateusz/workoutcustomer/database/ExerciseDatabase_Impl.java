@@ -28,9 +28,9 @@ public class ExerciseDatabase_Impl extends ExerciseDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `exercise_table` (`_id` INTEGER NOT NULL, `workoutId` INTEGER NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `instruction` TEXT NOT NULL, `series` INTEGER NOT NULL, `timeCheck` INTEGER NOT NULL, `time` INTEGER NOT NULL, `timeFormat` TEXT NOT NULL, `repeat` INTEGER NOT NULL, `pause` INTEGER NOT NULL, `pauseFormat` INTEGER NOT NULL, PRIMARY KEY(`_id`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `exercise_table` (`_id` INTEGER NOT NULL, `workoutId` INTEGER NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `instruction` TEXT NOT NULL, `series` INTEGER NOT NULL, `timeCheck` INTEGER NOT NULL, `time` INTEGER NOT NULL, `timeFormat` TEXT NOT NULL, `repeat` INTEGER NOT NULL, `pause` INTEGER NOT NULL, `pauseFormat` TEXT NOT NULL, PRIMARY KEY(`_id`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"24ebeaad8057b3f5f0446debd0df08cc\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2ccd563b88459aa1adcbc2c79d731b7e\")");
       }
 
       @Override
@@ -72,7 +72,7 @@ public class ExerciseDatabase_Impl extends ExerciseDatabase {
         _columnsExerciseTable.put("timeFormat", new TableInfo.Column("timeFormat", "TEXT", true, 0));
         _columnsExerciseTable.put("repeat", new TableInfo.Column("repeat", "INTEGER", true, 0));
         _columnsExerciseTable.put("pause", new TableInfo.Column("pause", "INTEGER", true, 0));
-        _columnsExerciseTable.put("pauseFormat", new TableInfo.Column("pauseFormat", "INTEGER", true, 0));
+        _columnsExerciseTable.put("pauseFormat", new TableInfo.Column("pauseFormat", "TEXT", true, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysExerciseTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesExerciseTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoExerciseTable = new TableInfo("exercise_table", _columnsExerciseTable, _foreignKeysExerciseTable, _indicesExerciseTable);
@@ -83,7 +83,7 @@ public class ExerciseDatabase_Impl extends ExerciseDatabase {
                   + " Found:\n" + _existingExerciseTable);
         }
       }
-    }, "24ebeaad8057b3f5f0446debd0df08cc", "5270a779930316e62bea966d4c343960");
+    }, "2ccd563b88459aa1adcbc2c79d731b7e", "61b83d92be6ae71bfc1a5e4a64c56009");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

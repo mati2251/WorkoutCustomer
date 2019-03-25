@@ -64,7 +64,11 @@ public class ExerciseDao_Impl implements ExerciseDao {
         }
         stmt.bindLong(10, value.getRepeat());
         stmt.bindLong(11, value.getPause());
-        stmt.bindLong(12, value.getPauseFormat());
+        if (value.getPauseFormat() == null) {
+          stmt.bindNull(12);
+        } else {
+          stmt.bindString(12, value.getPauseFormat());
+        }
       }
     };
     this.__preparedStmtOfDeleteAll = new SharedSQLiteStatement(__db) {
@@ -159,8 +163,8 @@ public class ExerciseDao_Impl implements ExerciseDao {
             _tmpRepeat = _cursor.getInt(_cursorIndexOfRepeat);
             final int _tmpPause;
             _tmpPause = _cursor.getInt(_cursorIndexOfPause);
-            final int _tmpPauseFormat;
-            _tmpPauseFormat = _cursor.getInt(_cursorIndexOfPauseFormat);
+            final String _tmpPauseFormat;
+            _tmpPauseFormat = _cursor.getString(_cursorIndexOfPauseFormat);
             _item = new Exercise(_tmpId,_tmpWorkoutId,_tmpTitle,_tmpDescription,_tmpInstruction,_tmpSeries,_tmpTimeCheck,_tmpTime,_tmpTimeFormat,_tmpRepeat,_tmpPause,_tmpPauseFormat);
             _result.add(_item);
           }

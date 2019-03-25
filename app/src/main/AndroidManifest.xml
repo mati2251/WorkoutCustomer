@@ -9,11 +9,13 @@
             android:roundIcon="@mipmap/ic_logo_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".creator.RepeatActivity">
+        </activity>
         <activity android:name=".creator.TimeActivity">
         </activity>
         <activity android:name=".creator.ExerciseActivity">
         </activity>
-        <activity android:name=".menu.ViewActivity">
+        <activity android:name=".viewer.ViewActivity">
         </activity>
         <activity android:name=".menu.ViewWorkout">
         </activity>

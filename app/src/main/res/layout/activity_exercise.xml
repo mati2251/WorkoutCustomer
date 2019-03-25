@@ -63,15 +63,16 @@
             android:layout_height="63dp"
             android:layout_marginTop="64dp"
             app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="36dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+            android:layout_marginStart="36dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:id="@+id/radio_group">
         <RadioButton
                 android:text="Time"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/radioButton" android:layout_weight="1"/>
+                android:layout_height="wrap_content" android:id="@+id/radio_button_time" android:layout_weight="1"/>
         <RadioButton
                 android:text="Repeat"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"/>
+                android:layout_height="wrap_content" android:id="@+id/radio_button_repeat" android:layout_weight="1"/>
     </RadioGroup>
     <Button
             android:text="Next"

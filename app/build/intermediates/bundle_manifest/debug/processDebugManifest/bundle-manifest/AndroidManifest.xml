@@ -18,6 +18,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.mateusz.workoutcustomer.creator.RepeatActivity" >
+        </activity>
+        <activity android:name="com.mateusz.workoutcustomer.creator.TimeActivity" >
+        </activity>
         <activity android:name="com.mateusz.workoutcustomer.creator.ExerciseActivity" >
         </activity>
         <activity android:name="com.mateusz.workoutcustomer.menu.ViewActivity" >

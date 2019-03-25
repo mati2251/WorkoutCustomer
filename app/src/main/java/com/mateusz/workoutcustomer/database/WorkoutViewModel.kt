@@ -28,7 +28,6 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
     var allExercise : LiveData<List<Exercise>>
 
     init{
-        WorkoutDatabase.getDatabase(application, scope)
         var workoutDao : WorkoutDao = WorkoutDatabase.getDatabase(application, scope).workoutDao()
         repository = WorkoutRepository(workoutDao)
         allWorkout = repository.allWorkout
