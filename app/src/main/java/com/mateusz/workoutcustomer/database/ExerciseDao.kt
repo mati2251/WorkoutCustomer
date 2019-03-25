@@ -15,5 +15,5 @@ interface ExerciseDao{
     fun deleteAll()
 
     @Query("SELECT * from exercise_table ORDER BY _id, title, description, instruction, series, timeCheck, time, timeFormat, repeat, pause, pauseFormat ASC")
-    fun getAllWords() : LiveData<List<Exercise>>
+    fun getAllExercise() : LiveData<List<Exercise>>
 }

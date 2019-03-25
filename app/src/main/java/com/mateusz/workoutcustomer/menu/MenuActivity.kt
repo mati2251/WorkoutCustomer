@@ -1,5 +1,6 @@
 package com.mateusz.workoutcustomer.menu
 
+import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.creator.SetTitleActivity
+import com.mateusz.workoutcustomer.database.ExerciseDatabase
 
 /**
  * A class MenuActivity is Main Activity in my App

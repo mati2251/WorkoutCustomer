@@ -106,7 +106,7 @@ public class WorkoutDao_Impl implements WorkoutDao {
   }
 
   @Override
-  public LiveData<List<Workout>> getAllWords() {
+  public LiveData<List<Workout>> getAllWorkout() {
     final String _sql = "SELECT * from workout_table ORDER BY _id, title, description ASC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return new ComputableLiveData<List<Workout>>() {

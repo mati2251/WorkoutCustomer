@@ -23,7 +23,7 @@ class SetTitleActivity : AppCompatActivity() {
         descriptionEditText = findViewById(R.id.desription_edit_text_set_activity)
     }
 
-    fun next(view : View){
+    fun next(view: View){
         var workout = Workout(MainActivity.workoutViewModel.allWorkout.value!!.size+1,titleEditText.text.toString(),descriptionEditText.text.toString())
         MainActivity.workoutViewModel.insert(workout)
         var nextIntent = Intent(this, ExerciseActivity::class.java)

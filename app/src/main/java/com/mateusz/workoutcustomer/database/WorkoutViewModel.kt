@@ -24,12 +24,17 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
     private val scope = CoroutineScope(coroutineContext)
     var repository : WorkoutRepository
     var allWorkout : LiveData<List<Workout>>
+    var repositoryExercise : ExerciseRepository
+    var allExercise : LiveData<List<Exercise>>
 
     init{
         WorkoutDatabase.getDatabase(application, scope)
         var workoutDao : WorkoutDao = WorkoutDatabase.getDatabase(application, scope).workoutDao()
         repository = WorkoutRepository(workoutDao)
         allWorkout = repository.allWorkout
+        var exerciseDao : ExerciseDao = ExerciseDatabase.getDatabase(application, scope).exerciseDao()
+        repositoryExercise = ExerciseRepository(exerciseDao)
+        allExercise = repositoryExercise.allExercise
     }
 
     /**
@@ -38,6 +43,14 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
 
     fun insert(workout: Workout) = scope.launch(Dispatchers.IO) {
         repository.insert(workout)
+    }
+
+    /**
+     * function insert insert exercise to database
+     */
+
+    fun insert(exercise: Exercise) = scope.launch(Dispatchers.IO) {
+        repositoryExercise.insert(exercise)
     }
 
     /**

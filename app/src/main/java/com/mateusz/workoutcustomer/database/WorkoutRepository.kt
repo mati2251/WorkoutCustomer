@@ -8,8 +8,8 @@ import android.support.annotation.WorkerThread
  * @property allWorkout has all workour
  */
 
-class WorkoutRepository (private val wordDao: WorkoutDao) {
-    var allWorkout : LiveData<List<Workout>> = wordDao.getAllWords()
+class WorkoutRepository (private val workoutDao: WorkoutDao) {
+    var allWorkout : LiveData<List<Workout>> = workoutDao.getAllWorkout()
 
     /**
      * Insert new element to database
@@ -17,14 +17,14 @@ class WorkoutRepository (private val wordDao: WorkoutDao) {
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun insert(workout: Workout){
-        wordDao.insert(workout)
-        allWorkout = wordDao.getAllWords()
+        workoutDao.insert(workout)
+        allWorkout = workoutDao.getAllWorkout()
     }
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun deleteAll(){
-        wordDao.deleteAll()
+        workoutDao.deleteAll()
     }
 
 }

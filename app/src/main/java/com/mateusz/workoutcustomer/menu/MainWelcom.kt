@@ -1,11 +1,14 @@
 package com.mateusz.workoutcustomer.menu
 
 import android.arch.lifecycle.ViewModelProviders
+import android.arch.persistence.room.Room
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.database.ExerciseDatabase
 import com.mateusz.workoutcustomer.database.WorkoutViewModel
 
 /**
