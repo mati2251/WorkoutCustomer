@@ -96,12 +96,12 @@
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/0e0a6d79a145f27aaca1253b02947318/res/drawable-v21/abc_list_divider_material.xml"
     },
     {
-        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
-        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/454d650b9670ccd28d35437c1665cc3f/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
-    },
-    {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/0e0a6d79a145f27aaca1253b02947318/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
+        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/454d650b9670ccd28d35437c1665cc3f/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -318,6 +318,10 @@
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/0a76ee233803e24ab53ff1a3e58acceb/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout_exercise_item.xml.flat",
+        "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/layout/exercise_item.xml"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",

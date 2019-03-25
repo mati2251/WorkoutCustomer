@@ -96,10 +96,10 @@ activity#com.mateusz.workoutcustomer.creator.ExerciseActivity
 ADDED from /home/mateusz/programowanie/WorkoutCustomer/app/src/main/AndroidManifest.xml:16:9-17:20
 	android:name
 		ADDED from /home/mateusz/programowanie/WorkoutCustomer/app/src/main/AndroidManifest.xml:16:19-59
-activity#com.mateusz.workoutcustomer.menu.ViewActivity
+activity#com.mateusz.workoutcustomer.viewer.ViewActivity
 ADDED from /home/mateusz/programowanie/WorkoutCustomer/app/src/main/AndroidManifest.xml:18:9-19:20
 	android:name
-		ADDED from /home/mateusz/programowanie/WorkoutCustomer/app/src/main/AndroidManifest.xml:18:19-52
+		ADDED from /home/mateusz/programowanie/WorkoutCustomer/app/src/main/AndroidManifest.xml:18:19-54
 activity#com.mateusz.workoutcustomer.menu.ViewWorkout
 ADDED from /home/mateusz/programowanie/WorkoutCustomer/app/src/main/AndroidManifest.xml:20:9-21:20
 	android:name

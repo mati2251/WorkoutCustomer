@@ -1119,8 +1119,10 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exercise_description_edit_text
+id exercise_desctiption
 id exercise_instruction_edit_text
 id exercise_instruction_text_view
+id exercise_title
 id exercise_title_edit_text
 id exercise_title_text_view
 id exitUntilCollapsed
@@ -1195,6 +1197,7 @@ id radio
 id radio_button_repeat
 id radio_button_time
 id radio_group
+id recycle_view_exercise
 id recyclerView
 id right
 id right_icon
@@ -1356,6 +1359,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout exercise_item
 layout fragment_history
 layout fragment_home
 layout fragment_notify

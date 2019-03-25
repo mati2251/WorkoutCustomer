@@ -24,7 +24,7 @@
         </activity>
         <activity android:name="com.mateusz.workoutcustomer.creator.ExerciseActivity" >
         </activity>
-        <activity android:name="com.mateusz.workoutcustomer.menu.ViewActivity" >
+        <activity android:name="com.mateusz.workoutcustomer.viewer.ViewActivity" >
         </activity>
         <activity android:name="com.mateusz.workoutcustomer.menu.ViewWorkout" >
         </activity>
