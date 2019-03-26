@@ -41,7 +41,14 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         var mExerciseDescription : TextView = viewItem.findViewById(R.id.exercise_desctiption)
     }
 
-    fun setList(list: List<Exercise>){
+    fun setList(list: List<Exercise>, workoutId: Int){
+        var tmp = list
+        for (i in 0 until tmp.size)
+        {
+            if(tmp[i].workoutId==workoutId){
+                list.toMutableList().removeAt(i)
+            }
+        }
         mExercise = list
         this.notifyDataSetChanged()
     }

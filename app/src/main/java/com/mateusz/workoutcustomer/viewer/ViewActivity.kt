@@ -23,14 +23,13 @@ class ViewActivity : AppCompatActivity() {
         var workout : Workout = MainActivity.workoutViewModel.findWorkoutById(id)
         var title : TextView = findViewById(R.id.workout_title_view_activity)
         var description : TextView = findViewById(R.id.workout_description_view_activity)
-        MainActivity.workoutViewModel = ViewModelProviders.of(this).get(WorkoutViewModel::class.java)
         title.text = workout.title
         description.text = workout.description
         exerciseAdapter = ExerciseAdapter(applicationContext)
         var recyclerView : RecyclerView = findViewById(R.id.recycle_view_exercise  )
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         MainActivity.workoutViewModel.allExercise.observe(this, Observer {
-                exercise -> exercise?.let { exerciseAdapter.setList(it) }
+                exercise -> exercise?.let { exerciseAdapter.setList(it, workout.id) }
         })
         recyclerView.adapter = exerciseAdapter
     }
