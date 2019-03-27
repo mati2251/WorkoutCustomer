@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 import com.mateusz.workoutcustomer.menu.MainActivity
@@ -32,10 +33,17 @@ class TimeActivity : AppCompatActivity() {
     }
 
     fun finish (view : View){
-        add()
-        var finishIntent : Intent = Intent(this, MenuActivity::class.java)
-        startActivity(finishIntent)
-        finish()
+        if(series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "" )
+        {
+            val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        else {
+            add()
+            var finishIntent: Intent = Intent(this, MenuActivity::class.java)
+            startActivity(finishIntent)
+            finish()
+        }
     }
 
     fun add(){
