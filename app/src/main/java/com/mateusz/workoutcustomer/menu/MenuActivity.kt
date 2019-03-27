@@ -44,6 +44,7 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
             }
             R.id.navigation_settings ->{
                 fragment = SettingsFragment()
+                MainActivity.workoutViewModel.deleteAll()
                 fab.hide()
             }
             else ->{

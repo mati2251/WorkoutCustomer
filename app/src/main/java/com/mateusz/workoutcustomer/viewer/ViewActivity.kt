@@ -38,9 +38,4 @@ class ViewActivity : AppCompatActivity() {
     companion object {
         var workoutId : Int = 0
     }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
-    }
 }

@@ -32,7 +32,7 @@ class MainActivity :  AppCompatActivity() {
             startActivity(homeIntent)
             finish()
         }, 700)
-    }
+     }
 
     companion object {
         lateinit var workoutViewModel: WorkoutViewModel

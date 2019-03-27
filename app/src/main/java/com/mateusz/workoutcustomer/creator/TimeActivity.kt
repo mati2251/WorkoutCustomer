@@ -39,10 +39,13 @@ class TimeActivity : AppCompatActivity() {
     }
 
     fun add(){
-        var id = intent.getIntExtra(SetTitleActivity.ID, 0 )
+        var id = MainActivity.workoutViewModel.allExercise.value?.size
+        if(id == null){
+            id=0
+        }
         MainActivity.workoutViewModel.insert(
             Exercise(
-                SetTitleActivity.exerciseNum++
+                id
                 , intent.getIntExtra(SetTitleActivity.ID, 0 ),
                 intent.getStringExtra(ExerciseActivity.TITLE),
                 intent.getStringExtra(ExerciseActivity.DESCRIPTION),
@@ -55,6 +58,5 @@ class TimeActivity : AppCompatActivity() {
                 pause.text.toString().toInt(),
                 "s"
             ))
-        SetTitleActivity.exerciseNum++
     }
 }

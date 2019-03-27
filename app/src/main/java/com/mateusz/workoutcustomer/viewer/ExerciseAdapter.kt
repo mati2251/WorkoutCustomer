@@ -43,14 +43,16 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
     }
 
     fun setList(list: List<Exercise>){
-        var tmp = list
+        var tmp = list.toMutableList()
+        var tmp1 : ArrayList<Int> = ArrayList()
         for (i in 0 until tmp.size)
         {
             if(tmp[i].workoutId==ViewActivity.workoutId){
-                list.toMutableList().removeAt(i)
+                tmp1.add(i)
             }
         }
-        mExercise = list
+        tmp1.forEach{i -> tmp.removeAt(i) }
+        mExercise = tmp
         this.notifyDataSetChanged()
     }
 
