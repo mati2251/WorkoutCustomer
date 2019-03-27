@@ -1,3 +1,4 @@
+
 package com.mateusz.workoutcustomer.viewer
 
 import android.content.Context
@@ -41,11 +42,11 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         var mExerciseDescription : TextView = viewItem.findViewById(R.id.exercise_desctiption)
     }
 
-    fun setList(list: List<Exercise>, workoutId: Int){
+    fun setList(list: List<Exercise>){
         var tmp = list
         for (i in 0 until tmp.size)
         {
-            if(tmp[i].workoutId==workoutId){
+            if(tmp[i].workoutId==ViewActivity.workoutId){
                 list.toMutableList().removeAt(i)
             }
         }

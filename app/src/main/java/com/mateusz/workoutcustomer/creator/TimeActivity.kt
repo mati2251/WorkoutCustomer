@@ -39,9 +39,10 @@ class TimeActivity : AppCompatActivity() {
     }
 
     fun add(){
+        var id = intent.getIntExtra(SetTitleActivity.ID, 0 )
         MainActivity.workoutViewModel.insert(
             Exercise(
-                SetTitleActivity.exerciseNum
+                SetTitleActivity.exerciseNum++
                 , intent.getIntExtra(SetTitleActivity.ID, 0 ),
                 intent.getStringExtra(ExerciseActivity.TITLE),
                 intent.getStringExtra(ExerciseActivity.DESCRIPTION),

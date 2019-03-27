@@ -30,6 +30,7 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
         currentStinrg = mWorkout[positon].description
         holder.mWorkoutDescripton.text = currentStinrg
         holder.id = mWorkout[positon].id
+
     }
 
     override fun getItemCount(): Int {

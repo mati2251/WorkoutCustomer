@@ -38,6 +38,7 @@ class ExerciseActivity : AppCompatActivity() {
         nextIntent.putExtra(TITLE, title.text.toString())
         nextIntent.putExtra(INSTRUCTION, instruction.text.toString())
         nextIntent.putExtra(DESCRIPTION, description.text.toString())
+        nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
         startActivity(nextIntent)
         finish()
     }

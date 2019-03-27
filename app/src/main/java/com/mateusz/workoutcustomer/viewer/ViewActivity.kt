@@ -28,9 +28,19 @@ class ViewActivity : AppCompatActivity() {
         exerciseAdapter = ExerciseAdapter(applicationContext)
         var recyclerView : RecyclerView = findViewById(R.id.recycle_view_exercise  )
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
+        workoutId= workout.id
         MainActivity.workoutViewModel.allExercise.observe(this, Observer {
-                exercise -> exercise?.let { exerciseAdapter.setList(it, workout.id) }
+                exercise -> exercise?.let { exerciseAdapter.setList(it) }
         })
         recyclerView.adapter = exerciseAdapter
+    }
+
+    companion object {
+        var workoutId : Int = 0
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

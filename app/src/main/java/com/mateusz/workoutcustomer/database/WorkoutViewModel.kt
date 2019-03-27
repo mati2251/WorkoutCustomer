@@ -63,6 +63,7 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
 
     fun deleteAll() = scope.launch(Dispatchers.IO){
         repository.deleteAll()
+        repositoryExercise.deleteAll()
     }
 
     fun findWorkoutById(index : Int): Workout {
