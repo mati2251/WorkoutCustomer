@@ -1,6 +1,5 @@
 package com.mateusz.workoutcustomer.creator
 
-import android.content.ClipDescription
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -8,8 +7,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.RadioGroup
 import com.mateusz.workoutcustomer.R
-import kotlinx.android.synthetic.main.activity_exercise.*
-import org.w3c.dom.ProcessingInstruction
 
 class ExerciseActivity : AppCompatActivity() {
 

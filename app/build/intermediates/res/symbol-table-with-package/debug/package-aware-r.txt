@@ -1081,6 +1081,7 @@ id bottom
 id button
 id button2
 id button3
+id button4
 id button5
 id buttonPanel
 id cancel_action
@@ -1188,6 +1189,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id pause_repeat
 id pause_time
 id percent
 id pin
@@ -1199,6 +1201,7 @@ id radio_button_time
 id radio_group
 id recycle_view_exercise
 id recyclerView
+id repeat
 id right
 id right_icon
 id right_side
@@ -1223,6 +1226,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id series_repeat
 id series_time
 id shortcut
 id showCustom
@@ -1258,7 +1262,9 @@ id textStart
 id textView
 id textView2
 id textView3
+id textView4
 id textView5
+id textView6
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
