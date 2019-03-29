@@ -1079,6 +1079,7 @@ id beginning
 id blocking
 id bottom
 id button
+id button2
 id button3
 id button4
 id button5
@@ -1348,9 +1349,11 @@ layout abc_tooltip
 layout activity_exercise
 layout activity_menu
 layout activity_repeat
+layout activity_repeat_viewer
 layout activity_set_title
 layout activity_start
 layout activity_time
+layout activity_time_viewer
 layout activity_view
 layout activity_welcom
 layout design_bottom_navigation_item

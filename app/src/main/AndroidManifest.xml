@@ -9,6 +9,10 @@
             android:roundIcon="@mipmap/ic_logo_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".viewer.RepeatViewerActivity">
+        </activity>
+        <activity android:name=".viewer.TimeViewerActivity">
+        </activity>
         <activity android:name=".viewer.StartActivity">
         </activity>
         <activity android:name=".creator.RepeatActivity">
