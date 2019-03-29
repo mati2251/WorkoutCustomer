@@ -2,10 +2,12 @@ package com.mateusz.workoutcustomer.viewer
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Workout
@@ -35,7 +37,14 @@ class ViewActivity : AppCompatActivity() {
         recyclerView.adapter = exerciseAdapter
     }
 
+    fun start(view: View){
+        var startInetnt = Intent(this, StartActivity::class.java)
+        startInetnt.putExtra(WORKOUTID, workoutId)
+        startActivity(startInetnt)
+    }
+
     companion object {
         var workoutId : Int = 0
+        var WORKOUTID : String = "com.mateusz.workoutcustomer.workoutid"
     }
 }

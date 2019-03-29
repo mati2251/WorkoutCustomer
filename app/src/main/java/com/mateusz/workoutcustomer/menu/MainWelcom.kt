@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.database.Exercise
 import com.mateusz.workoutcustomer.database.ExerciseDatabase
 import com.mateusz.workoutcustomer.database.WorkoutViewModel
 

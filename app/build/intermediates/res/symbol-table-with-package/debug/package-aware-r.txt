@@ -1079,7 +1079,6 @@ id beginning
 id blocking
 id bottom
 id button
-id button2
 id button3
 id button4
 id button5
@@ -1246,6 +1245,7 @@ id src_in
 id src_over
 id standard
 id start
+id start_activity
 id status_bar_latest_event_content
 id stretch
 id submenuarrow
@@ -1275,6 +1275,7 @@ id titleDividerNoCustom
 id title_edit_text_set_activity
 id title_template
 id title_text_view_set_activition
+id title_workout_start
 id toolbar
 id top
 id topPanel
@@ -1348,6 +1349,7 @@ layout activity_exercise
 layout activity_menu
 layout activity_repeat
 layout activity_set_title
+layout activity_start
 layout activity_time
 layout activity_view
 layout activity_welcom

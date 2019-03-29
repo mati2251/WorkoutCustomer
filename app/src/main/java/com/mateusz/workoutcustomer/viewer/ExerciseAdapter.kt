@@ -2,7 +2,6 @@
 package com.mateusz.workoutcustomer.viewer
 
 import android.content.Context
-import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -38,6 +37,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
     }
 
     inner class ExerciseViewHolder(viewItem: View, exerciseAdapter: ExerciseAdapter) : RecyclerView.ViewHolder(viewItem) {
+        var exerciseAdapter = exerciseAdapter
         var mExerciseTitle : TextView = viewItem.findViewById(R.id.exercise_title)
         var mExerciseDescription : TextView = viewItem.findViewById(R.id.exercise_desctiption)
     }
@@ -47,7 +47,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         var tmp1 : ArrayList<Int> = ArrayList()
         for (i in 0 until tmp.size)
         {
-            if(tmp[i].workoutId==ViewActivity.workoutId){
+            if(tmp[i].workoutId!=ViewActivity.workoutId){
                 tmp1.add(i)
             }
         }
