@@ -1083,6 +1083,8 @@ id button2
 id button3
 id button4
 id button5
+id button6
+id button7
 id buttonPanel
 id cancel_action
 id cardView
@@ -1104,6 +1106,7 @@ id custom
 id customPanel
 id decor_content_parent
 id default_activity_button
+id description_repeat_viewer
 id description_text_view_set_activity
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -1148,6 +1151,7 @@ id icon_group
 id ifRoom
 id image
 id info
+id instruction_repeat_viewer
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1227,6 +1231,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id series_repeat
+id series_repeat_viewer
 id series_time
 id shortcut
 id showCustom
@@ -1261,19 +1266,25 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView10
+id textView11
+id textView12
 id textView2
 id textView3
 id textView4
 id textView5
 id textView6
+id textView9
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
 id time
+id time_pause_view
 id title
 id titleDividerNoCustom
 id title_edit_text_set_activity
+id title_repeat_viewer
 id title_template
 id title_text_view_set_activition
 id title_workout_start
@@ -1348,6 +1359,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_exercise
 layout activity_menu
+layout activity_pause
 layout activity_repeat
 layout activity_repeat_viewer
 layout activity_set_title

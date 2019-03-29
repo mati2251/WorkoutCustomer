@@ -10,7 +10,6 @@ import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 import com.mateusz.workoutcustomer.menu.MainActivity
 import com.mateusz.workoutcustomer.menu.MenuActivity
-import kotlinx.android.synthetic.main.activity_time.*
 
 class RepeatActivity : AppCompatActivity() {
 

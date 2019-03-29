@@ -1,7 +1,6 @@
 package com.mateusz.workoutcustomer.viewer
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -12,7 +11,6 @@ import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Workout
 import com.mateusz.workoutcustomer.database.WorkoutAdapter
-import com.mateusz.workoutcustomer.database.WorkoutViewModel
 import com.mateusz.workoutcustomer.menu.MainActivity
 
 class ViewActivity : AppCompatActivity() {

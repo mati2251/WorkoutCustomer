@@ -26,10 +26,10 @@ class StartActivity : AppCompatActivity() {
                 workoutExercise.add(MainActivity.workoutViewModel.allExercise.value?.get(i)!!)
             }
         }
-        object : CountDownTimer(6000, 1000) {
+        object : CountDownTimer(2500, 500) {
 
             override fun onTick(millisUntilFinished: Long) {
-                time.text = "${millisUntilFinished/1000}"
+                time.text = "${millisUntilFinished/500}"
             }
 
             override fun onFinish() {
@@ -50,5 +50,7 @@ class StartActivity : AppCompatActivity() {
 
     companion object {
         var workoutExercise : ArrayList<Exercise> = ArrayList()
+        var position : Int = 0
+        var series : Int = 0
     }
 }
