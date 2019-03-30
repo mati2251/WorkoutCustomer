@@ -47,10 +47,7 @@ class TimeActivity : AppCompatActivity() {
     }
 
     fun add(){
-        var id = MainActivity.workoutViewModel.allExercise.value?.size
-        if(id == null){
-            id=0
-        }
+        var id = MainActivity.workoutViewModel.allExercise.value?.size ?: 0
         MainActivity.workoutViewModel.insert(
             Exercise(
                 id

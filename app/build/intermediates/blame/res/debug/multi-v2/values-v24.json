@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/0a76ee233803e24ab53ff1a3e58acceb/res/values-v24/values-v24.xml",
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/2ac372247a2aa2b561213ddc7ade71f7/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/0e0a6d79a145f27aaca1253b02947318/res/values-v24/values-v24.xml",
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

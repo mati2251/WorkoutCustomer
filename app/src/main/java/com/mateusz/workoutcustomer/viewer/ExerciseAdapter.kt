@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.creator.SetTitleActivity
 import com.mateusz.workoutcustomer.database.Exercise
 
 class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
@@ -43,15 +44,13 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
     }
 
     fun setList(list: List<Exercise>){
-        var tmp = list.toMutableList()
-        var tmp1 : ArrayList<Int> = ArrayList()
-        for (i in 0 until tmp.size)
-        {
-            if(tmp[i].workoutId!=ViewActivity.workoutId){
-                tmp1.add(i)
+        var tmp : ArrayList<Exercise> = ArrayList()
+        list.forEach{it ->
+            if(it.workoutId == ViewActivity.workoutId){
+                tmp.add(it)
             }
+
         }
-        tmp1.forEach{i -> tmp.removeAt(i) }
         mExercise = tmp
         this.notifyDataSetChanged()
     }

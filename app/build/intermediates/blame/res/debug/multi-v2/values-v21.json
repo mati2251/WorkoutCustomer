@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/0e0a6d79a145f27aaca1253b02947318/res/values-v21/values-v21.xml",
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,19,20,21,22,24,26,27,28,29,30,32,34,36,38,40,42,43,48,50,52,53,54,56,58,59,60,61,62,63,107,110,154,157,160,162,164,166,169,171,174,175,176,179,180,181,182,183,184,187,188,190,192,194,196,200,202,203,204,205,207,211,213,215,216,217,218,219,221,222,223,233,234,235,247",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,26 @@
                     }
                 },
                 {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/454d650b9670ccd28d35437c1665cc3f/res/values-v21/values-v21.xml",
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/d352ef09c983185967d5061d34dd14d6/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,223,290,354,470,596,722,850,1022",
+                        "endLines": "2,3,4,5,6,7,8,9,12,17",
+                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,263,264,271,275,311,314",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,223,290,19262,19378,19835,20129,22137,22309",
+                        "endLines": "2,3,4,5,263,264,271,275,313,318",
+                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "154,218,285,349,19373,19499,19956,20252,22304,22642"
+                    }
+                },
+                {
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b115a0e34d330d0caca17b7e298e1069/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,10,18,26",
                         "startColumns": "4,4,4,4",
@@ -42,7 +61,7 @@
                     }
                 },
                 {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/0a76ee233803e24ab53ff1a3e58acceb/res/values-v21/values-v21.xml",
+                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/2ac372247a2aa2b561213ddc7ade71f7/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -58,25 +77,6 @@
                         "endLines": "267,270,274,278",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "19667,19830,20124,20419"
-                    }
-                },
-                {
-                    "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/071e303951443fe1deb3bd012d9189e1/res/values-v21/values-v21.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,354,470,596,722,850,1022",
-                        "endLines": "2,3,4,5,6,7,8,9,12,17",
-                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,263,264,271,275,311,314",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19262,19378,19835,20129,22137,22309",
-                        "endLines": "2,3,4,5,263,264,271,275,313,318",
-                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19373,19499,19956,20252,22304,22642"
                     }
                 }
             ]
