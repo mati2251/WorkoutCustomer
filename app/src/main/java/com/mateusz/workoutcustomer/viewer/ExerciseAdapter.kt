@@ -45,7 +45,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
 
     fun setList(list: List<Exercise>){
         var tmp : ArrayList<Exercise> = ArrayList()
-        list.forEach{it ->
+        list.forEach{
             if(it.workoutId == ViewActivity.workoutId){
                 tmp.add(it)
             }

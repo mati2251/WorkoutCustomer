@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
+                {
+                    "source": "/home/mateusz/Programing/WorkoutCustomer/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1,7,3,2,4",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "16,278,120,70,158",
+                        "endColumns": "53,69,37,49,60",
+                        "endOffsets": "65,343,153,115,214"
+                    },
+                    "to": {
+                        "startLines": "590,597,599,601,609",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "38001,38816,39034,39153,40129",
+                        "endColumns": "53,69,37,49,60",
+                        "endOffsets": "38050,38881,39067,39198,40185"
+                    }
+                },
                 {
                     "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b115a0e34d330d0caca17b7e298e1069/res/values/values.xml",
                     "from": {
@@ -61,22 +78,39 @@
                     }
                 },
                 {
-                    "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/values/font_certs.xml",
+                    "source": "/home/mateusz/Programing/WorkoutCustomer/app/src/main/res/values/colors.xml",
                     "from": {
-                        "startLines": "2,6,11",
+                        "startLines": "4,2,3",
                         "startColumns": "4,4,4",
-                        "startOffsets": "55,257,1982",
-                        "endLines": "5,10,15",
-                        "endColumns": "12,19,19",
-                        "endOffsets": "252,1977,3567"
+                        "startOffsets": "153,55,102",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "194,97,148"
                     },
                     "to": {
-                        "startLines": "2,6,11",
+                        "startLines": "209,210,211",
                         "startColumns": "4,4,4",
-                        "startOffsets": "150,352,2077",
-                        "endLines": "5,10,15",
-                        "endColumns": "12,19,19",
-                        "endOffsets": "347,2072,3662"
+                        "startOffsets": "13592,13638,13685",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "13633,13680,13731"
+                    }
+                },
+                {
+                    "source": "/home/mateusz/Programing/WorkoutCustomer/app/src/main/res/values/preloaded_fonts.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "152"
+                    },
+                    "to": {
+                        "startLines": "16",
+                        "startColumns": "4",
+                        "startOffsets": "3667",
+                        "endLines": "18",
+                        "endColumns": "12",
+                        "endOffsets": "3764"
                     }
                 },
                 {
@@ -135,7 +169,7 @@
                     }
                 },
                 {
-                    "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/values/dimens.xml",
+                    "source": "/home/mateusz/Programing/WorkoutCustomer/app/src/main/res/values/dimens.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -152,7 +186,45 @@
                     }
                 },
                 {
-                    "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/values/ic_launcher_background.xml",
+                    "source": "/home/mateusz/Programing/WorkoutCustomer/app/src/main/res/values/font_certs.xml",
+                    "from": {
+                        "startLines": "2,6,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,257,1982",
+                        "endLines": "5,10,15",
+                        "endColumns": "12,19,19",
+                        "endOffsets": "252,1977,3567"
+                    },
+                    "to": {
+                        "startLines": "2,6,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "150,352,2077",
+                        "endLines": "5,10,15",
+                        "endColumns": "12,19,19",
+                        "endOffsets": "347,2072,3662"
+                    }
+                },
+                {
+                    "source": "/home/mateusz/Programing/WorkoutCustomer/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "54,374",
+                        "endLines": "8,15",
+                        "endColumns": "12,12",
+                        "endOffsets": "368,638"
+                    },
+                    "to": {
+                        "startLines": "619,2957",
+                        "startColumns": "4,4",
+                        "startOffsets": "40909,195401",
+                        "endLines": "624,2962",
+                        "endColumns": "12,12",
+                        "endOffsets": "41223,195665"
+                    }
+                },
+                {
+                    "source": "/home/mateusz/Programing/WorkoutCustomer/app/src/main/res/values/ic_launcher_background.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -166,42 +238,6 @@
                         "startOffsets": "15180",
                         "endColumns": "56",
                         "endOffsets": "15232"
-                    }
-                },
-                {
-                    "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/values/preloaded_fonts.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "152"
-                    },
-                    "to": {
-                        "startLines": "16",
-                        "startColumns": "4",
-                        "startOffsets": "3667",
-                        "endLines": "18",
-                        "endColumns": "12",
-                        "endOffsets": "3764"
-                    }
-                },
-                {
-                    "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "153,55,102",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "194,97,148"
-                    },
-                    "to": {
-                        "startLines": "209,210,211",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "13592,13638,13685",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "13633,13680,13731"
                     }
                 },
                 {
@@ -238,42 +274,6 @@
                         "startOffsets": "16593,31779,31832,31885,31938,153405,153581,153703,153965,154160",
                         "endColumns": "88,52,52,52,52,65,121,60,65,66",
                         "endOffsets": "16677,31827,31880,31933,31986,153466,153698,153759,154026,154222"
-                    }
-                },
-                {
-                    "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "54,374",
-                        "endLines": "8,15",
-                        "endColumns": "12,12",
-                        "endOffsets": "368,638"
-                    },
-                    "to": {
-                        "startLines": "619,2957",
-                        "startColumns": "4,4",
-                        "startOffsets": "40909,195401",
-                        "endLines": "624,2962",
-                        "endColumns": "12,12",
-                        "endOffsets": "41223,195665"
-                    }
-                },
-                {
-                    "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1,7,3,2,4",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "16,278,120,70,158",
-                        "endColumns": "53,69,37,49,60",
-                        "endOffsets": "65,343,153,115,214"
-                    },
-                    "to": {
-                        "startLines": "590,597,599,601,609",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "38001,38816,39034,39153,40129",
-                        "endColumns": "53,69,37,49,60",
-                        "endOffsets": "38050,38881,39067,39198,40185"
                     }
                 },
                 {
