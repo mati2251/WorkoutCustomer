@@ -38,15 +38,9 @@ class TimeViewerActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                var intent: Intent
-                if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
-                    intent = Intent(applicationContext, RepeatViewerActivity::class.java)
-                    startActivity(intent)
-                }
-                else if(StartActivity.workoutExercise[StartActivity.position].timeCheck){
-                    intent = Intent(applicationContext, TimeViewerActivity::class.java)
-                    startActivity(intent)
-                }
+                var intent : Intent = Intent(applicationContext, PauseActivity::class.java)
+                intent.putExtra(TimeViewerActivity.pause, exercise.pause)
+                startActivity(intent)
                 finish()
             }
         }.start()
@@ -54,7 +48,7 @@ class TimeViewerActivity : AppCompatActivity() {
 
     fun pause(view: View){
         var intent : Intent = Intent(this, PauseActivity::class.java)
-        intent.putExtra(pause, exercise.pause)
+        intent.putExtra(TimeViewerActivity.pause, exercise.pause)
         startActivity(intent)
         finish()
     }

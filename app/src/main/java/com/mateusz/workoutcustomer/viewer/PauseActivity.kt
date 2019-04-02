@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.menu.MenuActivity
 
 class PauseActivity : AppCompatActivity() {
 
@@ -22,7 +24,13 @@ class PauseActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 var intent: Intent
-                if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
+                if(StartActivity.workoutExercise.size == StartActivity.position){
+                    val toast = Toast.makeText(applicationContext, "You are finish workout", Toast.LENGTH_SHORT)
+                    toast.show()
+                    intent = Intent(applicationContext, MenuActivity::class.java)
+                    startActivity(intent)
+                }
+                else if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
                     intent = Intent(applicationContext, RepeatViewerActivity::class.java)
                     startActivity(intent)
                 }
@@ -37,8 +45,13 @@ class PauseActivity : AppCompatActivity() {
     }
 
     fun stopPause(view: View){
-        var intent: Intent
-        if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
+        if(StartActivity.workoutExercise.size == StartActivity.position){
+            val toast = Toast.makeText(applicationContext, "You are finish workout", Toast.LENGTH_SHORT)
+            toast.show()
+            intent = Intent(applicationContext, MenuActivity::class.java)
+            startActivity(intent)
+        }
+        else if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
             intent = Intent(applicationContext, RepeatViewerActivity::class.java)
             startActivity(intent)
         }
