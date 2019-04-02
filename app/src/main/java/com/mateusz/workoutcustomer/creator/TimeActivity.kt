@@ -1,5 +1,6 @@
 package com.mateusz.workoutcustomer.creator
 
+import android.arch.lifecycle.Observer
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -26,10 +27,18 @@ class TimeActivity : AppCompatActivity() {
     }
 
     fun addExercise (view : View){
-        add()
-        var nextIntent : Intent = Intent(this, ExerciseActivity::class.java)
-        startActivity(nextIntent)
-        finish()
+        if(series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "" )
+        {
+            val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        else {
+            add()
+            var nextIntent: Intent = Intent(this, ExerciseActivity::class.java)
+            nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
+            startActivity(nextIntent)
+            finish()
+        }
     }
 
     fun finish (view : View){
@@ -47,7 +56,10 @@ class TimeActivity : AppCompatActivity() {
     }
 
     fun add(){
-        var id = MainActivity.workoutViewModel.allExercise.value?.size ?: 0
+        var id : Int = 0
+        MainActivity.workoutViewModel.allWorkout.observe(this, Observer {
+                words -> words?.let { id = it.size }
+        })
         MainActivity.workoutViewModel.insert(
             Exercise(
                 id

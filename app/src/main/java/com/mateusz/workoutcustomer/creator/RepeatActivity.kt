@@ -1,5 +1,6 @@
 package com.mateusz.workoutcustomer.creator
 
+import android.arch.lifecycle.Observer
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -28,6 +29,7 @@ class RepeatActivity : AppCompatActivity() {
     fun addExerciseRepeat (view : View){
         add()
         var nextIntent : Intent = Intent(this, ExerciseActivity::class.java)
+        nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
         startActivity(nextIntent)
         finish()
     }
@@ -47,7 +49,10 @@ class RepeatActivity : AppCompatActivity() {
     }
 
     fun add(){
-        var id = MainActivity.workoutViewModel.allExercise.value?.size ?: 0
+        var id : Int = 0
+        MainActivity.workoutViewModel.allWorkout.observe(this, Observer {
+                words -> words?.let { id = it.size }
+        })
         MainActivity.workoutViewModel.insert(
             Exercise(
                 id
