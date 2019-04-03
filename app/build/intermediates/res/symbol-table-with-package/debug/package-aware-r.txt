@@ -1207,6 +1207,7 @@ id radio_group
 id recycle_view_exercise
 id recyclerView
 id repeat
+id repeat_viewer
 id right
 id right_icon
 id right_side
@@ -1277,6 +1278,7 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textView8
 id textView9
 id text_input_password_toggle
 id textinput_counter

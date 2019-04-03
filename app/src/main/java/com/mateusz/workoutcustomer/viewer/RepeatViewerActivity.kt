@@ -25,10 +25,12 @@ class RepeatViewerActivity : AppCompatActivity() {
         var description : TextView = findViewById(R.id.description_repeat_viewer)
         var instruction : TextView = findViewById(R.id.instruction_repeat_viewer)
         var series : TextView = findViewById(R.id.series_repeat_viewer)
+        var repeat : TextView = findViewById(R.id.repeat_viewer)
         title.text = exercise.title
         description.text = exercise.description
         instruction.text = exercise.instruction
         series.text = exercise.series.toString()
+        repeat.text = exercise.repeat.toString()
     }
 
     fun pause(view: View){

@@ -36,6 +36,13 @@
             android:layout_marginTop="152dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent" android:id="@+id/textView12"/>
     <TextView
+            android:text="Repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginTop="196dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:id="@+id/textView8"/>
+    <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,6 +73,14 @@
             app:layout_constraintStart_toEndOf="@+id/textView12"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView12"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:id="@+id/repeat_viewer"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+            app:layout_constraintStart_toEndOf="@+id/textView8" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
     <Button
             android:text="next"
             android:layout_width="0dp"
