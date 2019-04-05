@@ -26,6 +26,7 @@ class StartActivity : AppCompatActivity() {
                 workoutExercise.add(MainActivity.workoutViewModel.allExercise.value?.get(i)!!)
             }
         }
+        position = 0
         object : CountDownTimer(2500, 500) {
 
             override fun onTick(millisUntilFinished: Long) {

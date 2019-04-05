@@ -12,6 +12,7 @@ import com.mateusz.workoutcustomer.database.Exercise
 class TimeViewerActivity : AppCompatActivity() {
 
     lateinit var exercise : Exercise
+    var close : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,9 @@ class TimeViewerActivity : AppCompatActivity() {
 
             override fun onTick(millisUntilFinished: Long) {
                 time.text = "${millisUntilFinished/1000}"
+                if(close){
+                    cancel()
+                }
             }
 
             override fun onFinish() {
@@ -50,6 +54,7 @@ class TimeViewerActivity : AppCompatActivity() {
         var intent : Intent = Intent(this, PauseActivity::class.java)
         intent.putExtra(TimeViewerActivity.pause, exercise.pause)
         startActivity(intent)
+        close = true
         finish()
     }
 

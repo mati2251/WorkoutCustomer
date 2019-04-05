@@ -12,6 +12,8 @@ import com.mateusz.workoutcustomer.menu.MenuActivity
 
 class PauseActivity : AppCompatActivity() {
 
+    var close : Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pause)
@@ -20,6 +22,9 @@ class PauseActivity : AppCompatActivity() {
 
             override fun onTick(millisUntilFinished: Long) {
                 time.text = "${millisUntilFinished/1000}"
+                if(close){
+                    cancel()
+                }
             }
 
             override fun onFinish() {
@@ -49,6 +54,7 @@ class PauseActivity : AppCompatActivity() {
             val toast = Toast.makeText(applicationContext, "You are finish workout", Toast.LENGTH_SHORT)
             toast.show()
             intent = Intent(applicationContext, MenuActivity::class.java)
+            StartActivity.position = 0
             startActivity(intent)
         }
         else if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
@@ -59,6 +65,7 @@ class PauseActivity : AppCompatActivity() {
             intent = Intent(applicationContext, TimeViewerActivity::class.java)
             startActivity(intent)
         }
+        close = true
         finish()
     }
 }
