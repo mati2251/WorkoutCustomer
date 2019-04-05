@@ -50,7 +50,7 @@ class RepeatActivity : AppCompatActivity() {
 
     fun add(){
         var id : Int = 0
-        MainActivity.workoutViewModel.allWorkout.observe(this, Observer {
+        MainActivity.workoutViewModel.allExercise.observe(this, Observer {
                 words -> words?.let { id = it.size }
         })
         MainActivity.workoutViewModel.insert(

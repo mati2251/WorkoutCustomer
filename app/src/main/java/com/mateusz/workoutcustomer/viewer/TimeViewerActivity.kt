@@ -58,6 +58,11 @@ class TimeViewerActivity : AppCompatActivity() {
         finish()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        close = true
+    }
+
     companion object {
         var pause = "com.mateusz.workoutcustomer.pause"
     }

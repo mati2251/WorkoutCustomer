@@ -68,4 +68,9 @@ class PauseActivity : AppCompatActivity() {
         close = true
         finish()
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        close = true
+    }
 }

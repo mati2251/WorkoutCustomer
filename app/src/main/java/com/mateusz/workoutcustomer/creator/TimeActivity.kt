@@ -57,9 +57,10 @@ class TimeActivity : AppCompatActivity() {
 
     fun add(){
         var id : Int = 0
-        MainActivity.workoutViewModel.allWorkout.observe(this, Observer {
+        MainActivity.workoutViewModel.allExercise.observe(this, Observer {
                 words -> words?.let { id = it.size }
         })
+        var l : ArrayList<Exercise>
         MainActivity.workoutViewModel.insert(
             Exercise(
                 id
