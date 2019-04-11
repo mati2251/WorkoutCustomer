@@ -7,50 +7,58 @@
         android:layout_height="match_parent"
         tools:context=".creator.SetTitleActivity">
     <TextView
-            android:text="Workout TItle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:layout_width="162dp"
+            android:layout_height="40dp"
             android:id="@+id/title_text_view_set_activition" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/title_edit_text_set_activity"/>
+            app:layout_constraintBaseline_toBaselineOf="@+id/title_edit_text_set_activity"
+            style="@style/TextViewCreator"/>
     <TextView
-            android:text="Workout Description"
-            android:layout_width="138dp"
-            android:layout_height="25dp"
+            android:text="@string/description"
+            android:layout_width="157dp"
+            android:layout_height="33dp"
             android:id="@+id/description_text_view_set_activity"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/desription_edit_text_set_activity"/>
+            app:layout_constraintBaseline_toBaselineOf="@+id/desription_edit_text_set_activity"
+            android:textSize="24sp"
+            style="@style/TextViewCreator"/>
     <TextView
-            android:text="Workout Creator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="@string/create_workout"
+            android:layout_width="216dp"
+            android:layout_height="52dp"
             android:id="@+id/creator_text_view" android:textSize="30sp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="25dp" app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextViewCreator" app:layout_constraintHorizontal_bias="0.48"
+            android:textColor="@color/colorAccent"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Title"
             android:ems="10"
             android:id="@+id/title_edit_text_set_activity" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/title_text_view_set_activition"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/creator_text_view" app:layout_constraintHorizontal_bias="0.64"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="52dp"
+            app:layout_constraintTop_toBottomOf="@+id/creator_text_view"
+            android:selectAllOnFocus="false" android:inputType="text" android:hint="@string/workout_title"
+            android:autofillHints="" tools:targetApi="o"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" android:textColor="@color/colorAccent"/>
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="208dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Description"
             android:ems="10"
-            android:id="@+id/desription_edit_text_set_activity" android:layout_marginEnd="24dp"
+            android:id="@+id/desription_edit_text_set_activity" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/description_text_view_set_activity" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/title_edit_text_set_activity"/>
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/title_edit_text_set_activity" android:autofillHints=""
+            android:hint="@string/workout_description"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.973" android:textColor="@color/colorAccent"/>
     <Button
-            android:text="Next"
-            android:layout_width="wrap_content"
+            android:text="@string/next"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/next_button_set_activity" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/desription_edit_text_set_activity"
@@ -58,5 +66,6 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintVertical_bias="1.0"
-            android:onClick="next"/>
+            android:onClick="next"
+            style="@style/ButtonCreator"/>
 </android.support.constraint.ConstraintLayout>

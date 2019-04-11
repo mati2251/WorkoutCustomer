@@ -20,6 +20,7 @@ class SetTitleActivity : AppCompatActivity() {
         titleEditText = findViewById(R.id.title_edit_text_set_activity)
         descriptionEditText = findViewById(R.id.desription_edit_text_set_activity)
         exerciseNum = 0
+        supportActionBar?.hide()
     }
 
     fun next(view: View){

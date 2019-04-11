@@ -77,6 +77,7 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
         }
         val navigation = findViewById<BottomNavigationView>(R.id.navigation)
         navigation.setOnNavigationItemSelectedListener(this)
+        supportActionBar?.hide()
     }
 
     /**

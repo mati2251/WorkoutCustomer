@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Tue Apr 02 22:01:50 CEST 2019
-1.base=/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+#Wed Apr 10 13:07:56 CEST 2019
+1.base=/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+0.base=/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/dex/debug/mergeExtDexDebug/out
 1.path=classes.dex
