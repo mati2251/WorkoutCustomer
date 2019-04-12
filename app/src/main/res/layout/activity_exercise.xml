@@ -10,14 +10,14 @@
     <TextView
             android:layout_width="152dp"
             android:layout_height="34dp"
-            android:id="@+id/exercise_title_text_view" android:text="Name"
+            android:id="@+id/exercise_title_text_view" android:text="@string/name_exercise"
             android:layout_marginTop="116dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
             style="@style/TextViewCreator"/>
     <TextView
             android:layout_width="152dp"
             android:layout_height="32dp"
-            android:id="@+id/exercise_instruction_text_view" android:text="Instruction"
+            android:id="@+id/exercise_instruction_text_view" android:text="@string/instruction"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
             style="@style/TextViewCreator" android:layout_marginTop="25dp"
             app:layout_constraintTop_toBottomOf="@+id/textView"/>
@@ -29,9 +29,9 @@
             android:id="@+id/exercise_title_edit_text" android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBaseline_toBaselineOf="@+id/exercise_title_text_view"
-            android:hint="Name"
+            android:hint="@string/name_exercise"
             android:background="@null" app:layout_constraintStart_toEndOf="@+id/exercise_title_text_view"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp" android:autofillHints="" tools:targetApi="o"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -45,9 +45,9 @@
             app:layout_constraintTop_toTopOf="@+id/exercise_instruction_text_view"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
             android:background="@null"
-            android:hint="Instruction"
-            android:gravity="top|left" app:layout_constraintStart_toEndOf="@+id/exercise_instruction_text_view"
-            android:layout_marginStart="8dp"/>
+            android:hint="@string/instruction"
+            android:gravity="top" app:layout_constraintStart_toEndOf="@+id/exercise_instruction_text_view"
+            android:layout_marginStart="8dp" android:autofillHints="" tools:targetApi="o"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -57,11 +57,11 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-            android:hint="Description"
+            android:hint="@string/description"
             android:background="@null" app:layout_constraintStart_toEndOf="@+id/textView"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp" android:importantForAutofill="no" tools:targetApi="o"/>
     <TextView
-            android:text="Description"
+            android:text="@string/description"
             android:layout_width="152dp"
             android:layout_height="32dp"
             android:id="@+id/textView"
@@ -76,18 +76,18 @@
             android:id="@+id/radio_group" app:layout_constraintHorizontal_bias="1.0"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView14">
         <RadioButton
-                android:text="Time"
+                android:text="@string/time"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" android:id="@+id/radio_button_time" android:layout_weight="1"
                 android:textColor="@color/colorAccent" android:textSize="24sp"/>
         <RadioButton
-                android:text="Repeat"
+                android:text="@string/repeat"
                 android:layout_width="match_parent"
                 android:layout_height="51dp" android:id="@+id/radio_button_repeat" android:layout_weight="1"
                 android:textColor="@color/colorAccent" android:textSize="24sp"/>
     </RadioGroup>
     <Button
-            android:text="Next"
+            android:text="@string/next"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/next_exercise_activity" android:layout_marginBottom="8dp"
@@ -97,7 +97,7 @@
             style="@style/ButtonCreator" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"/>
     <TextView
-            android:text="Create Exercise"
+            android:text="@string/create_exercise"
             android:layout_width="210dp"
             android:layout_height="49dp"
             android:id="@+id/textView13" app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +111,7 @@
             android:id="@+id/textView14"
             style="@style/TextViewCreator" android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/exercise_instruction_edit_text"
-            android:text="Will exercise be for time or for repeat?" android:layout_marginStart="16dp"
+            android:text="@string/will_exercise_be_for_time_or_for_repeat" android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
 </android.support.constraint.ConstraintLayout>

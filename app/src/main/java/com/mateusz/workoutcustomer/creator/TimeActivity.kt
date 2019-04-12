@@ -24,6 +24,7 @@ class TimeActivity : AppCompatActivity() {
         series = findViewById(R.id.series_time)
         time = findViewById(R.id.time)
         pause = findViewById(R.id.pause_time)
+        supportActionBar?.hide()
     }
 
     fun addExercise (view : View){

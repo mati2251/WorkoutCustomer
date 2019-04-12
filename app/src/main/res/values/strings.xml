@@ -10,4 +10,15 @@
     <string name="next">Next</string>
     <string name="workout_title">Workout Title</string>
     <string name="workout_description">Workout Description</string>
+    <string name="description">Description</string>
+    <string name="name_exercise">Name</string>
+    <string name="instruction">Instruction</string>
+    <string name="name_exercise">Name</string>
+    <string name="instruction">Instruction</string>
+    <string name="repeat">Repeat</string>
+    <string name="next">Next</string>
+    <string name="create_exercise">Create Exercise</string>
+    <string name="description">Description</string>
+    <string name="time">Time</string>
+    <string name="will_exercise_be_for_time_or_for_repeat">Will exercise be for time or for repeat?</string>
 </resources>

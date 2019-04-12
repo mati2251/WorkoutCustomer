@@ -24,6 +24,7 @@ class RepeatActivity : AppCompatActivity() {
         series = findViewById(R.id.series_repeat)
         repeat = findViewById(R.id.repeat)
         pause = findViewById(R.id.pause_repeat)
+        supportActionBar?.hide()
     }
 
     fun addExerciseRepeat (view : View){
