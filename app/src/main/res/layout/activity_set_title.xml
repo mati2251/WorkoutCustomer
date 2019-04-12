@@ -43,7 +43,8 @@
             android:selectAllOnFocus="false" android:inputType="text" android:hint="@string/workout_title"
             android:autofillHints="" tools:targetApi="o"
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0" android:textColor="@color/colorAccent"/>
+            app:layout_constraintHorizontal_bias="1.0" android:textColor="@color/colorAccent"
+            android:background="@null"/>
     <EditText
             android:layout_width="208dp"
             android:layout_height="wrap_content"
@@ -55,7 +56,8 @@
             app:layout_constraintTop_toBottomOf="@+id/title_edit_text_set_activity" android:autofillHints=""
             android:hint="@string/workout_description"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.973" android:textColor="@color/colorAccent"/>
+            app:layout_constraintHorizontal_bias="0.973" android:textColor="@color/colorAccent"
+            android:background="@null"/>
     <Button
             android:text="@string/next"
             android:layout_width="0dp"
