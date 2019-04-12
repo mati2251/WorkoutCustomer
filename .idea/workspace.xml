@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57982231-663f-403f-bc99-83134f26e946" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/RepeatActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/RepeatActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/TimeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/TimeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_time.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_time.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +63,7 @@
           <entry key="workout_database" value="1" />
           <entry key="workout_database-shm" value="1" />
           <entry key="workout_database-wal" value="1" />
-          <entry key="xml" value="108" />
+          <entry key="xml" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -76,23 +74,23 @@
           <entry key="JAVA" value="48" />
           <entry key="Kotlin" value="247" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="108" />
+          <entry key="XML" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="65" />
           <entry key="kt" value="12899" />
-          <entry key="txt" value="1145" />
-          <entry key="xml" value="1189" />
+          <entry key="txt" value="1172" />
+          <entry key="xml" value="1242" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="65" />
           <entry key="Kotlin" value="12899" />
-          <entry key="PLAIN_TEXT" value="1145" />
-          <entry key="XML" value="1189" />
+          <entry key="PLAIN_TEXT" value="1172" />
+          <entry key="XML" value="1242" />
         </counts>
       </usages-collector>
     </session>
@@ -108,10 +106,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_time.xml">
           <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="94" column="39" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -123,12 +125,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exercise.xml">
           <provider selected="true" editor-type-id="android-designer2" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            <state relative-caret-position="318">
+              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -151,6 +153,8 @@
       <find>getDa</find>
       <find>repeat</find>
       <find>INstr</find>
+      <find>instru</find>
+      <find>textView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2681,8 +2685,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_set_title.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/TimeActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/RepeatActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_time.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_exercise.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_time.xml" />
       </list>
     </option>
   </component>
@@ -2877,6 +2881,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1046" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26307365" />
@@ -2889,12 +2894,12 @@
       <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49893278" weight="0.3293348" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4994664" weight="0.3293348" />
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49893278" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49893278" visible="true" weight="0.32279173" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49893278" weight="0.32279173" />
       <window_info anchor="bottom" id="Device File Explorer" order="4" sideWeight="0.5010672" side_tool="true" weight="0.32606325" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50274223" side_tool="true" weight="0.33005464" />
       <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49725777" weight="0.3293348" />
       <window_info anchor="bottom" id="Android Profiler" order="7" sideWeight="0.4994664" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49893278" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49893278" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49893278" weight="0.3129771" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.4994664" weight="0.3293348" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -2958,13 +2963,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-26/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/database/ExerciseDao.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -3145,14 +3143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -3275,18 +3265,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/RepeatActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_set_title.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_repeat.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -3297,15 +3292,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_time.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exercise.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        <state relative-caret-position="318">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mateusz/workoutcustomer/creator/RepeatActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_time.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="94" column="39" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
         </state>
       </provider>
     </entry>

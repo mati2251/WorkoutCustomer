@@ -1,4 +1,4 @@
-#Fri Apr 12 19:49:46 CEST 2019
+#Fri Apr 12 22:38:44 CEST 2019
 base.0=/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
 path.1=classes.dex
 renamed.1=classes2.dex

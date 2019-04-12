@@ -87,22 +87,22 @@ public final class R {
         public static final int blocking = 0x7f0a0022;
         public static final int chronometer = 0x7f0a0032;
         public static final int forever = 0x7f0a0060;
-        public static final int icon = 0x7f0a0068;
-        public static final int icon_group = 0x7f0a0069;
-        public static final int info = 0x7f0a006c;
-        public static final int italic = 0x7f0a0070;
-        public static final int line1 = 0x7f0a0075;
-        public static final int line3 = 0x7f0a0076;
-        public static final int normal = 0x7f0a008e;
-        public static final int notification_background = 0x7f0a008f;
-        public static final int notification_main_column = 0x7f0a0090;
-        public static final int notification_main_column_container = 0x7f0a0091;
-        public static final int right_icon = 0x7f0a00a7;
-        public static final int right_side = 0x7f0a00a8;
-        public static final int text = 0x7f0a00dd;
-        public static final int text2 = 0x7f0a00de;
-        public static final int time = 0x7f0a00f4;
-        public static final int title = 0x7f0a00f7;
+        public static final int icon = 0x7f0a0069;
+        public static final int icon_group = 0x7f0a006a;
+        public static final int info = 0x7f0a006d;
+        public static final int italic = 0x7f0a0071;
+        public static final int line1 = 0x7f0a0076;
+        public static final int line3 = 0x7f0a0077;
+        public static final int normal = 0x7f0a008f;
+        public static final int notification_background = 0x7f0a0090;
+        public static final int notification_main_column = 0x7f0a0091;
+        public static final int notification_main_column_container = 0x7f0a0092;
+        public static final int right_icon = 0x7f0a00a8;
+        public static final int right_side = 0x7f0a00a9;
+        public static final int text = 0x7f0a00de;
+        public static final int text2 = 0x7f0a00df;
+        public static final int time = 0x7f0a00f6;
+        public static final int title = 0x7f0a00f9;
     }
     public static final class integer {
         private integer() {}
@@ -122,7 +122,7 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int status_bar_notification_info_overflow = 0x7f10003c;
+        public static final int status_bar_notification_info_overflow = 0x7f100047;
     }
     public static final class style {
         private style() {}
