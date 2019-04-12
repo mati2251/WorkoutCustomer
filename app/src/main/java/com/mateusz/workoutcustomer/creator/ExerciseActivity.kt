@@ -22,6 +22,7 @@ class ExerciseActivity : AppCompatActivity() {
         title = findViewById(R.id.exercise_title_edit_text)
         description = findViewById(R.id.exercise_description_edit_text)
         instruction = findViewById(R.id.exercise_instruction_edit_text)
+        supportActionBar?.hide()
     }
 
     fun nextExercise(view : View){
