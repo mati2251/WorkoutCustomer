@@ -1081,7 +1081,6 @@ id blocking
 id bottom
 id button
 id button3
-id button4
 id button5
 id button6
 id button7
@@ -1281,7 +1280,6 @@ id textView2
 id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView8
 id textView9
@@ -1478,6 +1476,7 @@ string fab_transformation_sheet_behavior
 string finish
 string hide_bottom_view_on_scroll_behavior
 string how_long_pause
+string how_many_repeat
 string how_many_series
 string how_many_time
 string instruction

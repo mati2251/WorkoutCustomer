@@ -11,9 +11,8 @@
     <string name="workout_title">Workout Title</string>
     <string name="workout_description">Workout Description</string>
     <string name="name_exercise">Name</string>
-    <string name="time">Time</string>
+    <string name="time">Timegit </string>
     <string name="instruction">Instruction</string>
-    <string name="repeat">Repeat</string>
     <string name="create_exercise">Create Exercise</string>
     <string name="will_exercise_be_for_time_or_for_repeat">Will exercise be for time or for repeat?</string>
     <string name="pause">Pause</string>
@@ -23,4 +22,6 @@
     <string name="how_long_pause">How long pause</string>
     <string name="how_many_time">How many time</string>
     <string name="how_many_series">How many series</string>
+    <string name="repeat">Repeat</string>
+    <string name="how_many_repeat">how many repeat</string>
 </resources>

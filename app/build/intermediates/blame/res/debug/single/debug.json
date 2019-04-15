@@ -96,12 +96,12 @@
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-v21/abc_list_divider_material.xml"
     },
     {
-        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b115a0e34d330d0caca17b7e298e1069/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
+    },
+    {
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -120,20 +120,20 @@
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout_activity_time_viewer.xml.flat",
-        "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/layout/activity_time_viewer.xml"
-    },
-    {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout-sw600dp-v13_mtrl_layout_snackbar.xml.flat",
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b115a0e34d330d0caca17b7e298e1069/res/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
     },
     {
-        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout_activity_time_viewer.xml.flat",
+        "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/layout/activity_time_viewer.xml"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
@@ -316,16 +316,16 @@
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
-        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/2ac372247a2aa2b561213ddc7ade71f7/res/layout/notification_template_media.xml"
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_logo.png.flat",
+        "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/mipmap-xxhdpi/ic_logo.png"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_logo.png.flat",
-        "source": "/home/mateusz/programowanie/WorkoutCustomer/app/src/main/res/mipmap-xxhdpi/ic_logo.png"
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
+        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/2ac372247a2aa2b561213ddc7ade71f7/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/layout_exercise_item.xml.flat",
@@ -480,12 +480,12 @@
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_checked_black.xml.flat",
-        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b115a0e34d330d0caca17b7e298e1069/res/drawable/ic_mtrl_chip_checked_black.xml"
-    },
-    {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/anim_abc_grow_fade_in_from_bottom.xml.flat",
         "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b50ef868aeb7f725a5265d73904d8cce/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_checked_black.xml.flat",
+        "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b115a0e34d330d0caca17b7e298e1069/res/drawable/ic_mtrl_chip_checked_black.xml"
     },
     {
         "merged": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/res/merged/debug/color_mtrl_btn_text_btn_ripple_color.xml.flat",
