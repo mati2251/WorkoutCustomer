@@ -8,20 +8,32 @@
         tools:context=".viewer.StartActivity">
 
     <TextView
-            android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/time" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="355dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="177dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="357dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="176dp" android:textSize="30sp"/>
+            android:id="@+id/time"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="177dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="176dp" android:textSize="30sp"
+            style="@style/TextViewCreator"
+            app:layout_constraintTop_toTopOf="@+id/progressBar"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBar"/>
     <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="15dp"
+            android:layout_width="432dp"
+            android:layout_height="68dp"
             android:id="@+id/title_workout_start" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="95dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="188dp"
-            android:layout_marginBottom="230dp" app:layout_constraintBottom_toTopOf="@+id/time"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="165dp"/>
+            android:layout_marginTop="60dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="188dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="165dp"
+            style="@style/TextViewCreator" android:textSize="30sp" android:textAlignment="center"
+            app:layout_constraintHorizontal_bias="0.494"/>
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="420dp"
+            android:layout_height="299dp"
+            android:id="@+id/progressBar"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="205dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:progressBackgroundTint="@color/colorAccent"
+            app:layout_constraintHorizontal_bias="0.555" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/title_workout_start" app:layout_constraintVertical_bias="1.0"/>
 </android.support.constraint.ConstraintLayout>

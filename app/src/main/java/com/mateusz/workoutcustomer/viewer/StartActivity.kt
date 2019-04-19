@@ -4,6 +4,7 @@ import android.content.Intent
 import android .support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.widget.ProgressBar
 import android.widget.TextView
 import com.mateusz.workoutcustomer.menu.MainActivity
 import com.mateusz.workoutcustomer.R
@@ -21,16 +22,19 @@ class StartActivity : AppCompatActivity() {
         var workout = MainActivity.workoutViewModel.findWorkoutById(id)
         title.text = workout.title
         var time : TextView = findViewById(R.id.time)
+        var progressBar : ProgressBar = findViewById(R.id.progressBar)
         for (i in 0..((MainActivity.workoutViewModel.allExercise.value?.size?.minus(1)) ?: 0)){
             if(MainActivity.workoutViewModel.allExercise.value?.get(i)?.workoutId == workout.id){
                 workoutExercise.add(MainActivity.workoutViewModel.allExercise.value?.get(i)!!)
             }
         }
         position = 0
-        object : CountDownTimer(2500, 500) {
+        object : CountDownTimer(5000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                time.text = "${millisUntilFinished/500}"
+                time.text = "${millisUntilFinished/1000}"
+                progressBar.max = 5
+                progressBar.progress = ((millisUntilFinished/1000).toInt())
             }
 
             override fun onFinish() {
@@ -46,7 +50,7 @@ class StartActivity : AppCompatActivity() {
                 finish()
             }
         }.start()
-
+        supportActionBar?.hide()
     }
 
     companion object {

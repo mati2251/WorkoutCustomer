@@ -11,7 +11,7 @@
     <string name="workout_title">Workout Title</string>
     <string name="workout_description">Workout Description</string>
     <string name="name_exercise">Name</string>
-    <string name="time">Timegit </string>
+    <string name="time">Time</string>
     <string name="instruction">Instruction</string>
     <string name="create_exercise">Create Exercise</string>
     <string name="will_exercise_be_for_time_or_for_repeat">Will exercise be for time or for repeat?</string>
