@@ -33,6 +33,7 @@ class ViewActivity : AppCompatActivity() {
                 exercise -> exercise?.let { exerciseAdapter.setList(it) }
         })
         recyclerView.adapter = exerciseAdapter
+        supportActionBar?.hide()
     }
 
     fun start(view: View){

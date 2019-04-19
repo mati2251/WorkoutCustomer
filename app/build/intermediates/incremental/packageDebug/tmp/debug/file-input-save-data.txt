@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Apr 19 22:20:55 CEST 2019
+#Fri Apr 19 22:39:23 CEST 2019
 1.base=/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY

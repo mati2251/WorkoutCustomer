@@ -16,10 +16,12 @@
                       android:padding="6dp">
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:textSize="30dp" android:id="@+id/exercise_title"/>
+                      android:textSize="30dp" android:id="@+id/exercise_title"
+                        style="@style/TextViewCreator"/>
             <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/exercise_desctiption"/>
+                    android:layout_height="wrap_content" android:id="@+id/exercise_desctiption"
+                    style="@style/TextViewCreator"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>
