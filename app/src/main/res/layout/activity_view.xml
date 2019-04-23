@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".viewer.ViewActivity">
     <TextView
-            android:text="Workout Description"
+            android:text="@string/workout_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/workout_description_view_activity" app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
             app:layout_constraintTop_toBottomOf="@+id/workout_title_view_activity" android:textAlignment="viewStart"
             android:textSize="24sp"/>
     <TextView
-            android:text="Workout Tiitle"
+            android:text="@string/workout_tiitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/workout_title_view_activity" app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             style="@style/TextViewCreator" android:textAlignment="center" android:textSize="36sp"/>
     <Button
-            android:text="Start"
+            android:text="@string/start"
             android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:id="@+id/start_activity" app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
             android:onClick="start"
             style="@style/ButtonCreator"/>
     <Button
-            android:text="Delete"
+            android:text="@string/delete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button5"

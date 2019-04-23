@@ -28,13 +28,19 @@ class StartActivity : AppCompatActivity() {
                 workoutExercise.add(MainActivity.workoutViewModel.allExercise.value?.get(i)!!)
             }
         }
+
         position = 0
-        object : CountDownTimer(5000, 1000) {
+        progressBar.progress = 0
+        progressBar.max = 5000
+        time.text = 5.toString()
+
+        object : CountDownTimer(5000, 20) {
 
             override fun onTick(millisUntilFinished: Long) {
-                time.text = "${millisUntilFinished/1000}"
-                progressBar.max = 5
-                progressBar.progress = ((millisUntilFinished/1000).toInt())
+                progressBar.progress = progressBar.progress + 20
+                if(progressBar.progress%1000==0){
+                    time.text= (5-(progressBar.progress/1000)).toString()
+                }
             }
 
             override fun onFinish() {
@@ -47,6 +53,7 @@ class StartActivity : AppCompatActivity() {
                     intent = Intent(applicationContext, TimeViewerActivity::class.java)
                     startActivity(intent)
                 }
+                progressBar.progress = progressBar.progress + 20
                 finish()
             }
         }.start()

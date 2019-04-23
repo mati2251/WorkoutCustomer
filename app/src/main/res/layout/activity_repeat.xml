@@ -87,6 +87,7 @@
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toEndOf="@+id/button3"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.976"
+            android:layout_weight="1"
     />
     <Button
             android:text="@string/finish"
@@ -98,5 +99,6 @@
             android:onClick="finishRepeat"
             style="@style/ButtonCreator" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/button" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_weight="1"/>
 </android.support.constraint.ConstraintLayout>

@@ -1470,6 +1470,7 @@ string character_counter_content_description
 string character_counter_pattern
 string create_exercise
 string create_workout
+string delete
 string description
 string exercise_details
 string fab_transformation_scrim_behavior
@@ -1496,12 +1497,15 @@ string pause
 string repeat
 string search_menu_title
 string series
+string start
 string status_bar_notification_info_overflow
 string time
 string title
 string title_activity_menu
+string title_exercise
 string will_exercise_be_for_time_or_for_repeat
 string workout_description
+string workout_tiitle
 string workout_title
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -2084,3 +2088,4 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml circle

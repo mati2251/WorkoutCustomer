@@ -31,6 +31,7 @@ class RepeatViewerActivity : AppCompatActivity() {
         instruction.text = exercise.instruction
         series.text = exercise.series.toString()
         repeat.text = exercise.repeat.toString()
+        supportActionBar?.hide()
     }
 
     fun pause(view: View){
