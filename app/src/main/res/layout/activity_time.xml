@@ -72,32 +72,32 @@
             app:layout_constraintStart_toEndOf="@+id/textView5" android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
             android:background="@null" android:hint="@string/how_long_pause" android:importantForAutofill="no" tools:targetApi="o"/>
-    <Button
-            android:text="@string/next"
-            android:layout_width="198dp"
-            android:layout_height="48dp"
-            android:id="@+id/button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:onClick="addExercise"
-            style="@style/ButtonCreator"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toEndOf="@+id/button3"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.976"
-    />
-    <Button
-            android:text="@string/finish"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:onClick="finish"
-            style="@style/ButtonCreator" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/button" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toEndOf="parent"/>
     <android.support.constraint.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
                                       android:id="@+id/group" app:layout_constraintTop_toTopOf="parent"
                                       app:layout_constraintStart_toStartOf="parent"
                                       app:layout_constraintEnd_toStartOf="parent"
                                       app:layout_constraintBottom_toTopOf="parent"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="404dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+        <Button
+                android:text="@string/finish"
+                android:layout_weight=".5"
+                android:id="@+id/button3"
+                android:onClick="finish"
+                style="@style/ButtonCreator"
+                android:layout_marginRight="8dp"
+        />
+        <Button
+                android:text="@string/next"
+                android:layout_weight=".5"
+                android:id="@+id/button"
+                android:onClick="addExercise"
+                style="@style/ButtonCreator"
+                android:layout_marginLeft="8dp"/>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

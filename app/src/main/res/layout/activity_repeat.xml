@@ -76,29 +76,27 @@
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:background="@null" android:hint="@string/how_many_series" android:importantForAutofill="no"
             tools:targetApi="o"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="404dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
     <Button
             android:text="@string/next"
-            android:layout_width="198dp"
-            android:layout_height="48dp"
-            android:id="@+id/button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/button"
             android:onClick="addExerciseRepeat"
             style="@style/ButtonCreator"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toEndOf="@+id/button3"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.976"
-            android:layout_weight="1"
+            android:layout_weight=".5"
+            android:layout_marginRight="8dp"
     />
     <Button
             android:text="@string/finish"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
+            android:id="@+id/button3"
             android:onClick="finishRepeat"
-            style="@style/ButtonCreator" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/button" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_weight="1"/>
+            style="@style/ButtonCreator"
+            android:layout_weight=".5"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

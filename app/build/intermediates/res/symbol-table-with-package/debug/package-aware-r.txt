@@ -1200,6 +1200,7 @@ id pause_time
 id percent
 id pin
 id progressBar
+id progressBar2
 id progress_circular
 id progress_horizontal
 id radio
@@ -1281,6 +1282,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
 id textView8
 id textView9
@@ -1500,6 +1502,8 @@ string series
 string start
 string status_bar_notification_info_overflow
 string time
+string time_to_end
+string time_to_end_pause
 string title
 string title_activity_menu
 string title_exercise
