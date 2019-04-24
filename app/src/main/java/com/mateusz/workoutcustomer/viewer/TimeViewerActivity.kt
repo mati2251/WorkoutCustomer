@@ -1,12 +1,10 @@
 package com.mateusz.workoutcustomer.viewer
 
-import android.animation.ObjectAnimator
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
-import android.view.animation.DecelerateInterpolator
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
