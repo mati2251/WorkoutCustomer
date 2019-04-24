@@ -46,7 +46,7 @@ class PauseActivity : AppCompatActivity() {
                 finish()
             }
         }.start()
-
+        supportActionBar?.hide()
     }
 
     fun stopPause(view: View){

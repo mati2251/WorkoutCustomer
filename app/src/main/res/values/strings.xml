@@ -29,4 +29,5 @@
     <string name="delete">Delete</string>
     <string name="title_exercise">Title Exercise</string>
     <string name="time_to_end">TIme to end :</string>
+    <string name="time_to_end_pause">Time to end pause:</string>
 </resources>
