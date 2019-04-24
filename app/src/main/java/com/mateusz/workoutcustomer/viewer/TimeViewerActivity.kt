@@ -1,13 +1,17 @@
 package com.mateusz.workoutcustomer.viewer
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import android.view.animation.DecelerateInterpolator
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
+import kotlinx.android.synthetic.main.activity_start.*
+
 
 class TimeViewerActivity : AppCompatActivity() {
 
@@ -32,6 +36,8 @@ class TimeViewerActivity : AppCompatActivity() {
         instruction.text = exercise.instruction
         series.text = exercise.series.toString()
         var time : TextView = findViewById(R.id.time_viewer)
+        progressBar.progress = exercise.time
+        progressBar.max = exercise.time
         object : CountDownTimer((exercise.time*1000).toLong(), 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
@@ -39,6 +45,7 @@ class TimeViewerActivity : AppCompatActivity() {
                 if(close){
                     cancel()
                 }
+                progressBar.progress=progressBar.progress-1
             }
 
             override fun onFinish() {
@@ -48,6 +55,7 @@ class TimeViewerActivity : AppCompatActivity() {
                 finish()
             }
         }.start()
+        supportActionBar?.hide()
     }
 
     fun pause(view: View){
