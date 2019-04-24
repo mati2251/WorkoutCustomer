@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import com.mateusz.workoutcustomer.R
@@ -18,10 +19,14 @@ class PauseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pause)
         var time : TextView = findViewById(R.id.time_pause_view)
+        var progresBar : ProgressBar = findViewById(R.id.progressBar2)
+        progresBar.max = intent.getIntExtra(RepeatViewerActivity.pause, 0)
+        progresBar.progress = intent.getIntExtra(RepeatViewerActivity.pause, 0)
         object : CountDownTimer(intent.getIntExtra(RepeatViewerActivity.pause, 0).toLong()*1000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
                 time.text = "${millisUntilFinished/1000}"
+                progresBar.progress--
                 if(close){
                     cancel()
                 }
