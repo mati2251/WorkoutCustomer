@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.support.v7.app.AlertDialog
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -75,7 +76,15 @@ class PauseActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
-        close = true
+        AlertDialog.Builder(this)
+            .setTitle("Cancel Workout")
+            .setMessage("Are you sure you want to cancel workout?")
+            .setPositiveButton("OK") { dialog, which ->
+                super.onBackPressed()
+                StartActivity.series = 0
+                close = true
+            }
+            .setNegativeButton("CANCLE", null)
+            .show()
     }
 }

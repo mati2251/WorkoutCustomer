@@ -91,6 +91,7 @@
                 android:onClick="finish"
                 style="@style/ButtonCreator"
                 android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
         />
         <Button
                 android:text="@string/next"
@@ -98,6 +99,7 @@
                 android:id="@+id/button"
                 android:onClick="addExercise"
                 style="@style/ButtonCreator"
-                android:layout_marginLeft="8dp"/>
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

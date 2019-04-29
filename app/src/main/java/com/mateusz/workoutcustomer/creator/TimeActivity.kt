@@ -4,6 +4,7 @@ import android.arch.lifecycle.Observer
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
@@ -77,5 +78,16 @@ class TimeActivity : AppCompatActivity() {
                 pause.text.toString().toInt(),
                 "s"
             ))
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Create Exercise")
+            .setMessage("Are you sure you want to not save this exercise?")
+            .setPositiveButton("YES") { dialog, which ->
+                super.onBackPressed()
+            }
+            .setNegativeButton("NO", null)
+            .show()
     }
 }

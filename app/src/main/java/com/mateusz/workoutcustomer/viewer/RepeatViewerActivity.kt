@@ -3,6 +3,7 @@ package com.mateusz.workoutcustomer.viewer
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.view.View
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
@@ -45,5 +46,17 @@ class RepeatViewerActivity : AppCompatActivity() {
 
     companion object {
         var pause = "com.mateusz.workoutcustomer.pause"
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Cancel Workout")
+            .setMessage("Are you sure you want to cancel workout?")
+            .setPositiveButton("OK") { dialog, which ->
+                super.onBackPressed()
+                StartActivity.series = 0
+            }
+            .setNegativeButton("CANCLE", null)
+            .show()
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android .support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.support.v7.app.AlertDialog
 import android.widget.ProgressBar
 import android.widget.TextView
 import com.mateusz.workoutcustomer.menu.MainActivity
@@ -12,6 +13,8 @@ import com.mateusz.workoutcustomer.database.Exercise
 
 
 class StartActivity : AppCompatActivity() {
+
+    var close : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +40,14 @@ class StartActivity : AppCompatActivity() {
         object : CountDownTimer(5000, 20) {
 
             override fun onTick(millisUntilFinished: Long) {
-                progressBar.progress = progressBar.progress + 20
-                if(progressBar.progress%1000==0){
-                    time.text= (5-(progressBar.progress/1000)).toString()
+                if(!close) {
+                    progressBar.progress = progressBar.progress + 20
+                    if (progressBar.progress % 1000 == 0) {
+                        time.text = (5 - (progressBar.progress / 1000)).toString()
+                    }
+                }
+                else{
+                    cancel()
                 }
             }
 
@@ -58,6 +66,19 @@ class StartActivity : AppCompatActivity() {
             }
         }.start()
         supportActionBar?.hide()
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Cancel Workout")
+            .setMessage("Are you sure you want to cancel workout?")
+            .setPositiveButton("OK") { dialog, which ->
+                super.onBackPressed()
+                StartActivity.series = 0
+                close = true
+            }
+            .setNegativeButton("CANCLE", null)
+            .show()
     }
 
     companion object {
