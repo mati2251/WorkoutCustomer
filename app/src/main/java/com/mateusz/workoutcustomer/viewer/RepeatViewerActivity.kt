@@ -17,6 +17,8 @@ class RepeatViewerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_repeat_viewer)
         exercise = StartActivity.workoutExercise[StartActivity.position]
         StartActivity.series++
+        var currentSeries : TextView = findViewById(R.id.currentSeries2)
+        currentSeries.text = "Current series: ${StartActivity.series}"
         if(StartActivity.series==exercise.series) {
             StartActivity.position++
             StartActivity.series=0

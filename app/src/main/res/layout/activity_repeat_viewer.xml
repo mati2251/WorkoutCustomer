@@ -99,4 +99,13 @@
             android:layout_marginStart="8dp"
             android:onClick="pause"
             style="@style/ButtonCreator"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentSeries2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="77dp" app:layout_constraintBottom_toTopOf="@+id/button6"
+            style="@style/TextViewCreator" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/repeat_viewer" app:layout_constraintVertical_bias="0.23000002"/>
 </android.support.constraint.ConstraintLayout>

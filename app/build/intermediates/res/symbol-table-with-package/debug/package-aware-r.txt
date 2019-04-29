@@ -1101,6 +1101,8 @@ id content
 id contentPanel
 id coordinator
 id creator_text_view
+id currentSeries
+id currentSeries2
 id custom
 id customPanel
 id decor_content_parent

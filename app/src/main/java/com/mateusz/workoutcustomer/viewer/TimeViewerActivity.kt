@@ -21,6 +21,8 @@ class TimeViewerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_time_viewer)
         exercise = StartActivity.workoutExercise[StartActivity.position]
         StartActivity.series++
+        var currentSeries : TextView = findViewById(R.id.currentSeries)
+        currentSeries.text = "Current series: ${StartActivity.series}"
         if(StartActivity.series==exercise.series) {
             StartActivity.position++
             StartActivity.series=0
