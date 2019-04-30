@@ -1080,6 +1080,7 @@ id beginning
 id blocking
 id bottom
 id button
+id button2
 id button3
 id button5
 id button6
@@ -1498,6 +1499,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string pause
+string plus
 string repeat
 string search_menu_title
 string series

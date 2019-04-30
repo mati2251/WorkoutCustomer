@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.creator.ExerciseActivity
+import com.mateusz.workoutcustomer.creator.SetTitleActivity
 import com.mateusz.workoutcustomer.database.Workout
 import com.mateusz.workoutcustomer.database.WorkoutAdapter
 import com.mateusz.workoutcustomer.menu.MainActivity
@@ -53,6 +55,12 @@ class ViewActivity : AppCompatActivity() {
     fun deleteWorkout(view: View){
         MainActivity.workoutViewModel.deleteById(id)
         finish()
+    }
+
+    fun newExercise(view : View){
+        var nextIntent = Intent(this, ExerciseActivity::class.java)
+        nextIntent.putExtra(SetTitleActivity.ID, id)
+        startActivity(nextIntent)
     }
 
     companion object {

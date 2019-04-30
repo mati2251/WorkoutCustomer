@@ -24,10 +24,11 @@
     <string name="how_many_series">How many series</string>
     <string name="repeat">Repeat</string>
     <string name="how_many_repeat">how many repeat</string>
-    <string name="workout_tiitle">Workout Tiitle</string>
+    <string name="workout_tiitle">Workout Title</string>
     <string name="start">Start</string>
     <string name="delete">Delete</string>
     <string name="title_exercise">Title Exercise</string>
     <string name="time_to_end">TIme to end :</string>
     <string name="time_to_end_pause">Time to end pause:</string>
+    <string name="plus">+</string>
 </resources>
