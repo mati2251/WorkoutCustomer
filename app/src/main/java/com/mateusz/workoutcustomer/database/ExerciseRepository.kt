@@ -22,4 +22,10 @@ class ExerciseRepository (private val exerciseDao: ExerciseDao) {
         exerciseDao.deleteAll()
     }
 
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun deleteByWorkoutId(id: Int){
+        exerciseDao.deleteByWorkoutId(id)
+    }
+
 }

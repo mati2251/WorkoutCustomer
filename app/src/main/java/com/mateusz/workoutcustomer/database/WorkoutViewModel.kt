@@ -66,6 +66,11 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
         repositoryExercise.deleteAll()
     }
 
+    fun deleteById(id : Int) = scope.launch(Dispatchers.IO){
+        repository.deleteById(id)
+        repositoryExercise.deleteByWorkoutId(id)
+    }
+
     fun findWorkoutById(index : Int): Workout {
         allWorkout.value?.forEach { workout ->
             if(workout.id==index)

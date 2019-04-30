@@ -27,4 +27,9 @@ class WorkoutRepository (private val workoutDao: WorkoutDao) {
         workoutDao.deleteAll()
     }
 
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun deleteById(id : Int) {
+        workoutDao.removeById(id)
+    }
 }

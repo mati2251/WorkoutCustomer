@@ -14,6 +14,9 @@ interface ExerciseDao{
     @Query("DELETE FROM exercise_table")
     fun deleteAll()
 
+    @Query("DELETE FROM exercise_table WHERE workoutId LIKE :index")
+    fun deleteByWorkoutId(index : Int)
+
     @Query("SELECT * from exercise_table ORDER BY _id, title, description, instruction, series, timeCheck, time, timeFormat, repeat, pause, pauseFormat ASC")
     fun getAllExercise() : LiveData<List<Exercise>>
 }

@@ -10,7 +10,6 @@ import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Workout
 import com.mateusz.workoutcustomer.menu.MainActivity
-import com.mateusz.workoutcustomer.viewer.StartActivity
 
 class SetTitleActivity : AppCompatActivity() {
 

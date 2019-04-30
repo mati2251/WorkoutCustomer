@@ -44,7 +44,8 @@
                 android:id="@+id/button5"
                 style="@style/ButtonCreator"
                 android:layout_weight=".5"
-                android:layout_marginStart="8dp"/>
+                android:layout_marginStart="8dp"
+                android:onClick="deleteWorkout"/>
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
             android:layout_width="399dp"
