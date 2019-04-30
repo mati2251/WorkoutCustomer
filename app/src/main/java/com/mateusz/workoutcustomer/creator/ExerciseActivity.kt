@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog
 import android.view.View
 import android.widget.EditText
 import android.widget.RadioGroup
+import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 
 class ExerciseActivity : AppCompatActivity() {
@@ -27,6 +28,8 @@ class ExerciseActivity : AppCompatActivity() {
     }
 
     fun nextExercise(view : View){
+        if(!(title.text.toString()==""||instruction.text.toString()==""||description.text.toString()==""))
+        {
         var nextIntent : Intent
         if (radioGroup.checkedRadioButtonId == R.id.radio_button_repeat){
             nextIntent = Intent(this, RepeatActivity::class.java)
@@ -40,6 +43,11 @@ class ExerciseActivity : AppCompatActivity() {
         nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
         startActivity(nextIntent)
         finish()
+        }
+        else{
+            val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     override fun onBackPressed() {

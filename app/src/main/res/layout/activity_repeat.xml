@@ -90,8 +90,7 @@
                 style="@style/ButtonCreator"
                 android:layout_weight=".5"
                 android:layout_marginRight="8dp"
-                android:layout_marginLeft="8dp"
-        />
+                android:layout_marginLeft="8dp"/>
         <Button
                 android:text="@string/finish"
                 android:id="@+id/button3"

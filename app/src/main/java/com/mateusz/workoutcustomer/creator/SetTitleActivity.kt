@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Workout
 import com.mateusz.workoutcustomer.menu.MainActivity
@@ -26,13 +27,19 @@ class SetTitleActivity : AppCompatActivity() {
     }
 
     fun next(view: View){
-        var id = MainActivity.workoutViewModel.allWorkout.value!!.size+1
-        var workout = Workout(id ,titleEditText.text.toString(),descriptionEditText.text.toString())
-        MainActivity.workoutViewModel.insert(workout)
-        var nextIntent = Intent(this, ExerciseActivity::class.java)
-        nextIntent.putExtra(SetTitleActivity.ID, id)
-        startActivity(nextIntent)
-        finish()
+        if(!(titleEditText.text.toString()==""|| descriptionEditText.text.toString()=="")){
+            var id = MainActivity.workoutViewModel.allWorkout.value!!.size + 1
+            var workout = Workout(id, titleEditText.text.toString(), descriptionEditText.text.toString())
+            MainActivity.workoutViewModel.insert(workout)
+            var nextIntent = Intent(this, ExerciseActivity::class.java)
+            nextIntent.putExtra(SetTitleActivity.ID, id)
+            startActivity(nextIntent)
+            finish()
+        }
+        else{
+            val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     companion object {
