@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Workout
 import com.mateusz.workoutcustomer.database.WorkoutAdapter
@@ -38,9 +39,15 @@ class ViewActivity : AppCompatActivity() {
     }
 
     fun start(view: View){
-        var startInetnt = Intent(this, StartActivity::class.java)
-        startInetnt.putExtra(WORKOUTID, workoutId)
-        startActivity(startInetnt)
+        if(exerciseAdapter.mExercise.isNotEmpty()) {
+            var startInetnt = Intent(this, StartActivity::class.java)
+            startInetnt.putExtra(WORKOUTID, workoutId)
+            startActivity(startInetnt)
+        }
+        else{
+            val toast = Toast.makeText(applicationContext, "You can't start workout without exercise", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     fun deleteWorkout(view: View){
