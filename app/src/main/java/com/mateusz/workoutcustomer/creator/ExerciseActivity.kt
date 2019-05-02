@@ -28,7 +28,7 @@ class ExerciseActivity : AppCompatActivity() {
     }
 
     fun nextExercise(view : View){
-        if(!(title.text.toString()==""||instruction.text.toString()==""||description.text.toString()==""))
+        if(!(title.text.toString()==""))
         {
         var nextIntent : Intent
         if (radioGroup.checkedRadioButtonId == R.id.radio_button_repeat){

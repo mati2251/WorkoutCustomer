@@ -73,9 +73,18 @@
             android:id="@+id/pause_repeat"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
             app:layout_constraintStart_toEndOf="@+id/textView5" android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:background="@null" android:hint="@string/how_many_series" android:importantForAutofill="no"
-            tools:targetApi="o"/>
+            tools:targetApi="o"
+            app:layout_constraintEnd_toStartOf="@+id/pauseMenuRepeat"/>
+    <Spinner
+            android:id="@+id/pauseMenuRepeat"
+            android:layout_width="125dp"
+            android:layout_height="22dp"
+            android:spinnerMode="dropdown"
+            style="@style/TextViewCreator"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/pause_repeat"
+            app:layout_constraintBottom_toBottomOf="@+id/pause_repeat"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="404dp"

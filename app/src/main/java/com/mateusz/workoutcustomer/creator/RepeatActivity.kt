@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
@@ -18,6 +20,8 @@ class RepeatActivity : AppCompatActivity() {
     lateinit var series : EditText
     lateinit var repeat : EditText
     lateinit var pause : EditText
+    lateinit var spinner: Spinner
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +29,15 @@ class RepeatActivity : AppCompatActivity() {
         series = findViewById(R.id.series_repeat)
         repeat = findViewById(R.id.repeat)
         pause = findViewById(R.id.pause_repeat)
+        spinner = findViewById(R.id.pauseMenuRepeat)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.time_formats,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.adapter = adapter
+        }
         supportActionBar?.hide()
     }
 
@@ -65,10 +78,10 @@ class RepeatActivity : AppCompatActivity() {
                 series.text.toString().toInt(),
                 false,
                 0,
-                "s",
+                "",
                 repeat.text.toString().toInt(),
                 pause.text.toString().toInt(),
-                "s"
+                spinner.selectedItem.toString()
             ))
     }
 

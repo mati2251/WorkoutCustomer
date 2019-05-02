@@ -29,6 +29,7 @@ array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
+array time_formats
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1198,6 +1199,8 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id pauseMenu
+id pauseMenuRepeat
 id pause_repeat
 id pause_time
 id percent
@@ -1294,6 +1297,7 @@ id textinput_counter
 id textinput_error
 id textinput_helper_text
 id time
+id timeMenu
 id time_pause_view
 id time_viewer
 id title

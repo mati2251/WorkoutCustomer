@@ -40,12 +40,21 @@ class TimeViewerActivity : AppCompatActivity() {
         instruction.text = exercise.instruction
         series.text = exercise.series.toString()
         var time : TextView = findViewById(R.id.time_viewer)
-        progressBar.progress = exercise.time
-        progressBar.max = exercise.time
-        object : CountDownTimer((exercise.time*1000).toLong(), 1000) {
+        var timeSeconds : Int = exercise.time
+        if(exercise.timeFormat != "seconds"){
+            timeSeconds *= 60
+        }
+        progressBar.max = timeSeconds
+        progressBar.progress = timeSeconds
+        object : CountDownTimer((timeSeconds*1000).toLong(), 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                time.text = "${millisUntilFinished/1000}"
+                if(exercise.timeFormat=="seconds") {
+                    time.text = "${millisUntilFinished / 1000} sec"
+                }
+                else{
+                    time.text = "${(millisUntilFinished / 60000).toInt()} min ${millisUntilFinished/1000%60} sec"
+                }
                 if(close){
                     cancel()
                 }
@@ -64,7 +73,8 @@ class TimeViewerActivity : AppCompatActivity() {
 
     fun pause(view: View){
         var intent : Intent = Intent(this, PauseActivity::class.java)
-        intent.putExtra(TimeViewerActivity.pause, exercise.pause)
+        intent.putExtra(pause, exercise.pause)
+        intent.putExtra(pauseFormat, exercise.pauseFormat)
         startActivity(intent)
         close = true
         finish()
@@ -85,5 +95,6 @@ class TimeViewerActivity : AppCompatActivity() {
 
     companion object {
         var pause = "com.mateusz.workoutcustomer.pause"
+        var pauseFormat = "com.mateusz.workoutcustomer.pauseFormat"
     }
 }

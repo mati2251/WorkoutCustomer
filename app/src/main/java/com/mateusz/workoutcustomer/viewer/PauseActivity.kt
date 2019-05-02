@@ -21,16 +21,26 @@ class PauseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pause)
         var time : TextView = findViewById(R.id.time_pause_view)
         var progresBar : ProgressBar = findViewById(R.id.progressBar2)
-        progresBar.max = intent.getIntExtra(RepeatViewerActivity.pause, 0)
-        progresBar.progress = intent.getIntExtra(RepeatViewerActivity.pause, 0)
-        object : CountDownTimer(intent.getIntExtra(RepeatViewerActivity.pause, 0).toLong()*1000, 1000) {
+        var timeSeconds = intent.getIntExtra(TimeViewerActivity.pause, 0)
+        var timeFormat = intent.getStringExtra(TimeViewerActivity.pauseFormat)
+        if(timeFormat != "seconds"){
+            timeSeconds *= 60
+        }
+        progresBar.max = timeSeconds
+        progresBar.progress = timeSeconds
+        object : CountDownTimer(timeSeconds*1000.toLong(), 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                time.text = "${millisUntilFinished/1000}"
-                progresBar.progress--
+                if(timeFormat=="seconds") {
+                    time.text = "${millisUntilFinished / 1000} sec"
+                }
+                else{
+                    time.text = "${(millisUntilFinished / 60000).toInt()} min ${millisUntilFinished/1000%60} sec"
+                }
                 if(close){
                     cancel()
                 }
+                progresBar.progress=progresBar.progress-1
             }
 
             override fun onFinish() {

@@ -20,7 +20,7 @@
     <string name="finish">Finish</string>
     <string name="exercise_details">Exercise Details</string>
     <string name="how_long_pause">How long pause</string>
-    <string name="how_many_time">How many time</string>
+    <string name="how_many_time">How long time</string>
     <string name="how_many_series">How many series</string>
     <string name="repeat">Repeat</string>
     <string name="how_many_repeat">how many repeat</string>
@@ -31,4 +31,8 @@
     <string name="time_to_end">TIme to end :</string>
     <string name="time_to_end_pause">Time to end pause:</string>
     <string name="plus">+</string>
+    <string-array name="time_formats">
+        <item>seconds</item>
+        <item>minutes</item>
+    </string-array>
 </resources>

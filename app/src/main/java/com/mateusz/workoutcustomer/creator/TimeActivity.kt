@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
@@ -18,6 +20,8 @@ class TimeActivity : AppCompatActivity() {
     lateinit var series : EditText
     lateinit var time : EditText
     lateinit var pause : EditText
+    lateinit var spinner: Spinner
+    lateinit var spinnerPause: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +29,24 @@ class TimeActivity : AppCompatActivity() {
         series = findViewById(R.id.series_time)
         time = findViewById(R.id.time)
         pause = findViewById(R.id.pause_time)
+        spinner = findViewById(R.id.timeMenu)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.time_formats,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.adapter = adapter
+        }
+        spinnerPause = findViewById(R.id.pauseMenu)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.time_formats,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinnerPause.adapter = adapter
+        }
         supportActionBar?.hide()
     }
 
@@ -62,7 +84,6 @@ class TimeActivity : AppCompatActivity() {
         MainActivity.workoutViewModel.allExercise.observe(this, Observer {
                 words -> words?.let { id = it.size }
         })
-        var l : ArrayList<Exercise>
         MainActivity.workoutViewModel.insert(
             Exercise(
                 id
@@ -73,10 +94,10 @@ class TimeActivity : AppCompatActivity() {
                 series.text.toString().toInt(),
                 true,
                 time.text.toString().toInt(),
-                "s",
+                spinner.selectedItem.toString(),
                 0,
                 pause.text.toString().toInt(),
-                "s"
+                spinnerPause.selectedItem.toString()
             ))
     }
 

@@ -39,13 +39,10 @@ class RepeatViewerActivity : AppCompatActivity() {
 
     fun pause(view: View){
         var intent : Intent = Intent(this, PauseActivity::class.java)
-        intent.putExtra(pause, exercise.pause)
+        intent.putExtra(TimeViewerActivity.pause, exercise.pause)
+        intent.putExtra(TimeViewerActivity.pauseFormat, exercise.pauseFormat)
         startActivity(intent)
         finish()
-    }
-
-    companion object {
-        var pause = "com.mateusz.workoutcustomer.pause"
     }
 
     override fun onBackPressed() {
