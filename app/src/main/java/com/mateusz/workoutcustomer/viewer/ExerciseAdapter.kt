@@ -2,6 +2,7 @@
 package com.mateusz.workoutcustomer.viewer
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -10,11 +11,13 @@ import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.creator.SetTitleActivity
 import com.mateusz.workoutcustomer.database.Exercise
+import com.mateusz.workoutcustomer.database.WorkoutAdapter
 
 class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
 
     private var mInflater = LayoutInflater.from(context)
     lateinit var mExercise: List<Exercise>
+    var id : Int = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ExerciseViewHolder {
         var itemView = mInflater.inflate(R.layout.exercise_item, parent, false)
@@ -41,6 +44,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
             else -> currentString = "min"
         }
         holder.mExerciseDetails.text = "${holder.mExerciseDetails.text} Pause: ${mExercise[position].pause} $currentString"
+        holder.id = mExercise[position].id
     }
 
     override fun getItemCount(): Int {
@@ -52,11 +56,21 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         }
     }
 
-    inner class ExerciseViewHolder(viewItem: View, exerciseAdapter: ExerciseAdapter) : RecyclerView.ViewHolder(viewItem) {
+    inner class ExerciseViewHolder(viewItem: View, exerciseAdapter: ExerciseAdapter) : RecyclerView.ViewHolder(viewItem), View.OnClickListener {
         var exerciseAdapter = exerciseAdapter
         var mExerciseTitle : TextView = viewItem.findViewById(R.id.exercise_title)
         var mExerciseDescription : TextView = viewItem.findViewById(R.id.exercise_desctiption)
         var mExerciseDetails : TextView = viewItem.findViewById(R.id.detailsExercise)
+        var id : Int = this@ExerciseAdapter.id
+        init{
+            viewItem.setOnClickListener(this)
+        }
+
+        override fun onClick(view: View){
+            var intentView : Intent = Intent(itemView.context , ExerciseViewActivity::class.java)
+            intentView.putExtra(ID, id)
+            itemView.context.startActivity(intentView)
+        }
     }
 
     fun setList(list: List<Exercise>){
@@ -69,6 +83,10 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         }
         mExercise = tmp
         this.notifyDataSetChanged()
+    }
+
+    companion object{
+        var ID = "com.mateusz.workoutcustomer.ExerciseId"
     }
 
 }

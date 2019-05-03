@@ -13,7 +13,6 @@ import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 import com.mateusz.workoutcustomer.menu.MainActivity
-import com.mateusz.workoutcustomer.menu.MenuActivity
 
 class TimeActivity : AppCompatActivity() {
 
@@ -81,8 +80,6 @@ class TimeActivity : AppCompatActivity() {
         }
         else {
             add()
-            var finishIntent: Intent = Intent(this, MenuActivity::class.java)
-            startActivity(finishIntent)
             finish()
         }
     }

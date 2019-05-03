@@ -1379,6 +1379,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_exercise
+layout activity_exercise_view
 layout activity_menu
 layout activity_pause
 layout activity_repeat

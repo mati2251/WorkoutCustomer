@@ -54,7 +54,7 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
 
         override fun onClick(view: View){
             var intentView : Intent = Intent(itemView.context , ViewActivity::class.java)
-            intentView.putExtra(WorkoutAdapter.ID, id)
+            intentView.putExtra(ID, id)
             itemView.context.startActivity(intentView)
         }
 

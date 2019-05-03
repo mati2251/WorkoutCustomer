@@ -64,8 +64,6 @@ class RepeatActivity : AppCompatActivity() {
         }
         else {
             add()
-            var finishIntent: Intent = Intent(this, MenuActivity::class.java)
-            startActivity(finishIntent)
             finish()
         }
     }
