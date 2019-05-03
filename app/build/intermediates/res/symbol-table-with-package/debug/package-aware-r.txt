@@ -1118,6 +1118,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id desription_edit_text_set_activity
+id detailsExercise
 id dimensions
 id direct
 id disableHome

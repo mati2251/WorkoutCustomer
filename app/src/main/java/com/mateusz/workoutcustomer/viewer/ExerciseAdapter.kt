@@ -26,6 +26,21 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         holder.mExerciseTitle.text = currentString
         currentString = mExercise[position].description
         holder.mExerciseDescription.text = currentString
+        if(mExercise[position].timeCheck) {
+            when(mExercise[position].timeFormat){
+                "seconds" -> currentString = "sec"
+                else -> currentString = "min"
+            }
+            holder.mExerciseDetails.text = "Series: ${mExercise[position].series} Time: ${mExercise[position].time} $currentString"
+        }
+        else{
+            holder.mExerciseDetails.text = "Series: ${mExercise[position].series} Repeat: ${mExercise[position].repeat}"
+        }
+        when(mExercise[position].timeFormat){
+            "seconds" -> currentString = "sec"
+            else -> currentString = "min"
+        }
+        holder.mExerciseDetails.text = "${holder.mExerciseDetails.text} Pause: ${mExercise[position].pause} $currentString"
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +56,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         var exerciseAdapter = exerciseAdapter
         var mExerciseTitle : TextView = viewItem.findViewById(R.id.exercise_title)
         var mExerciseDescription : TextView = viewItem.findViewById(R.id.exercise_desctiption)
+        var mExerciseDetails : TextView = viewItem.findViewById(R.id.detailsExercise)
     }
 
     fun setList(list: List<Exercise>){
