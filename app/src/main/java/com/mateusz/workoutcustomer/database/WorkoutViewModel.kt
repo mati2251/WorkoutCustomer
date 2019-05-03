@@ -78,4 +78,12 @@ open class WorkoutViewModel (application: Application) : AndroidViewModel(applic
         }
         return Workout(0, "Error", "Error")
     }
+
+    fun findExerciseById(index : Int): Exercise {
+        allExercise.value?.forEach { exercise ->
+            if(exercise.id==index)
+                return exercise
+        }
+        return Exercise(0, 0, "Error", "Error","Error",0, true,0,"Error", 0, 0,"Error")
+    }
 }
