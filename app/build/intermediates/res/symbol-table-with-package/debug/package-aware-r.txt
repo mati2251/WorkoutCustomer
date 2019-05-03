@@ -1434,6 +1434,7 @@ menu navigation
 mipmap ic_llogo_layer
 mipmap ic_logo
 mipmap ic_logo_round
+raw bell
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

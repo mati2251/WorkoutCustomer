@@ -1,6 +1,7 @@
 package com.mateusz.workoutcustomer.viewer
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -59,6 +60,8 @@ class PauseActivity : AppCompatActivity() {
                     intent = Intent(applicationContext, TimeViewerActivity::class.java)
                     startActivity(intent)
                 }
+                var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.bell)
+                mediaPlayer?.start()
                 finish()
             }
         }.start()

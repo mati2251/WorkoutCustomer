@@ -147,23 +147,23 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int status_bar_notification_info_overflow = 0x7f10004b;
+        public static final int status_bar_notification_info_overflow = 0x7f11004b;
     }
     public static final class style {
         private style() {}
 
-        public static final int TextAppearance_Compat_Notification = 0x7f110116;
-        public static final int TextAppearance_Compat_Notification_Info = 0x7f110117;
-        public static final int TextAppearance_Compat_Notification_Info_Media = 0x7f110118;
-        public static final int TextAppearance_Compat_Notification_Line2 = 0x7f110119;
-        public static final int TextAppearance_Compat_Notification_Line2_Media = 0x7f11011a;
-        public static final int TextAppearance_Compat_Notification_Media = 0x7f11011b;
-        public static final int TextAppearance_Compat_Notification_Time = 0x7f11011c;
-        public static final int TextAppearance_Compat_Notification_Time_Media = 0x7f11011d;
-        public static final int TextAppearance_Compat_Notification_Title = 0x7f11011e;
-        public static final int TextAppearance_Compat_Notification_Title_Media = 0x7f11011f;
-        public static final int Widget_Compat_NotificationActionContainer = 0x7f1101c6;
-        public static final int Widget_Compat_NotificationActionText = 0x7f1101c7;
+        public static final int TextAppearance_Compat_Notification = 0x7f120116;
+        public static final int TextAppearance_Compat_Notification_Info = 0x7f120117;
+        public static final int TextAppearance_Compat_Notification_Info_Media = 0x7f120118;
+        public static final int TextAppearance_Compat_Notification_Line2 = 0x7f120119;
+        public static final int TextAppearance_Compat_Notification_Line2_Media = 0x7f12011a;
+        public static final int TextAppearance_Compat_Notification_Media = 0x7f12011b;
+        public static final int TextAppearance_Compat_Notification_Time = 0x7f12011c;
+        public static final int TextAppearance_Compat_Notification_Time_Media = 0x7f12011d;
+        public static final int TextAppearance_Compat_Notification_Title = 0x7f12011e;
+        public static final int TextAppearance_Compat_Notification_Title_Media = 0x7f12011f;
+        public static final int Widget_Compat_NotificationActionContainer = 0x7f1201c6;
+        public static final int Widget_Compat_NotificationActionText = 0x7f1201c7;
     }
     public static final class styleable {
         private styleable() {}
