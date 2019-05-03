@@ -56,6 +56,14 @@ class TimeActivity : AppCompatActivity() {
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
             toast.show()
         }
+        else if(series.text.toString().toInt() > 99 ||
+            (time.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds" ) ||
+            (time.text.toString().toInt() > 99 && spinner.selectedItem == "minutes" ) ||
+            (pause.text.toString().toInt() > 6000 && spinnerPause.selectedItem == "seconds") ||
+            (pause.text.toString().toInt() > 99 && spinnerPause.selectedItem == "minutes" )){
+            val toast = Toast.makeText(applicationContext, "Insert smaller data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
         else {
             add()
             var nextIntent: Intent = Intent(this, ExerciseActivity::class.java)

@@ -55,6 +55,13 @@ class RepeatActivity : AppCompatActivity() {
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
             toast.show()
         }
+        else if(series.text.toString().toInt() > 99 ||
+            repeat.text.toString().toInt() > 10000 ||
+            (pause.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds") ||
+            (pause.text.toString().toInt() > 99 && spinner.selectedItem == "minutes" )){
+            val toast = Toast.makeText(applicationContext, "Insert smaller data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
         else {
             add()
             var finishIntent: Intent = Intent(this, MenuActivity::class.java)

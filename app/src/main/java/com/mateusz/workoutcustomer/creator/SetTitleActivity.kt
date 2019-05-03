@@ -26,18 +26,22 @@ class SetTitleActivity : AppCompatActivity() {
     }
 
     fun next(view: View){
-        if(!(titleEditText.text.toString()==""|| descriptionEditText.text.toString()=="")){
+        if(titleEditText.text.toString()==""|| descriptionEditText.text.toString()==""){
+            val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        else if(titleEditText.text.toString().length>30 || descriptionEditText.text.toString().length>50){
+            val toast = Toast.makeText(applicationContext, "Insert shorter description or title please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        else{
             var id = MainActivity.workoutViewModel.allWorkout.value!!.size + 1
             var workout = Workout(id, titleEditText.text.toString(), descriptionEditText.text.toString())
             MainActivity.workoutViewModel.insert(workout)
             var nextIntent = Intent(this, ExerciseActivity::class.java)
-            nextIntent.putExtra(SetTitleActivity.ID, id)
+            nextIntent.putExtra(ID, id)
             startActivity(nextIntent)
             finish()
-        }
-        else{
-            val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
-            toast.show()
         }
     }
 

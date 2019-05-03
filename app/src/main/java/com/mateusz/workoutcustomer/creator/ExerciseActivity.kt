@@ -44,6 +44,10 @@ class ExerciseActivity : AppCompatActivity() {
         startActivity(nextIntent)
         finish()
         }
+        else if(title.text.toString().length > 30 || description.text.toString().length > 50){
+            val toast = Toast.makeText(applicationContext, "Insert shorter description or title please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
         else{
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
             toast.show()
