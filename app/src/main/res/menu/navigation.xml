@@ -4,20 +4,16 @@
     <item
             android:id="@+id/navigation_home"
             android:icon="@drawable/logo"
-            android:title="Workout"/>
+            android:title="@string/workout"/>
 
     <item
             android:id="@+id/navigation_history"
             android:icon="@drawable/ic_history"
-            android:title="History"/>
+            android:title="@string/history"/>
 
-    <item
-            android:id="@+id/navigation_notifications"
-            android:icon="@drawable/ic_notifications"
-            android:title="Notifications"/>
     <item
             android:id="@+id/navigation_settings"
             android:icon="@drawable/ic_settings"
-            android:title="Settings"/>
+            android:title="@string/settings"/>
 
 </menu>

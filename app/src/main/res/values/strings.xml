@@ -31,6 +31,15 @@
     <string name="time_to_end">TIme to end :</string>
     <string name="time_to_end_pause">Time to end pause:</string>
     <string name="plus">+</string>
+    <string name="history">History</string>
+    <string name="workout">Workout</string>
+    <string name="settings">Settings</string>
+    <string name="description2">Description :</string>
+    <string name="instruction2">Instruction :</string>
+    <string name="series2">Series :</string>
+    <string name="delete_exercise">Delete Exercise</string>
+    <string name="pause2">Pause :</string>
+    <string name="time2">Time :</string>
     <string-array name="time_formats">
         <item>seconds</item>
         <item>minutes</item>

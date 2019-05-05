@@ -38,10 +38,6 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
                 fragment = CalendarFragment()
                 fab.hide()
             }
-            R.id.navigation_notifications -> {
-                fragment = NotifyFragment()
-                fab.hide()
-            }
             R.id.navigation_settings ->{
                 fragment = SettingsFragment()
                 MainActivity.workoutViewModel.deleteAll()
