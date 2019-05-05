@@ -108,5 +108,6 @@
             app:layout_constraintHorizontal_bias="1.0"
             style="@style/ButtonCreator"
             android:padding="5dp"
+            android:onClick="deleteExercise"
     />
 </android.support.constraint.ConstraintLayout>

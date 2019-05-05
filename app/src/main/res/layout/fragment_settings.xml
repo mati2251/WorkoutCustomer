@@ -1,12 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
                 android:layout_height="match_parent">
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Settings"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:text="@string/about_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0" android:textSize="24sp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="@string/my_name_is_mateusz_i_am_student_who_in_free_time_learn_programming_i_hope_you_like_my_app_if_so_you_can_give_positive_rating_and_feedback_i_am_open_to_change_in_my_app"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView22" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView20"
+                android:textSize="18sp"/>
+        <TextView
+                android:text="@string/license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" app:layout_constraintHorizontal_bias="0.0"
+                android:textSize="24sp"/>
+        <TextView
+                android:text="@string/gnu_general_public_license_v3_0_nmore_information_https_github_com_mati2251_workoutcustomer_blob_master_license"
+                android:layout_width="0dp"
+                android:layout_height="86dp"
+                android:id="@+id/textView24" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp" android:textSize="18sp"
+                android:autoLink="web"/>
+        <TextView
+                android:text="@string/source_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView26" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0" android:textSize="24sp"/>
+        <TextView
+                android:text="@string/https_github_com_mati2251_workoutcustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView27" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp" android:textSize="18sp"
+                android:autoLink="web"/>
+    </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

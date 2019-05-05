@@ -22,7 +22,7 @@
         <item name="android:textColor">#575a5e</item>
     </style>
 
-    <style name="ButtonCreator">
+    <style name="ButtonCreator" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/colorPrimary</item>

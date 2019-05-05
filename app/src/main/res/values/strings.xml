@@ -40,6 +40,19 @@
     <string name="delete_exercise">Delete Exercise</string>
     <string name="pause2">Pause :</string>
     <string name="time2">Time :</string>
+    <string name="coming_soon">Coming Soon!</string>
+    <string name="about_me">About Me:</string>
+    <string name="my_name_is_mateusz_i_am_student_who_in_free_time_learn_programming_i_hope_you_like_my_app_if_so_you_can_give_positive_rating_and_feedback_i_am_open_to_change_in_my_app">
+        My name is Mateusz. I am student who in free time learn programming. I hope you like my app. If so you can give
+        positive rating and feedback. I am open to change in my app.
+    </string>
+    <string name="license">License:</string>
+    <string name="gnu_general_public_license_v3_0_nmore_information_https_github_com_mati2251_workoutcustomer_blob_master_license">
+        GNU General Public License v3.0. More Information:
+        https://github.com/mati2251/WorkoutCustomer/blob/master/LICENSE
+    </string>
+    <string name="source_code">Source code:</string>
+    <string name="https_github_com_mati2251_workoutcustomer">https://github.com/mati2251/WorkoutCustomer</string>
     <string-array name="time_formats">
         <item>seconds</item>
         <item>minutes</item>

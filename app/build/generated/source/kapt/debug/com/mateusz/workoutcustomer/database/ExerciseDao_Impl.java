@@ -27,6 +27,8 @@ public class ExerciseDao_Impl implements ExerciseDao {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteByWorkoutId;
 
+  private final SharedSQLiteStatement __preparedStmtOfDeleteByExerciseId;
+
   public ExerciseDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfExercise = new EntityInsertionAdapter<Exercise>(__db) {
@@ -87,6 +89,13 @@ public class ExerciseDao_Impl implements ExerciseDao {
         return _query;
       }
     };
+    this.__preparedStmtOfDeleteByExerciseId = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM exercise_table WHERE _id LIKE ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -125,6 +134,21 @@ public class ExerciseDao_Impl implements ExerciseDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfDeleteByWorkoutId.release(_stmt);
+    }
+  }
+
+  @Override
+  public void deleteByExerciseId(int index) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteByExerciseId.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      _stmt.bindLong(_argIndex, index);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteByExerciseId.release(_stmt);
     }
   }
 

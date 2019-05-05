@@ -2,12 +2,14 @@ package com.mateusz.workoutcustomer.viewer
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.menu.MainActivity
-import org.w3c.dom.Text
 
 class ExerciseViewActivity : AppCompatActivity() {
+
+    var id : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +36,11 @@ class ExerciseViewActivity : AppCompatActivity() {
         }
         tmp = findViewById(R.id.pauseExercise)
         tmp.text = "${exercise.pause} ${exercise.pauseFormat}"
+        id = exercise.id
         supportActionBar?.hide()
+    }
+
+    fun deleteExercise(view : View){
+        MainActivity.workoutViewModel.deleteExerciseById(id)
     }
 }

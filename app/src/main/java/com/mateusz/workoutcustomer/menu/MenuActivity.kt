@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.view.View
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.creator.SetTitleActivity
 import com.mateusz.workoutcustomer.database.ExerciseDatabase
@@ -40,7 +41,6 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
             }
             R.id.navigation_settings ->{
                 fragment = SettingsFragment()
-                MainActivity.workoutViewModel.deleteAll()
                 fab.hide()
             }
             else ->{
@@ -89,6 +89,10 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
             return true
         }
         return false
+    }
+
+    fun deleteAll(view: View){
+        MainActivity.workoutViewModel.deleteAll()
     }
 
 }
