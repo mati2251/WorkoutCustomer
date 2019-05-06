@@ -21,7 +21,8 @@ import com.mateusz.workoutcustomer.menu.MainActivity
  * @property pause is EditText where user put pause number new exercise
  * @property spinner is EditText where user choose time formats new exercise
  * @property spinnerPause is EditText where user choose pause formats new exercise
-
+ *
+ * @author Mateusz Karłowski
  */
 
 class TimeActivity : AppCompatActivity() {

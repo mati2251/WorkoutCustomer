@@ -8,6 +8,7 @@ import android.arch.persistence.room.Query
 
 /**
  * It is interface with query to database
+ * @author Mateusz Karłowski
  */
 
 @Dao

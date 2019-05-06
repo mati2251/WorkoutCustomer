@@ -6,6 +6,9 @@
 
 class **WorkoutDatabase** is singleton for build and open database
 
+**Author**
+Mateusz Karłowski
+
 ### Constructors
 
 | [&lt;init&gt;](-init-.md) | `WorkoutDatabase()`<br>class **WorkoutDatabase** is singleton for build and open database |

@@ -3,3 +3,9 @@
 # DESCRIPTION
 
 `const val DESCRIPTION: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+
+is address description new exercise where new intent put data. And where next activity can find data from this activity
+
+### Property
+
+`DESCRIPTION` - is address description new exercise where new intent put data. And where next activity can find data from this activity

@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `SetTitleActivity()`
+
+It creates new Workout
+

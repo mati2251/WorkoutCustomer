@@ -9,3 +9,6 @@ get repository and allWorkout
 **Constructor**
 get repository and allWorkout
 
+**Author**
+Mateusz Karłowski
+

@@ -6,7 +6,9 @@ import android.arch.persistence.room.Insert
 import android.arch.persistence.room.OnConflictStrategy
 import android.arch.persistence.room.Query
 
-/** **WorkoutDao** is a class for insert data
+/**
+ * **WorkoutDao** is a class for insert data
+ * @author Mateusz Karłowski
  */
 
 @Dao

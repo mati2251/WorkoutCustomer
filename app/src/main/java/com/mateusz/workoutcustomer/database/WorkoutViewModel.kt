@@ -16,6 +16,7 @@ import kotlin.coroutines.CoroutineContext
  * @property repositoryExercise is var repository with exercise and function
  * @property allExercise is all exercise in database
  * @constructor get repository and allWorkout
+ * @author Mateusz Karłowski
  */
 
 open class WorkoutViewModel (application: Application) : AndroidViewModel(application){

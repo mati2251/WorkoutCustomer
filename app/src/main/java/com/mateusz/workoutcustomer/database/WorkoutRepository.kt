@@ -6,6 +6,7 @@ import android.support.annotation.WorkerThread
 /** Workout Reposority is class contain
  * @property wordDao element for get all workout
  * @property allWorkout has all workour
+ * @author Mateusz Karłowski
  */
 
 class WorkoutRepository (private val workoutDao: WorkoutDao) {

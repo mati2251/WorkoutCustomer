@@ -3,3 +3,6 @@
 # insert
 
 `abstract fun insert(exercise: `[`Exercise`](../-exercise/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+
+Insert new exercise
+

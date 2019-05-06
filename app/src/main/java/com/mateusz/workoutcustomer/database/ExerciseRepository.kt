@@ -5,6 +5,7 @@ import android.support.annotation.WorkerThread
 
 /**
  * This class have functions evokes other function from ExerciseDao
+ * @author Mateusz Karłowski
  */
 
 class ExerciseRepository (private val exerciseDao: ExerciseDao) {

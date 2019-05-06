@@ -3,3 +3,6 @@
 # findExerciseById
 
 `fun findExerciseById(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Exercise`](../-exercise/index.md)
+
+Function find exercise by ID
+

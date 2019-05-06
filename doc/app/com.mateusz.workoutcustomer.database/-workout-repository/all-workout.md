@@ -9,3 +9,7 @@ has all workour
 ### Property
 
 `allWorkout` - has all workour
+
+**Author**
+Mateusz Karłowski
+

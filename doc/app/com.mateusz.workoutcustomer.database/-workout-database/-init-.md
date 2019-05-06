@@ -6,3 +6,6 @@
 
 class **WorkoutDatabase** is singleton for build and open database
 
+**Author**
+Mateusz Karłowski
+

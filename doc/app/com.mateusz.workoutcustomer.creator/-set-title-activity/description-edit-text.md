@@ -3,3 +3,9 @@
 # descriptionEditText
 
 `lateinit var descriptionEditText: `[`EditText`](https://developer.android.com/reference/android/widget/EditText.html)
+
+is EditText where user can put data for new workout
+
+### Property
+
+`descriptionEditText` - is EditText where user can put data for new workout

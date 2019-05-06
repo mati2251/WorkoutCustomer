@@ -5,14 +5,14 @@
 `class MainActivity : AppCompatActivity`
 
 MainActivity is splash screen
-It show  on 0.7 seconds layout activity_welcom and switch to MenuActivity
+It shows  on 0.7 seconds layout activity_welcom and switch to MenuActivity
 
 **Author**
 Mateusz Karłowski
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `MainActivity()`<br>MainActivity is splash screen It show  on 0.7 seconds layout activity_welcom and switch to MenuActivity |
+| [&lt;init&gt;](-init-.md) | `MainActivity()`<br>MainActivity is splash screen It shows  on 0.7 seconds layout activity_welcom and switch to MenuActivity |
 
 ### Functions
 

@@ -3,3 +3,9 @@
 # repeat
 
 `lateinit var repeat: `[`EditText`](https://developer.android.com/reference/android/widget/EditText.html)
+
+is EditText where user put repeat number new exercise
+
+### Property
+
+`repeat` - is EditText where user put repeat number new exercise

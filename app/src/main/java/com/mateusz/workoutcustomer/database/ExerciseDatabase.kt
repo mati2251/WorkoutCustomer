@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 
 /**
  * It opens data, This class is singleton
+ * @author Mateusz Karłowski
  */
 
 @Database(entities = arrayOf(Exercise::class), version = 1)

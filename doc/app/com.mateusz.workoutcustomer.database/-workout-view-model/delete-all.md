@@ -3,3 +3,6 @@
 # deleteAll
 
 `fun deleteAll(): Job`
+
+Function delete all data
+

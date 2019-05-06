@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 
 /**
  * class **WorkoutDatabase** is singleton for build and open database
+ * @author Mateusz Karłowski
  */
 
 @Database(entities = arrayOf(Workout::class), version = 1)

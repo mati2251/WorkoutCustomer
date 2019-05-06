@@ -3,3 +3,9 @@
 # allExercise
 
 `var allExercise: LiveData<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Exercise`](../-exercise/index.md)`>>`
+
+is all exercise in database
+
+### Property
+
+`allExercise` - is all exercise in database

@@ -3,3 +3,6 @@
 # add
 
 `fun add(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+
+It adds new Exercise to database for this get data from intent and EditText
+

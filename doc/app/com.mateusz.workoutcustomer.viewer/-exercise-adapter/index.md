@@ -26,5 +26,5 @@
 
 ### Companion Object Properties
 
-| [ID](-i-d.md) | `var ID: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [ID](-i-d.md) | `const val ID: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 

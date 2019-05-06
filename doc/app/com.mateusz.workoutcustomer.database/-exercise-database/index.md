@@ -4,9 +4,14 @@
 
 `abstract class ExerciseDatabase : RoomDatabase`
 
+It opens data, This class is singleton
+
+**Author**
+Mateusz Karłowski
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `ExerciseDatabase()` |
+| [&lt;init&gt;](-init-.md) | `ExerciseDatabase()`<br>It opens data, This class is singleton |
 
 ### Functions
 

@@ -3,3 +3,9 @@
 # &lt;init&gt;
 
 `ExerciseDatabase()`
+
+It opens data, This class is singleton
+
+**Author**
+Mateusz Karłowski
+

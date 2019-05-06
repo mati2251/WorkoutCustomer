@@ -16,6 +16,7 @@ import com.mateusz.workoutcustomer.menu.MainActivity
  * @property titleEditText is EditText where user can put data for new workout
  * @property descriptionEditText is EditText where user can put data for new workout
  * @property ID is address title workout id where new intent put data. And where next activity can find data from this activity. Next activity use ID for create new Exercise to this workout
+ * @author Mateusz Karłowski
  */
 
 class SetTitleActivity : AppCompatActivity() {

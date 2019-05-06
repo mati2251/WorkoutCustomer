@@ -3,3 +3,9 @@
 # &lt;init&gt;
 
 `ExerciseRepository(exerciseDao: `[`ExerciseDao`](../-exercise-dao/index.md)`)`
+
+This class have functions evokes other function from ExerciseDao
+
+**Author**
+Mateusz Karłowski
+

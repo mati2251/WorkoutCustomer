@@ -12,5 +12,5 @@ is object class WorkoutViewModel
 
 **See Also**
 
-[WorkoutViewModelx](#)
+[WorkoutViewModel](../../com.mateusz.workoutcustomer.database/-workout-view-model/index.md)
 

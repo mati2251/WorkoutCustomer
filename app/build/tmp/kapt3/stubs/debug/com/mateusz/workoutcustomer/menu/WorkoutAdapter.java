@@ -5,7 +5,7 @@ import java.lang.System;
 /**
  * * class WorkoutAdapter extends from RecycleView.Adapter and it is for RecycleView
  * *  @property mWorkout is list Workout
- * *  @see Workout
+ * *  @see Workoutgit
  * *  @property id stores id clicked item
  * *  @property ID is string which stores id address. This address is for intent can put ID. This property is companion object because ViewActivity must have address for read data
  * *  @author Mateusz Karłowski

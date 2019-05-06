@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `ExerciseActivity()`
+
+class ExerciseActivity is create new Exercise
+

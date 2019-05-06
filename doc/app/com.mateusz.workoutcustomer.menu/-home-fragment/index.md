@@ -5,11 +5,11 @@
 `class HomeFragment : Fragment`
 
 class HomeFragment is for this display layout R.layout.fragment_home
-also it read old data to CardView
+also it reads old data to CardView
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `HomeFragment()`<br>class HomeFragment is for this display layout R.layout.fragment_home also it read old data to CardView |
+| [&lt;init&gt;](-init-.md) | `HomeFragment()`<br>class HomeFragment is for this display layout R.layout.fragment_home also it reads old data to CardView |
 
 ### Functions
 

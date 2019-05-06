@@ -3,3 +3,6 @@
 # deleteExerciseById
 
 `fun deleteExerciseById(id: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): Job`
+
+Function delete exercise by ID
+

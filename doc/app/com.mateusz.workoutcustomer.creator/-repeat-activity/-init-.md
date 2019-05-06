@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `RepeatActivity()`
+
+RepeatActivity is creator repeat exercise
+

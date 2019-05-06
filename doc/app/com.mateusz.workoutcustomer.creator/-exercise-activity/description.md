@@ -3,3 +3,9 @@
 # description
 
 `lateinit var description: `[`EditText`](https://developer.android.com/reference/android/widget/EditText.html)
+
+is EditText where user put description new exercise
+
+### Property
+
+`description` - is EditText where user put description new exercise

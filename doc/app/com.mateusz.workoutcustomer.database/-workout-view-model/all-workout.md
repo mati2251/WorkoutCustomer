@@ -4,8 +4,8 @@
 
 `var allWorkout: LiveData<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Workout`](../-workout/index.md)`>>`
 
-is all workout in database
+is all workout in database with workout and function
 
 ### Property
 
-`allWorkout` - is all workout in database
+`allWorkout` - is all workout in database with workout and function

@@ -6,6 +6,7 @@ import android.arch.persistence.room.PrimaryKey
 
 /**
  * It is data class Exercise
+ * @author Mateusz Karłowski
  */
 
 @Entity(tableName = "exercise_table")
