@@ -3,3 +3,9 @@
 # &lt;init&gt;
 
 `SettingsFragment()`
+
+class SettingsFragment only show layout R.layout.fragment_settings
+
+**Author**
+Mateusz Karłowski
+

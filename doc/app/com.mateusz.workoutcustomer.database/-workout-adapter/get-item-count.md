@@ -3,3 +3,7 @@
 # getItemCount
 
 `fun getItemCount(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
+
+**Return**
+how many item
+

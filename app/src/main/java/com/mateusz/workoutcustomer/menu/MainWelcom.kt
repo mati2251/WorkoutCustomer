@@ -14,15 +14,20 @@ import com.mateusz.workoutcustomer.database.WorkoutViewModel
 
 /**
  * MainActivity is splash screen
- *
- * It show only on 0.7 seconds layout activity_welcom and switch to MenuActivity
+ * It show  on 0.7 seconds layout activity_welcom and switch to MenuActivity
  * @author Mateusz Karłowski
+ *
+ * @property workoutViewModel is object class WorkoutViewModel
+ * @see WorkoutViewModel
  */
 
 
 class MainActivity :  AppCompatActivity() {
 
-
+    /**
+     * onCreate create WorkoutViewModel and ready other data in database.
+     * The second task onCreate is stop splash screen on 7 seconds
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcom)

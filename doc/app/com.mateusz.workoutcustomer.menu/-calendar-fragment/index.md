@@ -4,9 +4,14 @@
 
 `class CalendarFragment : Fragment`
 
+class CalendarFragment only show layout R.layout.fragment_settings
+
+**Author**
+Mateusz Karłowski
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `CalendarFragment()` |
+| [&lt;init&gt;](-init-.md) | `CalendarFragment()`<br>class CalendarFragment only show layout R.layout.fragment_settings |
 
 ### Functions
 

@@ -4,3 +4,4 @@ $dokka.linkExtension:md
 com.mateusz.workoutcustomer.creator
 com.mateusz.workoutcustomer.database
 com.mateusz.workoutcustomer.menu
+com.mateusz.workoutcustomer.viewer

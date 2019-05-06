@@ -4,16 +4,14 @@
 
 `class HomeFragment : Fragment`
 
+class HomeFragment is for this display layout R.layout.fragment_home
+also it read old data to CardView
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `HomeFragment()` |
-
-### Properties
-
-| [fab](fab.md) | `lateinit var fab: FloatingActionButton` |
-| [workoutAdapter](workout-adapter.md) | `lateinit var workoutAdapter: `[`WorkoutAdapter`](../../com.mateusz.workoutcustomer.database/-workout-adapter/index.md) |
+| [&lt;init&gt;](-init-.md) | `HomeFragment()`<br>class HomeFragment is for this display layout R.layout.fragment_home also it read old data to CardView |
 
 ### Functions
 
-| [onCreateView](on-create-view.md) | `fun onCreateView(inflater: `[`LayoutInflater`](https://developer.android.com/reference/android/view/LayoutInflater.html)`, container: `[`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup.html)`?, savedInstanceState: `[`Bundle`](https://developer.android.com/reference/android/os/Bundle.html)`?): `[`View`](https://developer.android.com/reference/android/view/View.html)`?` |
+| [onCreateView](on-create-view.md) | `fun onCreateView(inflater: `[`LayoutInflater`](https://developer.android.com/reference/android/view/LayoutInflater.html)`, container: `[`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup.html)`?, savedInstanceState: `[`Bundle`](https://developer.android.com/reference/android/os/Bundle.html)`?): `[`View`](https://developer.android.com/reference/android/view/View.html)`?`<br>onCreateView find recyclerView set adapter and LayoutManager finally get data from database and set as data for RecycleView |
 

@@ -2,7 +2,7 @@
 
 # MenuActivity
 
-`class MenuActivity : FragmentActivity, OnNavigationItemSelectedListener`
+`class MenuActivity : AppCompatActivity, OnNavigationItemSelectedListener`
 
 A class MenuActivity is Main Activity in my App
 

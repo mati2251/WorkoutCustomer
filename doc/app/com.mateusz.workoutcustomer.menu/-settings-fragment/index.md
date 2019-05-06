@@ -4,9 +4,14 @@
 
 `class SettingsFragment : Fragment`
 
+class SettingsFragment only show layout R.layout.fragment_settings
+
+**Author**
+Mateusz Karłowski
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `SettingsFragment()` |
+| [&lt;init&gt;](-init-.md) | `SettingsFragment()`<br>class SettingsFragment only show layout R.layout.fragment_settings |
 
 ### Functions
 

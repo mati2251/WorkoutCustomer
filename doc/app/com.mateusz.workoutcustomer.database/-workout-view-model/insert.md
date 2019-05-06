@@ -6,3 +6,7 @@
 
 function **insert** insert Workout to database
 
+`fun insert(exercise: `[`Exercise`](../-exercise/index.md)`): Job`
+
+function insert insert exercise to database
+

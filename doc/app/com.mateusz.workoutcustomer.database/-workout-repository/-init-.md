@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`WorkoutRepository(wordDao: `[`WorkoutDao`](../-workout-dao/index.md)`)`
+`WorkoutRepository(workoutDao: `[`WorkoutDao`](../-workout-dao/index.md)`)`
 
 Workout Reposority is class contain
 

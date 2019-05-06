@@ -5,8 +5,7 @@
 `MainActivity()`
 
 MainActivity is splash screen
-
-It show only on 0.7 seconds layout activity_welcom and switch to MenuActivity
+It show  on 0.7 seconds layout activity_welcom and switch to MenuActivity
 
 **Author**
 Mateusz Karłowski

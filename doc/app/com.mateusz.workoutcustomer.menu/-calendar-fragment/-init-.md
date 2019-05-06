@@ -3,3 +3,9 @@
 # &lt;init&gt;
 
 `CalendarFragment()`
+
+class CalendarFragment only show layout R.layout.fragment_settings
+
+**Author**
+Mateusz Karłowski
+

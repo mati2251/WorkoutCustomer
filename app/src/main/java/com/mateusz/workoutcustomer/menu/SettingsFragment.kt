@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.mateusz.workoutcustomer.R
 
-
+/**
+ * class SettingsFragment only show layout R.layout.fragment_settings
+ * @author Mateusz Karłowski
+ */
 
 class SettingsFragment : Fragment() {
 

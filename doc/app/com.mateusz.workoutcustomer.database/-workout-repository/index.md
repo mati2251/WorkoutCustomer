@@ -8,7 +8,7 @@ Workout Reposority is class contain
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `WorkoutRepository(wordDao: `[`WorkoutDao`](../-workout-dao/index.md)`)`<br>Workout Reposority is class contain |
+| [&lt;init&gt;](-init-.md) | `WorkoutRepository(workoutDao: `[`WorkoutDao`](../-workout-dao/index.md)`)`<br>Workout Reposority is class contain |
 
 ### Properties
 
@@ -17,5 +17,6 @@ Workout Reposority is class contain
 ### Functions
 
 | [deleteAll](delete-all.md) | `suspend fun deleteAll(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [deleteById](delete-by-id.md) | `suspend fun deleteById(id: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
 | [insert](insert.md) | `suspend fun insert(workout: `[`Workout`](../-workout/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Insert new element to database |
 
