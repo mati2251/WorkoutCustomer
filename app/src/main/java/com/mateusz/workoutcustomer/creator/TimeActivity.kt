@@ -14,13 +14,27 @@ import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 import com.mateusz.workoutcustomer.menu.MainActivity
 
+/**
+ * RepeatActivity is creator repeat exercise
+ * @property series is EditText where user put series number new exercise
+ * @property repeat is EditText where user put repeat number new exercise
+ * @property pause is EditText where user put pause number new exercise
+ * @property spinner is EditText where user choose time formats new exercise
+ * @property spinnerPause is EditText where user choose pause formats new exercise
+
+ */
+
 class TimeActivity : AppCompatActivity() {
 
     lateinit var series : EditText
     lateinit var time : EditText
     lateinit var pause : EditText
-    lateinit var spinner: Spinner
-    lateinit var spinnerPause: Spinner
+    private lateinit var spinner: Spinner
+    private lateinit var spinnerPause: Spinner
+
+    /**
+     * It finds layouts elements and stores to variable and set array strings to spinners
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +63,10 @@ class TimeActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    /**
+     * check EditText is not empty, evokes add and create new intent and start it
+     */
+
     fun addExercise (view : View){
         if(series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "" )
         {
@@ -72,10 +90,22 @@ class TimeActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * check EditText is not empty, evokes add and finish activity
+     */
+
     fun finish (view : View){
         if(series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "" )
         {
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        else if(series.text.toString().toInt() > 99 ||
+            (time.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds" ) ||
+            (time.text.toString().toInt() > 99 && spinner.selectedItem == "minutes" ) ||
+            (pause.text.toString().toInt() > 6000 && spinnerPause.selectedItem == "seconds") ||
+            (pause.text.toString().toInt() > 99 && spinnerPause.selectedItem == "minutes" )){
+            val toast = Toast.makeText(applicationContext, "Insert smaller data please", Toast.LENGTH_SHORT)
             toast.show()
         }
         else {
@@ -83,6 +113,10 @@ class TimeActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    /**
+     * It adds new Exercise to database for this get data from intent and EditText
+     */
 
     fun add(){
         var id : Int = 0
@@ -105,6 +139,13 @@ class TimeActivity : AppCompatActivity() {
                 spinnerPause.selectedItem.toString()
             ))
     }
+
+    /**
+     * It shows dialog window with message "Are you sure you want to not save this exercise?"
+     * It has 2 options:
+     * YES back to MenuActivity
+     * NO do nothing
+     */
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)

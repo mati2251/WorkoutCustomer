@@ -45,7 +45,7 @@ public final class MenuActivity extends android.support.v7.app.AppCompatActivity
     
     /**
      * * Function onCreate evokes when class MenuActivity are creates.
-     *     * It set layout activity_menu
+     *     * It sets layout activity_menu
      *     * It evokes function loadFragment because set default fragment
      *     * Next create variable navigation and changes it into BottomNavigationView from layout
      *     * The last set listener for BottomNavigationView

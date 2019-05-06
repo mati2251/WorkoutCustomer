@@ -13,15 +13,25 @@ import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 import com.mateusz.workoutcustomer.menu.MainActivity
-import com.mateusz.workoutcustomer.menu.MenuActivity
+
+/**
+ * RepeatActivity is creator repeat exercise
+ * @property series is EditText where user put series number new exercise
+ * @property repeat is EditText where user put repeat number new exercise
+ * @property pause is EditText where user put pause number new exercise
+ * @property spinner is EditText where user choose pause formats new exercise
+ */
 
 class RepeatActivity : AppCompatActivity() {
 
     lateinit var series : EditText
     lateinit var repeat : EditText
     lateinit var pause : EditText
-    lateinit var spinner: Spinner
+    private lateinit var spinner: Spinner
 
+    /**
+     * It finds layouts elements and stores to variable and set array strings to spinner
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,13 +51,35 @@ class RepeatActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    /**
+     * check EditText is not empty, evokes add and create new intent and start it
+     */
+
     fun addExerciseRepeat (view : View){
-        add()
-        var nextIntent : Intent = Intent(this, ExerciseActivity::class.java)
-        nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
-        startActivity(nextIntent)
-        finish()
+        if(series.text.toString() == "" || repeat.text.toString() == "" || pause.text.toString() == "" )
+        {
+            val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        else if(series.text.toString().toInt() > 99 ||
+            repeat.text.toString().toInt() > 10000 ||
+            (pause.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds") ||
+            (pause.text.toString().toInt() > 99 && spinner.selectedItem == "minutes" )){
+            val toast = Toast.makeText(applicationContext, "Insert smaller data please", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        else {
+            add()
+            var nextIntent: Intent = Intent(this, ExerciseActivity::class.java)
+            nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
+            startActivity(nextIntent)
+            finish()
+        }
     }
+
+    /**
+     * check EditText is not empty, evokes add and finish activity
+     */
 
     fun finishRepeat (view : View){
         if(series.text.toString() == "" || repeat.text.toString() == "" || pause.text.toString() == "" )
@@ -68,7 +100,11 @@ class RepeatActivity : AppCompatActivity() {
         }
     }
 
-    fun add(){
+    /**
+     * It adds new Exercise to database for this get data from intent and EditText
+     */
+
+    private fun add(){
         var id : Int = 0
         MainActivity.workoutViewModel.allExercise.observe(this, Observer {
                 words -> words?.let { id = it.size }
@@ -89,6 +125,13 @@ class RepeatActivity : AppCompatActivity() {
                 spinner.selectedItem.toString()
             ))
     }
+
+    /**
+     * It shows dialog window with message "Are you sure you want to not save this exercise?"
+     * It has 2 options:
+     * YES back to MenuActivity
+     * NO do nothing
+     */
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)

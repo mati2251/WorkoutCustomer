@@ -14,7 +14,7 @@ import com.mateusz.workoutcustomer.database.WorkoutAdapter
 import com.mateusz.workoutcustomer.database.WorkoutViewModel
 
 /** class HomeFragment is for this display layout R.layout.fragment_home
- *  also it read old data to CardView
+ *  also it reads old data to CardView
  *  @property workoutAdapter is object WorkoutAdapter for RecycleView
  *  @see WorkoutAdapter
  *  @author Mateusz Karłowski

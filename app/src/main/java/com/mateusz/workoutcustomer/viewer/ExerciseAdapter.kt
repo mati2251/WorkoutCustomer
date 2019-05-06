@@ -9,9 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
-import com.mateusz.workoutcustomer.creator.SetTitleActivity
 import com.mateusz.workoutcustomer.database.Exercise
-import com.mateusz.workoutcustomer.database.WorkoutAdapter
 
 class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
 
@@ -20,7 +18,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
     var id : Int = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ExerciseViewHolder {
-        var itemView = mInflater.inflate(R.layout.exercise_item, parent, false)
+        val itemView = mInflater.inflate(R.layout.exercise_item, parent, false)
         return ExerciseViewHolder(itemView, this)
     }
 
@@ -48,11 +46,10 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
     }
 
     override fun getItemCount(): Int {
-        if(::mExercise.isInitialized){
-            return mExercise.size
-        }
-        else{
-            return 0
+        return if(::mExercise.isInitialized){
+            mExercise.size
+        } else{
+            0
         }
     }
 
@@ -86,7 +83,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
     }
 
     companion object{
-        var ID = "com.mateusz.workoutcustomer.ExerciseId"
+        const val ID = "com.mateusz.workoutcustomer.ExerciseId"
     }
 
 }
