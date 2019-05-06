@@ -18,7 +18,7 @@ import com.mateusz.workoutcustomer.database.WorkoutViewModel
  * @author Mateusz Karłowski
  *
  * @property workoutViewModel is object class WorkoutViewModel
- * @see WorkoutViewModel
+ * @see WorkoutViewModelx
  */
 
 
