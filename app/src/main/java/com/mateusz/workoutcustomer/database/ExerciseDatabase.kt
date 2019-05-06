@@ -9,6 +9,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+/**
+ * It opens data, This class is singleton
+ */
+
 @Database(entities = arrayOf(Exercise::class), version = 1)
 abstract class ExerciseDatabase : RoomDatabase() {
     abstract fun exerciseDao () : ExerciseDao

@@ -13,8 +13,8 @@ import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.creator.ExerciseActivity
 import com.mateusz.workoutcustomer.creator.SetTitleActivity
 import com.mateusz.workoutcustomer.database.Workout
-import com.mateusz.workoutcustomer.database.WorkoutAdapter
 import com.mateusz.workoutcustomer.menu.MainActivity
+import com.mateusz.workoutcustomer.menu.WorkoutAdapter
 
 class ViewActivity : AppCompatActivity() {
     lateinit var exerciseAdapter: ExerciseAdapter

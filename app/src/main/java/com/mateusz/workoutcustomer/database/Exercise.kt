@@ -4,6 +4,10 @@ import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
+/**
+ * It is data class Exercise
+ */
+
 @Entity(tableName = "exercise_table")
 data class Exercise (@PrimaryKey
                      @ColumnInfo(name = "_id") var id : Int,

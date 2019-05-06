@@ -70,7 +70,7 @@ public final class RepeatActivity extends android.support.v7.app.AppCompatActivi
     }
     
     /**
-     * * It adds new Exercise to database. Because get data from intent and EditText
+     * * It adds new Exercise to database for this get data from intent and EditText
      */
     private final void add() {
     }

@@ -10,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mateusz.workoutcustomer.R
-import com.mateusz.workoutcustomer.database.WorkoutAdapter
 import com.mateusz.workoutcustomer.database.WorkoutViewModel
 
 /** class HomeFragment is for this display layout R.layout.fragment_home

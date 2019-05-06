@@ -1,4 +1,4 @@
-package com.mateusz.workoutcustomer.database
+package com.mateusz.workoutcustomer.menu
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.mateusz.workoutcustomer.R
+import com.mateusz.workoutcustomer.database.Workout
 import com.mateusz.workoutcustomer.viewer.ViewActivity
 
 /**
