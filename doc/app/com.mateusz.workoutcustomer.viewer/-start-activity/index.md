@@ -4,9 +4,14 @@
 
 `class StartActivity : AppCompatActivity`
 
+This class has workout all Exercise and counting down to start workout.
+
+**Author**
+Mateusz Karłowski
+
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `StartActivity()` |
+| [&lt;init&gt;](-init-.md) | `StartActivity()`<br>This class has workout all Exercise and counting down to start workout. |
 
 ### Properties
 

@@ -3,3 +3,6 @@
 # onBackPressed
 
 `fun onBackPressed(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+
+This function displays dialog with message "Are you sure you want to cancel workout?"
+

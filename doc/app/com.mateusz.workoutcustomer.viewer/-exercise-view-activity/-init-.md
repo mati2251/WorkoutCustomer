@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `ExerciseViewActivity()`
+
+This shows data about selected exercise
+

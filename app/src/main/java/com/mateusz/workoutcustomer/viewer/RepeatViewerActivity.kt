@@ -9,9 +9,19 @@ import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 
+/**
+ * It see exercise with repeat
+ * @property exercise is current exercise object
+ * @author Mateusz Karłowski
+ */
+
 class RepeatViewerActivity : AppCompatActivity() {
 
     lateinit var exercise : Exercise
+
+    /**
+     * It gets current exercise. Adds one to series. Find layout elements and show data.
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +47,11 @@ class RepeatViewerActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    /**
+     * This function stops counting down across set close to true.
+     * Next function creates new intent and start it
+     */
+
     fun pause(view: View){
         var intent : Intent = Intent(this, PauseActivity::class.java)
         intent.putExtra(TimeViewerActivity.pause, exercise.pause)
@@ -44,6 +59,10 @@ class RepeatViewerActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    /**
+     * This function displays dialog with message "Are you sure you want to cancel workout?"
+     */
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)

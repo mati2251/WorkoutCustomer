@@ -12,6 +12,10 @@ import com.mateusz.workoutcustomer.menu.MainActivity
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 
+/**
+ * This class has workout all Exercise and counting down to start workout.
+ * @author Mateusz Karłowski
+ */
 
 class StartActivity : AppCompatActivity() {
 

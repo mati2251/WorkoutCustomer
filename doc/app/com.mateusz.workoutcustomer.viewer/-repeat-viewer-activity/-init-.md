@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `RepeatViewerActivity()`
+
+It see exercise with repeat
+

@@ -12,13 +12,23 @@ import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 import kotlinx.android.synthetic.main.activity_start.*
 
-
-
+/**
+ * It see exercise with time
+ * @property exercise is current exercise object
+ * @property close is bool when is true this activity is finish
+ * @property pause is address where intent put data and where activity get data. Address have information about pause
+ * @property pauseFormat is address where intent put data and where activity get data. Address have information about pause format
+ */
 
 class TimeViewerActivity : AppCompatActivity() {
 
     lateinit var exercise : Exercise
     var close : Boolean = false
+
+    /**
+     * It gets current exercise. Adds one to series. Find layout elements and show data.
+     * The last task this function is counting down time.
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,6 +83,11 @@ class TimeViewerActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    /**
+     * This function stops counting down across set close to true.
+     * Next function creates new intent and start it
+     */
+
     fun pause(view: View){
         var intent : Intent = Intent(this, PauseActivity::class.java)
         intent.putExtra(pause, exercise.pause)
@@ -81,6 +96,10 @@ class TimeViewerActivity : AppCompatActivity() {
         close = true
         finish()
     }
+
+    /**
+     * This function displays dialog with message "Are you sure you want to cancel workout?"
+     */
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)
@@ -96,7 +115,7 @@ class TimeViewerActivity : AppCompatActivity() {
     }
 
     companion object {
-        var pause = "com.mateusz.workoutcustomer.pause"
-        var pauseFormat = "com.mateusz.workoutcustomer.pauseFormat"
+        const val pause = "com.mateusz.workoutcustomer.pause"
+        const val pauseFormat = "com.mateusz.workoutcustomer.pauseFormat"
     }
 }

@@ -11,16 +11,34 @@ import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.database.Exercise
 
+/**
+ * class ExerciseAdapter extends from RecycleView.Adapter and it is for RecycleView
+ *  @property mExercise is list Workout
+ *  @see Exercise
+ *  @property id stores id clicked item
+ *  @property ID is string which stores id address. This address is for intent can put ID. This property is companion object because ExerciseViewActivity must have address for read data
+ *  @author Mateusz Karłowski
+ */
+
+
 class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
 
     private var mInflater = LayoutInflater.from(context)
     lateinit var mExercise: List<Exercise>
     var id : Int = 0
 
+    /**
+     * onCreateViewHolder find CardView in layout and return items look like R.layout.exercise_item with data
+     */
+
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ExerciseViewHolder {
         val itemView = mInflater.inflate(R.layout.exercise_item, parent, false)
         return ExerciseViewHolder(itemView, this)
     }
+
+    /**
+     * onBindViewHolder set data from mExercise to item
+     */
 
     override fun onBindViewHolder(holder: ExerciseViewHolder, position: Int) {
         var currentString = mExercise[position].title
@@ -45,6 +63,10 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         holder.id = mExercise[position].id
     }
 
+    /**
+     * @return how many item
+     */
+
     override fun getItemCount(): Int {
         return if(::mExercise.isInitialized){
             mExercise.size
@@ -52,6 +74,15 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
             0
         }
     }
+
+    /**
+     * class WorkoutViewHolder set onClick card listener and find layout item in R.layout.workout_item
+     * @property id is workout id
+     * @property mExerciseTitle is TextView with exercise Title
+     * @property mExerciseDescription is TextView with exercise Description.
+     * @property mExerciseDetails is TextView with exercise Details
+     * @constructor sets OnClick as OnClickListener
+     */
 
     inner class ExerciseViewHolder(viewItem: View, exerciseAdapter: ExerciseAdapter) : RecyclerView.ViewHolder(viewItem), View.OnClickListener {
         var exerciseAdapter = exerciseAdapter
@@ -63,12 +94,21 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
             viewItem.setOnClickListener(this)
         }
 
+        /**
+         * onClick starts new Intent and put ID to this Intent
+         */
+
         override fun onClick(view: View){
             var intentView : Intent = Intent(itemView.context , ExerciseViewActivity::class.java)
             intentView.putExtra(ID, id)
             itemView.context.startActivity(intentView)
         }
     }
+
+    /**
+     * function setList set new List with new Data
+     *  @property list is list with exercise
+     */
 
     fun setList(list: List<Exercise>){
         var tmp : ArrayList<Exercise> = ArrayList()

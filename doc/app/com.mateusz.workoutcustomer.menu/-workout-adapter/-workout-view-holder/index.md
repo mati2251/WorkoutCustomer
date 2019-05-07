@@ -8,7 +8,7 @@ class WorkoutViewHolder set onClick card listener and find layout item in R.layo
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `WorkoutViewHolder(viewItem: `[`View`](https://developer.android.com/reference/android/view/View.html)`, workoutAdapter: `[`WorkoutAdapter`](../index.md)`)`<br>set OnClick as OnClickListener |
+| [&lt;init&gt;](-init-.md) | `WorkoutViewHolder(viewItem: `[`View`](https://developer.android.com/reference/android/view/View.html)`, workoutAdapter: `[`WorkoutAdapter`](../index.md)`)`<br>sets OnClick as OnClickListener |
 
 ### Properties
 
@@ -19,5 +19,5 @@ class WorkoutViewHolder set onClick card listener and find layout item in R.layo
 
 ### Functions
 
-| [onClick](on-click.md) | `fun onClick(view: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>onClick start new Intent and put ID to this Intent |
+| [onClick](on-click.md) | `fun onClick(view: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>onClick starts new Intent and put ID to this Intent |
 

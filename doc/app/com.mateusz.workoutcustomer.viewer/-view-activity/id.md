@@ -3,3 +3,9 @@
 # id
 
 `var id: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
+
+is workout current id
+
+### Property
+
+`id` - is workout current id

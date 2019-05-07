@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `ViewActivity()`
+
+This class is main viewer workout
+

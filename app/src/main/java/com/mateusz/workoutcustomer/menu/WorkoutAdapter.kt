@@ -15,7 +15,7 @@ import com.mateusz.workoutcustomer.viewer.ViewActivity
 /**
  * class WorkoutAdapter extends from RecycleView.Adapter and it is for RecycleView
  *  @property mWorkout is list Workout
- *  @see Workoutgit
+ *  @see Workout
  *  @property id stores id clicked item
  *  @property ID is string which stores id address. This address is for intent can put ID. This property is companion object because ViewActivity must have address for read data
  *  @author Mateusz Karłowski
@@ -67,7 +67,7 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
      * @property id is workout id
      * @property mWorkoutTitle is TextView with workout Title, Its id is R.id.workout_title
      * @property mWorkoutDescription is TextView with workout Description. Its id is R.id.workout_description
-     * @constructor set OnClick as OnClickListener
+     * @constructor sets OnClick as OnClickListener
      */
 
     inner class WorkoutViewHolder (viewItem : View, workoutAdapter : WorkoutAdapter) : RecyclerView.ViewHolder(viewItem), View.OnClickListener{
@@ -81,7 +81,7 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
         }
 
         /**
-         * onClick start new Intent and put ID to this Intent
+         * onClick starts new Intent and put ID to this Intent
          */
 
         override fun onClick(view: View){

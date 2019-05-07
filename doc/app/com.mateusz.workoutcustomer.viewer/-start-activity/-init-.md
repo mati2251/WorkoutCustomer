@@ -3,3 +3,9 @@
 # &lt;init&gt;
 
 `StartActivity()`
+
+This class has workout all Exercise and counting down to start workout.
+
+**Author**
+Mateusz Karłowski
+

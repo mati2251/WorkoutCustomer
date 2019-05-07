@@ -7,9 +7,19 @@ import android.widget.TextView
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.menu.MainActivity
 
+/**
+ * This shows data about selected exercise
+ * @property id is current exercise id
+ * @author Mateusz Karłowski
+ */
+
 class ExerciseViewActivity : AppCompatActivity() {
 
     var id : Int = 0
+
+    /**
+     * It finds exercise by id in database. And show data about this exercise on TextView.
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +49,10 @@ class ExerciseViewActivity : AppCompatActivity() {
         id = exercise.id
         supportActionBar?.hide()
     }
+
+    /**
+     * This function delete Exercise by ID
+     */
 
     fun deleteExercise(view : View){
         MainActivity.workoutViewModel.deleteExerciseById(id)

@@ -3,3 +3,9 @@
 # mExerciseDescription
 
 `var mExerciseDescription: `[`TextView`](https://developer.android.com/reference/android/widget/TextView.html)
+
+is TextView with exercise Description.
+
+### Property
+
+`mExerciseDescription` - is TextView with exercise Description.

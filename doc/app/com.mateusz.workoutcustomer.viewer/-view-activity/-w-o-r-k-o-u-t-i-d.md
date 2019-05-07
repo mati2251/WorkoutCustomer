@@ -2,4 +2,14 @@
 
 # WORKOUTID
 
-`var WORKOUTID: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+`const val WORKOUTID: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+
+is address where intent put data about id and where activity get data.
+
+### Property
+
+`WORKOUTID` - is address where intent put data about id and where activity get data.
+
+**Author**
+Mateusz Karłowski
+
