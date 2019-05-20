@@ -39,6 +39,12 @@ interface WorkoutDao {
      * Function **removeById** remove workout with the same id
      */
 
-    @Query("DELETE FROM workout_table WHERE _id LIKE :index")
-    fun removeById(index : Int)
+    @Query("DELETE FROM workout_table WHERE _id LIKE :ID")
+    fun removeById(ID : Int)
+
+    @Query("UPDATE workout_table SET title=:title WHERE _id LIKE :ID")
+    fun updateWorkoutTitle(title: String, ID: Int)
+
+    @Query("UPDATE workout_table SET description=:description WHERE _id LIKE :ID")
+    fun updateWorkoutDescription(description: String, ID: Int)
 }
