@@ -105,6 +105,13 @@ class ExerciseRepository(private val exerciseDao: ExerciseDao) {
         exerciseDao.updateExercisePauseFormat(pauseFormat,id)
     }
 
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun changeExerciseId(toID: Int, fromID : Int) {
+        exerciseDao.changeExerciseID(toID,fromID)
+    }
+
+
 
 
 

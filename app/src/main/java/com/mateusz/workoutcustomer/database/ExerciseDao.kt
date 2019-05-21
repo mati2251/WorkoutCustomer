@@ -52,6 +52,8 @@ interface ExerciseDao {
     @Query("UPDATE exercise_table SET title=:title WHERE _id LIKE :ID")
     fun updateExerciseTitle(title: String, ID: Int)
 
+    @Query("UPDATE exercise_table SET _id=:toID WHERE _id LIKE :fromID")
+    fun changeExerciseID(toID: Int, fromID: Int)
 
     @Query("UPDATE exercise_table SET description=:description WHERE _id LIKE :ID")
     fun updateExerciseDescription(description: String, ID: Int)

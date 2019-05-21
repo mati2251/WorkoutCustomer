@@ -31,6 +31,8 @@ public class ExerciseDao_Impl implements ExerciseDao {
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseTitle;
 
+  private final SharedSQLiteStatement __preparedStmtOfChangeExerciseID;
+
   private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseDescription;
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseInstruction;
@@ -118,6 +120,13 @@ public class ExerciseDao_Impl implements ExerciseDao {
       @Override
       public String createQuery() {
         final String _query = "UPDATE exercise_table SET title=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfChangeExerciseID = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET _id=? WHERE _id LIKE ?";
         return _query;
       }
     };
@@ -251,6 +260,23 @@ public class ExerciseDao_Impl implements ExerciseDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfUpdateExerciseTitle.release(_stmt);
+    }
+  }
+
+  @Override
+  public void changeExerciseID(int toID, int fromID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfChangeExerciseID.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      _stmt.bindLong(_argIndex, toID);
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, fromID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfChangeExerciseID.release(_stmt);
     }
   }
 
