@@ -16,15 +16,15 @@ import com.mateusz.workoutcustomer.creator.SetTitleActivity
  */
 
 
-class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItemSelectedListener{
+class MenuActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     /**
      * Function onNavigationItemSelected change fragments when user chosen option on BottomNavigationView
      */
 
-    lateinit var fab : FloatingActionButton
+    lateinit var fab: FloatingActionButton
     private val newWorkoutActivityRequestCode = 1
-    lateinit var fragment : Fragment
+    lateinit var fragment: Fragment
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -36,11 +36,11 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
                 fragment = CalendarFragment()
                 fab.hide()
             }
-            R.id.navigation_settings ->{
+            R.id.navigation_settings -> {
                 fragment = SettingsFragment()
                 fab.hide()
             }
-            else ->{
+            else -> {
                 fab.show()
                 fragment = HomeFragment()
             }
@@ -63,8 +63,8 @@ class MenuActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
         loadFragment(fragment)
         fab = findViewById(R.id.floatingActionButton)
         fab.setOnClickListener {
-            if (fragment is HomeFragment){
-                var creatorIntent : Intent = Intent(this, SetTitleActivity::class.java)
+            if (fragment is HomeFragment) {
+                var creatorIntent: Intent = Intent(this, SetTitleActivity::class.java)
                 startActivityForResult(creatorIntent, newWorkoutActivityRequestCode)
             }
         }

@@ -20,7 +20,7 @@ import com.mateusz.workoutcustomer.database.WorkoutViewModel
  */
 
 class HomeFragment : Fragment() {
-    private lateinit var workoutAdapter : WorkoutAdapter
+    private lateinit var workoutAdapter: WorkoutAdapter
 
     /**
      * onCreateView find recyclerView set adapter and LayoutManager
@@ -29,13 +29,13 @@ class HomeFragment : Fragment() {
      */
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view : View = inflater.inflate(R.layout.fragment_home, container, false)
-        val recyclerView : RecyclerView = view.findViewById(R.id.recyclerView)
+        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
         MainActivity.workoutViewModel = ViewModelProviders.of(this).get(WorkoutViewModel::class.java)
         workoutAdapter = WorkoutAdapter(this.requireContext())
-        MainActivity.workoutViewModel.allWorkout.observe(this, Observer {
-                words -> words?.let { workoutAdapter.setList(it) }
+        MainActivity.workoutViewModel.allWorkout.observe(this, Observer { words ->
+            words?.let { workoutAdapter.setList(it) }
         })
         recyclerView.adapter = workoutAdapter
         return view

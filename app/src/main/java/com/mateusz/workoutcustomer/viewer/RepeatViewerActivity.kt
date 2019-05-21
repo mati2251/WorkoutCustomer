@@ -17,7 +17,7 @@ import com.mateusz.workoutcustomer.database.Exercise
 
 class RepeatViewerActivity : AppCompatActivity() {
 
-    lateinit var exercise : Exercise
+    lateinit var exercise: Exercise
 
     /**
      * It gets current exercise. Adds one to series. Find layout elements and show data.
@@ -28,17 +28,17 @@ class RepeatViewerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_repeat_viewer)
         exercise = StartActivity.workoutExercise[StartActivity.position]
         StartActivity.series++
-        var currentSeries : TextView = findViewById(R.id.currentSeries2)
+        var currentSeries: TextView = findViewById(R.id.currentSeries2)
         currentSeries.text = "Current series: ${StartActivity.series}"
-        if(StartActivity.series==exercise.series) {
+        if (StartActivity.series == exercise.series) {
             StartActivity.position++
-            StartActivity.series=0
+            StartActivity.series = 0
         }
-        var title : TextView = findViewById(R.id.title_repeat_viewer)
-        var description : TextView = findViewById(R.id.description_repeat_viewer)
-        var instruction : TextView = findViewById(R.id.instruction_repeat_viewer)
-        var series : TextView = findViewById(R.id.series_repeat_viewer)
-        var repeat : TextView = findViewById(R.id.repeat_viewer)
+        var title: TextView = findViewById(R.id.title_repeat_viewer)
+        var description: TextView = findViewById(R.id.description_repeat_viewer)
+        var instruction: TextView = findViewById(R.id.instruction_repeat_viewer)
+        var series: TextView = findViewById(R.id.series_repeat_viewer)
+        var repeat: TextView = findViewById(R.id.repeat_viewer)
         title.text = exercise.title
         description.text = exercise.description
         instruction.text = exercise.instruction
@@ -52,8 +52,8 @@ class RepeatViewerActivity : AppCompatActivity() {
      * Next function creates new intent and start it
      */
 
-    fun pause(view: View){
-        var intent : Intent = Intent(this, PauseActivity::class.java)
+    fun pause(view: View) {
+        var intent: Intent = Intent(this, PauseActivity::class.java)
         intent.putExtra(TimeViewerActivity.pause, exercise.pause)
         intent.putExtra(TimeViewerActivity.pauseFormat, exercise.pauseFormat)
         startActivity(intent)

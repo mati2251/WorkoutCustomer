@@ -15,48 +15,45 @@ import com.mateusz.workoutcustomer.menu.MenuActivity
 
 class PauseActivity : AppCompatActivity() {
 
-    var close : Boolean = false
+    var close: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pause)
-        var time : TextView = findViewById(R.id.time_pause_view)
-        var progresBar : ProgressBar = findViewById(R.id.progressBar2)
+        var time: TextView = findViewById(R.id.time_pause_view)
+        var progresBar: ProgressBar = findViewById(R.id.progressBar2)
         var timeSeconds = intent.getIntExtra(TimeViewerActivity.pause, 0)
         var timeFormat = intent.getStringExtra(TimeViewerActivity.pauseFormat)
-        if(timeFormat != "seconds"){
+        if (timeFormat != "seconds") {
             timeSeconds *= 60
         }
         progresBar.max = timeSeconds
         progresBar.progress = timeSeconds
-        object : CountDownTimer(timeSeconds*1000.toLong(), 1000) {
+        object : CountDownTimer(timeSeconds * 1000.toLong(), 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                if(timeFormat=="seconds") {
+                if (timeFormat == "seconds") {
                     time.text = "${millisUntilFinished / 1000} sec"
+                } else {
+                    time.text = "${(millisUntilFinished / 60000).toInt()} min ${millisUntilFinished / 1000 % 60} sec"
                 }
-                else{
-                    time.text = "${(millisUntilFinished / 60000).toInt()} min ${millisUntilFinished/1000%60} sec"
-                }
-                if(close){
+                if (close) {
                     cancel()
                 }
-                progresBar.progress=progresBar.progress-1
+                progresBar.progress = progresBar.progress - 1
             }
 
             override fun onFinish() {
                 var intent: Intent
-                if(StartActivity.workoutExercise.size == StartActivity.position){
+                if (StartActivity.workoutExercise.size == StartActivity.position) {
                     val toast = Toast.makeText(applicationContext, "You are finish workout", Toast.LENGTH_SHORT)
                     toast.show()
                     intent = Intent(applicationContext, MenuActivity::class.java)
                     startActivity(intent)
-                }
-                else if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
+                } else if (!StartActivity.workoutExercise[StartActivity.position].timeCheck) {
                     intent = Intent(applicationContext, RepeatViewerActivity::class.java)
                     startActivity(intent)
-                }
-                else if(StartActivity.workoutExercise[StartActivity.position].timeCheck){
+                } else if (StartActivity.workoutExercise[StartActivity.position].timeCheck) {
                     intent = Intent(applicationContext, TimeViewerActivity::class.java)
                     startActivity(intent)
                 }
@@ -68,19 +65,17 @@ class PauseActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    fun stopPause(view: View){
-        if(StartActivity.workoutExercise.size == StartActivity.position){
+    fun stopPause(view: View) {
+        if (StartActivity.workoutExercise.size == StartActivity.position) {
             val toast = Toast.makeText(applicationContext, "You are finish workout", Toast.LENGTH_SHORT)
             toast.show()
             intent = Intent(applicationContext, MenuActivity::class.java)
             StartActivity.position = 0
             startActivity(intent)
-        }
-        else if(!StartActivity.workoutExercise[StartActivity.position].timeCheck){
+        } else if (!StartActivity.workoutExercise[StartActivity.position].timeCheck) {
             intent = Intent(applicationContext, RepeatViewerActivity::class.java)
             startActivity(intent)
-        }
-        else if(StartActivity.workoutExercise[StartActivity.position].timeCheck){
+        } else if (StartActivity.workoutExercise[StartActivity.position].timeCheck) {
             intent = Intent(applicationContext, TimeViewerActivity::class.java)
             startActivity(intent)
         }

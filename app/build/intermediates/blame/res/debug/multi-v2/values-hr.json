@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml",
+            "outputFile": "/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml",
             "map": [
                 {
                     "source": "/home/mateusz/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/d352ef09c983185967d5061d34dd14d6/res/values-hr/values-hr.xml",

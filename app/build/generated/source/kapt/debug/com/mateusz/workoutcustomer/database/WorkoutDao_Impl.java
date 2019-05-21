@@ -27,6 +27,10 @@ public class WorkoutDao_Impl implements WorkoutDao {
 
   private final SharedSQLiteStatement __preparedStmtOfRemoveById;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateWorkoutTitle;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateWorkoutDescription;
+
   public WorkoutDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfWorkout = new EntityInsertionAdapter<Workout>(__db) {
@@ -64,6 +68,20 @@ public class WorkoutDao_Impl implements WorkoutDao {
         return _query;
       }
     };
+    this.__preparedStmtOfUpdateWorkoutTitle = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE workout_table SET title=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateWorkoutDescription = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE workout_table SET description=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -91,17 +109,59 @@ public class WorkoutDao_Impl implements WorkoutDao {
   }
 
   @Override
-  public void removeById(int index) {
+  public void removeById(int ID) {
     final SupportSQLiteStatement _stmt = __preparedStmtOfRemoveById.acquire();
     __db.beginTransaction();
     try {
       int _argIndex = 1;
-      _stmt.bindLong(_argIndex, index);
+      _stmt.bindLong(_argIndex, ID);
       _stmt.executeUpdateDelete();
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
       __preparedStmtOfRemoveById.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateWorkoutTitle(String title, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateWorkoutTitle.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (title == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, title);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateWorkoutTitle.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateWorkoutDescription(String description, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateWorkoutDescription.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (description == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, description);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateWorkoutDescription.release(_stmt);
     }
   }
 

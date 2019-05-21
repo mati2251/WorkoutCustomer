@@ -15,12 +15,12 @@ import kotlinx.coroutines.launch
  */
 
 @Database(entities = arrayOf(Workout::class), version = 1)
-abstract class WorkoutDatabase : RoomDatabase(){
+abstract class WorkoutDatabase : RoomDatabase() {
     /**
      * Abstract fun
      * @return WorkoutDao
      */
-    abstract fun workoutDao() : WorkoutDao
+    abstract fun workoutDao(): WorkoutDao
 
     companion object {
         @Volatile

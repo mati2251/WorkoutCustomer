@@ -2,7 +2,7 @@ package com.mateusz.workoutcustomer.viewer
 
 import android.content.Intent
 import android.media.MediaPlayer
-import android .support.v7.app.AppCompatActivity
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.support.v7.app.AlertDialog
@@ -19,20 +19,20 @@ import com.mateusz.workoutcustomer.database.Exercise
 
 class StartActivity : AppCompatActivity() {
 
-    var close : Boolean = false
+    var close: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
         workoutExercise.clear()
-        val title : TextView = findViewById(R.id.title_workout_start)
-        val id = intent.getIntExtra(ViewActivity.WORKOUTID,0)
+        val title: TextView = findViewById(R.id.title_workout_start)
+        val id = intent.getIntExtra(ViewActivity.WORKOUTID, 0)
         val workout = MainActivity.workoutViewModel.findWorkoutById(id)
         title.text = workout.title
-        val time : TextView = findViewById(R.id.time)
-        val progressBar : ProgressBar = findViewById(R.id.progressBar)
-        for (i in 0..((MainActivity.workoutViewModel.allExercise.value?.size?.minus(1)) ?: 0)){
-            if(MainActivity.workoutViewModel.allExercise.value?.get(i)?.workoutId == workout.id){
+        val time: TextView = findViewById(R.id.time)
+        val progressBar: ProgressBar = findViewById(R.id.progressBar)
+        for (i in 0..((MainActivity.workoutViewModel.allExercise.value?.size?.minus(1)) ?: 0)) {
+            if (MainActivity.workoutViewModel.allExercise.value?.get(i)?.workoutId == workout.id) {
                 workoutExercise.add(MainActivity.workoutViewModel.allExercise.value?.get(i)!!)
             }
         }
@@ -45,24 +45,22 @@ class StartActivity : AppCompatActivity() {
         object : CountDownTimer(5000, 20) {
 
             override fun onTick(millisUntilFinished: Long) {
-                if(!close) {
+                if (!close) {
                     progressBar.progress = progressBar.progress + 20
                     if (progressBar.progress % 1000 == 0) {
                         time.text = (5 - (progressBar.progress / 1000)).toString()
                     }
-                }
-                else{
+                } else {
                     cancel()
                 }
             }
 
             override fun onFinish() {
                 var intent: Intent
-                if(!workoutExercise[0].timeCheck){
+                if (!workoutExercise[0].timeCheck) {
                     intent = Intent(applicationContext, RepeatViewerActivity::class.java)
                     startActivity(intent)
-                }
-                else if(workoutExercise[0].timeCheck){
+                } else if (workoutExercise[0].timeCheck) {
                     intent = Intent(applicationContext, TimeViewerActivity::class.java)
                     startActivity(intent)
                 }
@@ -89,8 +87,8 @@ class StartActivity : AppCompatActivity() {
     }
 
     companion object {
-        var workoutExercise : ArrayList<Exercise> = ArrayList()
-        var position : Int = 0
-        var series : Int = 0
+        var workoutExercise: ArrayList<Exercise> = ArrayList()
+        var position: Int = 0
+        var series: Int = 0
     }
 }

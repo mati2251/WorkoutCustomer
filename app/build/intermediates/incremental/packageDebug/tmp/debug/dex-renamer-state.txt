@@ -1,7 +1,7 @@
-#Wed May 08 11:58:54 CEST 2019
-base.0=/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+#Mon May 20 17:05:14 CEST 2019
+base.0=/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/mateusz/Programing/WorkoutCustomer/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+base.1=/home/mateusz/programowanie/WorkoutCustomer/app/build/intermediates/dex/debug/mergeExtDexDebug/out

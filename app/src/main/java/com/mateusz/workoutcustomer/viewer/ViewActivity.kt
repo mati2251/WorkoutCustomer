@@ -27,7 +27,7 @@ import com.mateusz.workoutcustomer.menu.WorkoutAdapter
 
 class ViewActivity : AppCompatActivity() {
     lateinit var exerciseAdapter: ExerciseAdapter
-    var id : Int = 0
+    var id: Int = 0
 
     /**
      * It gets id from intent. Next find workout by id in database. And print about workout info on TextView.
@@ -38,17 +38,17 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
         id = intent.getIntExtra(WorkoutAdapter.ID, 0)
-        val workout : Workout = MainActivity.workoutViewModel.findWorkoutById(id)
-        val title : TextView = findViewById(R.id.workout_title_view_activity)
-        val description : TextView = findViewById(R.id.workout_description_view_activity)
+        val workout: Workout = MainActivity.workoutViewModel.findWorkoutById(id)
+        val title: TextView = findViewById(R.id.workout_title_view_activity)
+        val description: TextView = findViewById(R.id.workout_description_view_activity)
         title.text = workout.title
         description.text = workout.description
         exerciseAdapter = ExerciseAdapter(applicationContext)
-        val recyclerView : RecyclerView = findViewById(R.id.recycle_view_exercise)
-        workoutId= workout.id
+        val recyclerView: RecyclerView = findViewById(R.id.recycle_view_exercise)
+        workoutId = workout.id
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
-        MainActivity.workoutViewModel.allExercise.observe(this, Observer {
-                exercise -> exercise?.let { exerciseAdapter.setList(it) }
+        MainActivity.workoutViewModel.allExercise.observe(this, Observer { exercise ->
+            exercise?.let { exerciseAdapter.setList(it) }
         })
         recyclerView.adapter = exerciseAdapter
         supportActionBar?.hide()
@@ -58,14 +58,14 @@ class ViewActivity : AppCompatActivity() {
      * It starts current workout. And check if workout have exercise
      */
 
-    fun start(view: View){
-        if(exerciseAdapter.mExercise.isNotEmpty()) {
+    fun start(view: View) {
+        if (exerciseAdapter.mExercise.isNotEmpty()) {
             var startInetnt = Intent(this, StartActivity::class.java)
             startInetnt.putExtra(WORKOUTID, id)
             startActivity(startInetnt)
-        }
-        else{
-            val toast = Toast.makeText(applicationContext, "You can't start workout without exercise", Toast.LENGTH_SHORT)
+        } else {
+            val toast =
+                Toast.makeText(applicationContext, "You can't start workout without exercise", Toast.LENGTH_SHORT)
             toast.show()
         }
     }
@@ -74,7 +74,7 @@ class ViewActivity : AppCompatActivity() {
      * Delete Workout and Finish activity
      */
 
-    fun deleteWorkout(view: View){
+    fun deleteWorkout(view: View) {
         MainActivity.workoutViewModel.deleteById(id)
         finish()
     }
@@ -83,14 +83,14 @@ class ViewActivity : AppCompatActivity() {
      * Start creator new Exercise
      */
 
-    fun newExercise(view : View){
+    fun newExercise(view: View) {
         var nextIntent = Intent(this, ExerciseActivity::class.java)
         nextIntent.putExtra(SetTitleActivity.ID, id)
         startActivity(nextIntent)
     }
 
     companion object {
-        const val WORKOUTID : String = "com.mateusz.workoutcustomer.workoutid"
-        var workoutId : Int = 0
+        const val WORKOUTID: String = "com.mateusz.workoutcustomer.workoutid"
+        var workoutId: Int = 0
     }
 }

@@ -21,29 +21,29 @@ import com.mateusz.workoutcustomer.viewer.ViewActivity
  *  @author Mateusz Karłowski
  */
 
-class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
+class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>() {
     private var mInflater = LayoutInflater.from(context)
-    private lateinit var mWorkout : List<Workout>
-    private lateinit var cardView : CardView
-    var id : Int = 0
+    private lateinit var mWorkout: List<Workout>
+    private lateinit var cardView: CardView
+    var id: Int = 0
 
     /**
      * onCreateViewHolder find CardView in layout and return items look like R.layout.workout_item with data
      */
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): WorkoutViewHolder {
-        val itemView = mInflater.inflate(R.layout.workout_item, parent,false)
+        val itemView = mInflater.inflate(R.layout.workout_item, parent, false)
         cardView = itemView.findViewById(R.id.cardView)
-        return WorkoutViewHolder(itemView, this )
+        return WorkoutViewHolder(itemView, this)
     }
 
     /**
      * onBindViewHolder set data from mWorkout to item
      */
 
-    override fun onBindViewHolder(holder : WorkoutViewHolder, positon: Int) {
+    override fun onBindViewHolder(holder: WorkoutViewHolder, positon: Int) {
         var currentStinrg = mWorkout[positon].title
-        holder.mWorkoutTitle.text=currentStinrg
+        holder.mWorkoutTitle.text = currentStinrg
         currentStinrg = mWorkout[positon].description
         holder.mWorkoutDescription.text = currentStinrg
         holder.id = mWorkout[positon].id
@@ -55,9 +55,9 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
      */
 
     override fun getItemCount(): Int {
-        return if(::mWorkout.isInitialized){
+        return if (::mWorkout.isInitialized) {
             mWorkout.size
-        } else{
+        } else {
             0
         }
     }
@@ -70,13 +70,14 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
      * @constructor sets OnClick as OnClickListener
      */
 
-    inner class WorkoutViewHolder (viewItem : View, workoutAdapter : WorkoutAdapter) : RecyclerView.ViewHolder(viewItem), View.OnClickListener{
+    inner class WorkoutViewHolder(viewItem: View, workoutAdapter: WorkoutAdapter) : RecyclerView.ViewHolder(viewItem),
+        View.OnClickListener {
         var mAdapter: WorkoutAdapter = workoutAdapter
-        var id : Int = this@WorkoutAdapter.id
-        var mWorkoutTitle : TextView = viewItem.findViewById(R.id.workout_title)
-        var mWorkoutDescription : TextView = viewItem.findViewById(R.id.workout_description)
+        var id: Int = this@WorkoutAdapter.id
+        var mWorkoutTitle: TextView = viewItem.findViewById(R.id.workout_title)
+        var mWorkoutDescription: TextView = viewItem.findViewById(R.id.workout_description)
 
-        init{
+        init {
             viewItem.setOnClickListener(this)
         }
 
@@ -84,8 +85,8 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
          * onClick starts new Intent and put ID to this Intent
          */
 
-        override fun onClick(view: View){
-            var intentView = Intent(itemView.context , ViewActivity::class.java)
+        override fun onClick(view: View) {
+            var intentView = Intent(itemView.context, ViewActivity::class.java)
             intentView.putExtra(ID, id)
             itemView.context.startActivity(intentView)
         }
@@ -104,6 +105,6 @@ class WorkoutAdapter(context: Context) : RecyclerView.Adapter<WorkoutAdapter.Wor
     }
 
     companion object {
-        var ID : String = "com.mateusz.workoutcustomre.menu.id"
+        var ID: String = "com.mateusz.workoutcustomre.menu.id"
     }
 }

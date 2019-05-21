@@ -22,7 +22,7 @@ import com.mateusz.workoutcustomer.database.WorkoutViewModel
  */
 
 
-class MainActivity :  AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     /**
      * onCreate create WorkoutViewModel and ready other data in database.
@@ -38,7 +38,7 @@ class MainActivity :  AppCompatActivity() {
             startActivity(homeIntent)
             finish()
         }, 700)
-     }
+    }
 
     companion object {
         lateinit var workoutViewModel: WorkoutViewModel

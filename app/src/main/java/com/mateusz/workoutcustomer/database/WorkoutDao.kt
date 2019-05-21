@@ -18,7 +18,7 @@ interface WorkoutDao {
      */
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(workout : Workout)
+    fun insert(workout: Workout)
 
     /**
      * Function **deleteAll** delete all data in database
@@ -33,14 +33,14 @@ interface WorkoutDao {
      */
 
     @Query("SELECT * from workout_table ORDER BY _id, title, description ASC")
-    fun getAllWorkout() : LiveData<List<Workout>>
+    fun getAllWorkout(): LiveData<List<Workout>>
 
     /**
      * Function **removeById** remove workout with the same id
      */
 
     @Query("DELETE FROM workout_table WHERE _id LIKE :ID")
-    fun removeById(ID : Int)
+    fun removeById(ID: Int)
 
     @Query("UPDATE workout_table SET title=:title WHERE _id LIKE :ID")
     fun updateWorkoutTitle(title: String, ID: Int)

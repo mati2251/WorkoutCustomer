@@ -29,6 +29,24 @@ public class ExerciseDao_Impl implements ExerciseDao {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteByExerciseId;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseDescription;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseInstruction;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseSeries;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseTimeCheck;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseTime;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseTimeFormat;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseRepeat;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExercisePause;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExercisePauseFormat;
+
   public ExerciseDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfExercise = new EntityInsertionAdapter<Exercise>(__db) {
@@ -96,6 +114,69 @@ public class ExerciseDao_Impl implements ExerciseDao {
         return _query;
       }
     };
+    this.__preparedStmtOfUpdateExerciseDescription = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET description=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExerciseInstruction = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET instruction=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExerciseSeries = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET series=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExerciseTimeCheck = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET timeCheck=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExerciseTime = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET time=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExerciseTimeFormat = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET timeFormat=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExerciseRepeat = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET repeat=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExercisePause = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET pause=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfUpdateExercisePauseFormat = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET pauseFormat=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -149,6 +230,185 @@ public class ExerciseDao_Impl implements ExerciseDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfDeleteByExerciseId.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExerciseDescription(String description, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseDescription.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (description == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, description);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseDescription.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExerciseInstruction(String instruction, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseInstruction.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (instruction == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, instruction);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseInstruction.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExerciseSeries(int series, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseSeries.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      _stmt.bindLong(_argIndex, series);
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseSeries.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExerciseTimeCheck(boolean timeCheck, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseTimeCheck.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      final int _tmp;
+      _tmp = timeCheck ? 1 : 0;
+      _stmt.bindLong(_argIndex, _tmp);
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseTimeCheck.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExerciseTime(int time, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseTime.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      _stmt.bindLong(_argIndex, time);
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseTime.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExerciseTimeFormat(String timeFormat, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseTimeFormat.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (timeFormat == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, timeFormat);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseTimeFormat.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExerciseRepeat(String repeat, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseRepeat.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (repeat == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, repeat);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseRepeat.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExercisePause(String pause, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExercisePause.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (pause == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, pause);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExercisePause.release(_stmt);
+    }
+  }
+
+  @Override
+  public void updateExercisePauseFormat(String pauseFormat, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExercisePauseFormat.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (pauseFormat == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, pauseFormat);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExercisePauseFormat.release(_stmt);
     }
   }
 

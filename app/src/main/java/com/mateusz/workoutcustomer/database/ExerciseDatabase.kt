@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 
 @Database(entities = arrayOf(Exercise::class), version = 1)
 abstract class ExerciseDatabase : RoomDatabase() {
-    abstract fun exerciseDao () : ExerciseDao
+    abstract fun exerciseDao(): ExerciseDao
 
     companion object {
         @Volatile

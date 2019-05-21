@@ -1,4 +1,3 @@
-
 package com.mateusz.workoutcustomer.viewer
 
 import android.content.Context
@@ -25,7 +24,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
 
     private var mInflater = LayoutInflater.from(context)
     lateinit var mExercise: List<Exercise>
-    var id : Int = 0
+    var id: Int = 0
 
     /**
      * onCreateViewHolder find CardView in layout and return items look like R.layout.exercise_item with data
@@ -45,21 +44,22 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         holder.mExerciseTitle.text = currentString
         currentString = mExercise[position].description
         holder.mExerciseDescription.text = currentString
-        if(mExercise[position].timeCheck) {
-            when(mExercise[position].timeFormat){
+        if (mExercise[position].timeCheck) {
+            when (mExercise[position].timeFormat) {
                 "seconds" -> currentString = "sec"
                 else -> currentString = "min"
             }
-            holder.mExerciseDetails.text = "Series: ${mExercise[position].series} Time: ${mExercise[position].time} $currentString"
-        }
-        else{
+            holder.mExerciseDetails.text =
+                "Series: ${mExercise[position].series} Time: ${mExercise[position].time} $currentString"
+        } else {
             holder.mExerciseDetails.text = "Series: ${mExercise[position].series} Repeat: ${mExercise[position].repeat}"
         }
-        when(mExercise[position].timeFormat){
+        when (mExercise[position].timeFormat) {
             "seconds" -> currentString = "sec"
             else -> currentString = "min"
         }
-        holder.mExerciseDetails.text = "${holder.mExerciseDetails.text} Pause: ${mExercise[position].pause} $currentString"
+        holder.mExerciseDetails.text =
+            "${holder.mExerciseDetails.text} Pause: ${mExercise[position].pause} $currentString"
         holder.id = mExercise[position].id
     }
 
@@ -68,9 +68,9 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
      */
 
     override fun getItemCount(): Int {
-        return if(::mExercise.isInitialized){
+        return if (::mExercise.isInitialized) {
             mExercise.size
-        } else{
+        } else {
             0
         }
     }
@@ -84,13 +84,15 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
      * @constructor sets OnClick as OnClickListener
      */
 
-    inner class ExerciseViewHolder(viewItem: View, exerciseAdapter: ExerciseAdapter) : RecyclerView.ViewHolder(viewItem), View.OnClickListener {
+    inner class ExerciseViewHolder(viewItem: View, exerciseAdapter: ExerciseAdapter) :
+        RecyclerView.ViewHolder(viewItem), View.OnClickListener {
         var exerciseAdapter = exerciseAdapter
-        var mExerciseTitle : TextView = viewItem.findViewById(R.id.exercise_title)
-        var mExerciseDescription : TextView = viewItem.findViewById(R.id.exercise_desctiption)
-        var mExerciseDetails : TextView = viewItem.findViewById(R.id.detailsExercise)
-        var id : Int = this@ExerciseAdapter.id
-        init{
+        var mExerciseTitle: TextView = viewItem.findViewById(R.id.exercise_title)
+        var mExerciseDescription: TextView = viewItem.findViewById(R.id.exercise_desctiption)
+        var mExerciseDetails: TextView = viewItem.findViewById(R.id.detailsExercise)
+        var id: Int = this@ExerciseAdapter.id
+
+        init {
             viewItem.setOnClickListener(this)
         }
 
@@ -98,8 +100,8 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
          * onClick starts new Intent and put ID to this Intent
          */
 
-        override fun onClick(view: View){
-            var intentView : Intent = Intent(itemView.context , ExerciseViewActivity::class.java)
+        override fun onClick(view: View) {
+            var intentView: Intent = Intent(itemView.context, ExerciseViewActivity::class.java)
             intentView.putExtra(ID, id)
             itemView.context.startActivity(intentView)
         }
@@ -110,10 +112,10 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
      *  @property list is list with exercise
      */
 
-    fun setList(list: List<Exercise>){
-        var tmp : ArrayList<Exercise> = ArrayList()
-        list.forEach{
-            if(it.workoutId == ViewActivity.workoutId){
+    fun setList(list: List<Exercise>) {
+        var tmp: ArrayList<Exercise> = ArrayList()
+        list.forEach {
+            if (it.workoutId == ViewActivity.workoutId) {
                 tmp.add(it)
             }
 
@@ -122,7 +124,7 @@ class ExerciseAdapter(context: Context) : RecyclerView.Adapter<ExerciseAdapter.E
         this.notifyDataSetChanged()
     }
 
-    companion object{
+    companion object {
         const val ID = "com.mateusz.workoutcustomer.ExerciseId"
     }
 

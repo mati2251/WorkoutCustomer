@@ -21,8 +21,8 @@ import com.mateusz.workoutcustomer.menu.MainActivity
 
 class SetTitleActivity : AppCompatActivity() {
 
-    lateinit var titleEditText : EditText
-    lateinit var descriptionEditText : EditText
+    lateinit var titleEditText: EditText
+    lateinit var descriptionEditText: EditText
 
     /**
      *It finds layouts elements and stores to variable
@@ -41,16 +41,15 @@ class SetTitleActivity : AppCompatActivity() {
      * If no it create new intent, put data and start it
      */
 
-    fun next(view: View){
-        if(titleEditText.text.toString()==""|| descriptionEditText.text.toString()==""){
+    fun next(view: View) {
+        if (titleEditText.text.toString() == "" || descriptionEditText.text.toString() == "") {
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
             toast.show()
-        }
-        else if(titleEditText.text.toString().length>30 || descriptionEditText.text.toString().length>50){
-            val toast = Toast.makeText(applicationContext, "Insert shorter description or title please", Toast.LENGTH_SHORT)
+        } else if (titleEditText.text.toString().length > 30 || descriptionEditText.text.toString().length > 50) {
+            val toast =
+                Toast.makeText(applicationContext, "Insert shorter description or title please", Toast.LENGTH_SHORT)
             toast.show()
-        }
-        else{
+        } else {
             val id = MainActivity.workoutViewModel.allWorkout.value!!.size + 1
             val workout = Workout(id, titleEditText.text.toString(), descriptionEditText.text.toString())
             MainActivity.workoutViewModel.insert(workout)
@@ -62,7 +61,7 @@ class SetTitleActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val ID : String = "com.mateusz.workoutcustomer.currentId"
+        const val ID: String = "com.mateusz.workoutcustomer.currentId"
     }
 
     /**

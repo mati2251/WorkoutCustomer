@@ -24,8 +24,8 @@ import com.mateusz.workoutcustomer.R
 
 class ExerciseActivity : AppCompatActivity() {
 
-    lateinit var radioGroup : RadioGroup
-    lateinit var title : EditText
+    lateinit var radioGroup: RadioGroup
+    lateinit var title: EditText
     lateinit var description: EditText
     lateinit var instruction: EditText
 
@@ -47,10 +47,9 @@ class ExerciseActivity : AppCompatActivity() {
      * It checks EditText is empty. If yes show statement. But if EditText is not empty. It create new Intent, put data and start new activity
      */
 
-    fun nextExercise(view : View){
-        if(!(title.text.toString()==""))
-        {
-        val nextIntent : Intent = if(radioGroup.checkedRadioButtonId == R.id.radio_button_repeat){
+    fun nextExercise(view: View) {
+        if (!(title.text.toString() == "")) {
+            val nextIntent: Intent = if (radioGroup.checkedRadioButtonId == R.id.radio_button_repeat) {
                 Intent(this, RepeatActivity::class.java)
             } else {
                 Intent(this, TimeActivity::class.java)
@@ -61,12 +60,11 @@ class ExerciseActivity : AppCompatActivity() {
             nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
             startActivity(nextIntent)
             finish()
-        }
-        else if(title.text.toString().length > 30 || description.text.toString().length > 50){
-            val toast = Toast.makeText(applicationContext, "Insert shorter description or title please", Toast.LENGTH_SHORT)
+        } else if (title.text.toString().length > 30 || description.text.toString().length > 50) {
+            val toast =
+                Toast.makeText(applicationContext, "Insert shorter description or title please", Toast.LENGTH_SHORT)
             toast.show()
-        }
-        else{
+        } else {
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
             toast.show()
         }
@@ -91,9 +89,9 @@ class ExerciseActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val TITLE : String = "com.mateusz.workoutcustomer.etitle"
-        const val DESCRIPTION : String = "com.mateusz.workoutcustomer.description"
-        const val INSTRUCTION : String = "com.mateusz.workoutcustomer.instrucuton"
+        const val TITLE: String = "com.mateusz.workoutcustomer.etitle"
+        const val DESCRIPTION: String = "com.mateusz.workoutcustomer.description"
+        const val INSTRUCTION: String = "com.mateusz.workoutcustomer.instrucuton"
     }
 
 }

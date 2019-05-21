@@ -27,9 +27,9 @@ import com.mateusz.workoutcustomer.menu.MainActivity
 
 class TimeActivity : AppCompatActivity() {
 
-    lateinit var series : EditText
-    lateinit var time : EditText
-    lateinit var pause : EditText
+    lateinit var series: EditText
+    lateinit var time: EditText
+    lateinit var pause: EditText
     private lateinit var spinner: Spinner
     private lateinit var spinnerPause: Spinner
 
@@ -68,21 +68,19 @@ class TimeActivity : AppCompatActivity() {
      * check EditText is not empty, evokes add and create new intent and start it
      */
 
-    fun addExercise (view : View){
-        if(series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "" )
-        {
+    fun addExercise(view: View) {
+        if (series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "") {
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
             toast.show()
-        }
-        else if(series.text.toString().toInt() > 99 ||
-            (time.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds" ) ||
-            (time.text.toString().toInt() > 99 && spinner.selectedItem == "minutes" ) ||
+        } else if (series.text.toString().toInt() > 99 ||
+            (time.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds") ||
+            (time.text.toString().toInt() > 99 && spinner.selectedItem == "minutes") ||
             (pause.text.toString().toInt() > 6000 && spinnerPause.selectedItem == "seconds") ||
-            (pause.text.toString().toInt() > 99 && spinnerPause.selectedItem == "minutes" )){
+            (pause.text.toString().toInt() > 99 && spinnerPause.selectedItem == "minutes")
+        ) {
             val toast = Toast.makeText(applicationContext, "Insert smaller data please", Toast.LENGTH_SHORT)
             toast.show()
-        }
-        else {
+        } else {
             add()
             var nextIntent: Intent = Intent(this, ExerciseActivity::class.java)
             nextIntent.putExtra(SetTitleActivity.ID, intent.getIntExtra(SetTitleActivity.ID, 0))
@@ -95,21 +93,19 @@ class TimeActivity : AppCompatActivity() {
      * check EditText is not empty, evokes add and finish activity
      */
 
-    fun finish (view : View){
-        if(series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "" )
-        {
+    fun finish(view: View) {
+        if (series.text.toString() == "" || time.text.toString() == "" || pause.text.toString() == "") {
             val toast = Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
             toast.show()
-        }
-        else if(series.text.toString().toInt() > 99 ||
-            (time.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds" ) ||
-            (time.text.toString().toInt() > 99 && spinner.selectedItem == "minutes" ) ||
+        } else if (series.text.toString().toInt() > 99 ||
+            (time.text.toString().toInt() > 6000 && spinner.selectedItem == "seconds") ||
+            (time.text.toString().toInt() > 99 && spinner.selectedItem == "minutes") ||
             (pause.text.toString().toInt() > 6000 && spinnerPause.selectedItem == "seconds") ||
-            (pause.text.toString().toInt() > 99 && spinnerPause.selectedItem == "minutes" )){
+            (pause.text.toString().toInt() > 99 && spinnerPause.selectedItem == "minutes")
+        ) {
             val toast = Toast.makeText(applicationContext, "Insert smaller data please", Toast.LENGTH_SHORT)
             toast.show()
-        }
-        else {
+        } else {
             add()
             finish()
         }
@@ -119,15 +115,15 @@ class TimeActivity : AppCompatActivity() {
      * It adds new Exercise to database for this get data from intent and EditText
      */
 
-    fun add(){
-        var id : Int = 0
-        MainActivity.workoutViewModel.allExercise.observe(this, Observer {
-                words -> words?.let { id = it.size }
+    fun add() {
+        var id: Int = 0
+        MainActivity.workoutViewModel.allExercise.observe(this, Observer { words ->
+            words?.let { id = it.size }
         })
         MainActivity.workoutViewModel.insert(
             Exercise(
                 id
-                , intent.getIntExtra(SetTitleActivity.ID, 0 ),
+                , intent.getIntExtra(SetTitleActivity.ID, 0),
                 intent.getStringExtra(ExerciseActivity.TITLE),
                 intent.getStringExtra(ExerciseActivity.DESCRIPTION),
                 intent.getStringExtra(ExerciseActivity.INSTRUCTION),
@@ -138,7 +134,8 @@ class TimeActivity : AppCompatActivity() {
                 0,
                 pause.text.toString().toInt(),
                 spinnerPause.selectedItem.toString()
-            ))
+            )
+        )
     }
 
     /**

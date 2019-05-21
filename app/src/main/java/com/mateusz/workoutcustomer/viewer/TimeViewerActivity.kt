@@ -22,8 +22,8 @@ import kotlinx.android.synthetic.main.activity_start.*
 
 class TimeViewerActivity : AppCompatActivity() {
 
-    lateinit var exercise : Exercise
-    var close : Boolean = false
+    lateinit var exercise: Exercise
+    var close: Boolean = false
 
     /**
      * It gets current exercise. Adds one to series. Find layout elements and show data.
@@ -35,44 +35,43 @@ class TimeViewerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_time_viewer)
         exercise = StartActivity.workoutExercise[StartActivity.position]
         StartActivity.series++
-        var currentSeries : TextView = findViewById(R.id.currentSeries)
+        var currentSeries: TextView = findViewById(R.id.currentSeries)
         currentSeries.text = "Current series: ${StartActivity.series}"
-        if(StartActivity.series==exercise.series) {
+        if (StartActivity.series == exercise.series) {
             StartActivity.position++
-            StartActivity.series=0
+            StartActivity.series = 0
         }
-        var title : TextView = findViewById(R.id.title_time_viewer)
-        var description : TextView = findViewById(R.id.description_time_viewer)
-        var instruction : TextView = findViewById(R.id.instruction_time_viewer)
-        var series : TextView = findViewById(R.id.series_time_viewer)
+        var title: TextView = findViewById(R.id.title_time_viewer)
+        var description: TextView = findViewById(R.id.description_time_viewer)
+        var instruction: TextView = findViewById(R.id.instruction_time_viewer)
+        var series: TextView = findViewById(R.id.series_time_viewer)
         title.text = exercise.title
         description.text = exercise.description
         instruction.text = exercise.instruction
         series.text = exercise.series.toString()
-        var time : TextView = findViewById(R.id.time_viewer)
-        var timeSeconds : Int = exercise.time
-        if(exercise.timeFormat != "seconds"){
+        var time: TextView = findViewById(R.id.time_viewer)
+        var timeSeconds: Int = exercise.time
+        if (exercise.timeFormat != "seconds") {
             timeSeconds *= 60
         }
         progressBar.max = timeSeconds
         progressBar.progress = timeSeconds
-        object : CountDownTimer((timeSeconds*1000).toLong(), 1000) {
+        object : CountDownTimer((timeSeconds * 1000).toLong(), 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                if(exercise.timeFormat=="seconds") {
+                if (exercise.timeFormat == "seconds") {
                     time.text = "${millisUntilFinished / 1000} sec"
+                } else {
+                    time.text = "${(millisUntilFinished / 60000).toInt()} min ${millisUntilFinished / 1000 % 60} sec"
                 }
-                else{
-                    time.text = "${(millisUntilFinished / 60000).toInt()} min ${millisUntilFinished/1000%60} sec"
-                }
-                if(close){
+                if (close) {
                     cancel()
                 }
-                progressBar.progress=progressBar.progress-1
+                progressBar.progress = progressBar.progress - 1
             }
 
             override fun onFinish() {
-                var intent : Intent = Intent(applicationContext, PauseActivity::class.java)
+                var intent: Intent = Intent(applicationContext, PauseActivity::class.java)
                 intent.putExtra(TimeViewerActivity.pause, exercise.pause)
                 startActivity(intent)
                 var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.bell)
@@ -88,8 +87,8 @@ class TimeViewerActivity : AppCompatActivity() {
      * Next function creates new intent and start it
      */
 
-    fun pause(view: View){
-        var intent : Intent = Intent(this, PauseActivity::class.java)
+    fun pause(view: View) {
+        var intent: Intent = Intent(this, PauseActivity::class.java)
         intent.putExtra(pause, exercise.pause)
         intent.putExtra(pauseFormat, exercise.pauseFormat)
         startActivity(intent)
