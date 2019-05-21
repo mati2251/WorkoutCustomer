@@ -1,9 +1,15 @@
 package com.mateusz.workoutcustomer.viewer
 
+import android.annotation.SuppressLint
+import android.graphics.PorterDuff
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
+import android.text.InputType.TYPE_CLASS_NUMBER
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.mateusz.workoutcustomer.R
 import com.mateusz.workoutcustomer.menu.MainActivity
 
@@ -21,30 +27,203 @@ class ExerciseViewActivity : AppCompatActivity() {
      * It finds exercise by id in database. And show data about this exercise on TextView.
      */
 
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise_view)
         var exercise = MainActivity.workoutViewModel.findExerciseById(intent.getIntExtra(ExerciseAdapter.ID, 0))
-        var tmp: TextView = findViewById(R.id.exerciseTitle)
-        tmp.text = exercise.title
-        tmp = findViewById(R.id.descriptionExercise)
-        tmp.text = exercise.description
-        tmp = findViewById(R.id.instructionExercise)
-        tmp.text = exercise.instruction
-        tmp = findViewById(R.id.seriesExercise)
-        tmp.text = exercise.series.toString()
-        tmp = findViewById(R.id.timeOrRepeatOutput)
+        var title: TextView = findViewById(R.id.exerciseTitle)
+        title.text = exercise.title
+        title.setOnLongClickListener{
+            var alert : AlertDialog.Builder = AlertDialog.Builder(this)
+            alert.setTitle("Enter new exercise title")
+            var editText : EditText = EditText(applicationContext)
+            alert.setView(editText)
+            editText.background.clearColorFilter()
+            editText.background.setColorFilter(R.color.primary_material_dark, PorterDuff.Mode.SRC_IN)
+            alert.setPositiveButton("OK"){ dialog, which ->
+                when {
+                    editText.text.toString() == "" -> {
+                        val toast =
+                            Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+                        toast.show()
+                    }
+                    editText.text.toString().length > 30 -> {
+                        val toast =
+                            Toast.makeText(applicationContext, "Insert shorter data please", Toast.LENGTH_SHORT)
+                        toast.show()
+                    }
+                    else -> {
+                        MainActivity.workoutViewModel.updateExerciseTitle(id, editText.text.toString())
+                        title.text = editText.text.toString()
+                    }
+                }
+            }
+            alert.setNegativeButton("Cancel", null)
+            alert.show()
+            return@setOnLongClickListener true
+        }
+        var description : TextView = findViewById(R.id.descriptionExercise)
+        description.text = exercise.description
+        description.setOnLongClickListener{
+            var alert : AlertDialog.Builder = AlertDialog.Builder(this)
+            alert.setTitle("Enter new exercise description")
+            var editText : EditText = EditText(applicationContext)
+            alert.setView(editText)
+            editText.background.clearColorFilter()
+            editText.background.setColorFilter(R.color.primary_material_dark, PorterDuff.Mode.SRC_IN)
+            alert.setPositiveButton("OK"){ dialog, which ->
+                when {
+                    editText.text.toString() == "" -> {
+                        val toast =
+                            Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+                        toast.show()
+                    }
+                    editText.text.toString().length > 30 -> {
+                        val toast =
+                            Toast.makeText(applicationContext, "Insert shorter data please", Toast.LENGTH_SHORT)
+                        toast.show()
+                    }
+                    else -> {
+                        MainActivity.workoutViewModel.updateExerciseDescription(id, editText.text.toString())
+                        description.text = editText.text.toString()
+                    }
+                }
+            }
+            alert.setNegativeButton("Cancel", null)
+            alert.show()
+            return@setOnLongClickListener true
+        }
+        var instruction : TextView = findViewById(R.id.instructionExercise)
+        instruction.text = exercise.instruction
+        instruction.setOnLongClickListener{
+            var alert : AlertDialog.Builder = AlertDialog.Builder(this)
+            alert.setTitle("Enter new exercise instruction")
+            var editText : EditText = EditText(applicationContext)
+            alert.setView(editText)
+            editText.background.clearColorFilter()
+            editText.background.setColorFilter(R.color.primary_material_dark, PorterDuff.Mode.SRC_IN)
+            alert.setPositiveButton("OK"){ dialog, which ->
+                when {
+                    editText.text.toString() == "" -> {
+                        val toast =
+                            Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+                        toast.show()
+                    }
+                    else -> {
+                        MainActivity.workoutViewModel.updateExerciseInstruction(id, editText.text.toString())
+                        instruction.text = editText.text.toString()
+                    }
+                }
+            }
+            alert.setNegativeButton("Cancel", null)
+            alert.show()
+            return@setOnLongClickListener true
+        }
+        var series : TextView = findViewById(R.id.seriesExercise)
+        series.text = exercise.series.toString()
+        series.setOnLongClickListener{
+            var alert : AlertDialog.Builder = AlertDialog.Builder(this)
+            alert.setTitle("Enter new number series")
+            var editText : EditText = EditText(applicationContext)
+            alert.setView(editText)
+            editText.inputType = TYPE_CLASS_NUMBER
+            editText.background.clearColorFilter()
+            editText.background.setColorFilter(R.color.primary_material_dark, PorterDuff.Mode.SRC_IN)
+            alert.setPositiveButton("OK"){ dialog, which ->
+                when {
+                    editText.text.toString() == "" -> {
+                        val toast =
+                            Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+                        toast.show()
+                    }
+                    editText.text.toString().length > 30 -> {
+                        val toast =
+                            Toast.makeText(applicationContext, "Insert shorter data please", Toast.LENGTH_SHORT)
+                        toast.show()
+                    }
+                    else -> {
+                        MainActivity.workoutViewModel.updateExerciseSeries(id, editText.text.toString().toInt())
+                        series.text = editText.text.toString()
+                    }
+                }
+            }
+            alert.setNegativeButton("Cancel", null)
+            alert.show()
+            return@setOnLongClickListener true
+        }
+        var timeOrRepat : TextView = findViewById(R.id.timeOrRepeatOutput)
         if (exercise.timeCheck) {
             var tmp2: TextView = findViewById(R.id.timeOrRepeat)
             tmp2.text = "Time: "
-            tmp.text = "${exercise.time} ${exercise.timeFormat}"
+            timeOrRepat.text = "${exercise.time} ${exercise.timeFormat}"
+            timeOrRepat.setOnLongClickListener{
+                var alert : AlertDialog.Builder = AlertDialog.Builder(this)
+                alert.setTitle("Enter new time")
+                var editText : EditText = EditText(applicationContext)
+                alert.setView(editText)
+                editText.background.clearColorFilter()
+                editText.inputType = TYPE_CLASS_NUMBER
+                editText.background.setColorFilter(R.color.primary_material_dark, PorterDuff.Mode.SRC_IN)
+                alert.setPositiveButton("OK"){ dialog, which ->
+                    when {
+                        editText.text.toString() == "" -> {
+                            val toast =
+                                Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+                            toast.show()
+                        }
+                        editText.text.toString().length > 30 -> {
+                            val toast =
+                                Toast.makeText(applicationContext, "Insert shorter data please", Toast.LENGTH_SHORT)
+                            toast.show()
+                        }
+                        else -> {
+                            MainActivity.workoutViewModel.updateExerciseTime(id, editText.text.toString().toInt())
+                            timeOrRepat.text = editText.text.toString()
+                        }
+                    }
+                }
+                alert.setNegativeButton("Cancel", null)
+                alert.show()
+                return@setOnLongClickListener true
+            }
         } else {
             var tmp2: TextView = findViewById(R.id.timeOrRepeat)
             tmp2.text = "Pause: "
-            tmp.text = exercise.repeat.toString()
+            timeOrRepat.text = exercise.repeat.toString()
+            timeOrRepat.setOnLongClickListener{
+                var alert : AlertDialog.Builder = AlertDialog.Builder(this)
+                alert.setTitle("Enter new repeat number")
+                var editText : EditText = EditText(applicationContext)
+                alert.setView(editText)
+                editText.background.clearColorFilter()
+                editText.inputType = TYPE_CLASS_NUMBER
+                editText.background.setColorFilter(R.color.primary_material_dark, PorterDuff.Mode.SRC_IN)
+                alert.setPositiveButton("OK"){ dialog, which ->
+                    when {
+                        editText.text.toString() == "" -> {
+                            val toast =
+                                Toast.makeText(applicationContext, "Insert data please", Toast.LENGTH_SHORT)
+                            toast.show()
+                        }
+                        editText.text.toString().length > 30 -> {
+                            val toast =
+                                Toast.makeText(applicationContext, "Insert shorter data please", Toast.LENGTH_SHORT)
+                            toast.show()
+                        }
+                        else -> {
+                            MainActivity.workoutViewModel.updateExerciseRepeat(id, editText.text.toString().toInt())
+                            timeOrRepat.text = editText.text.toString()
+                        }
+                    }
+                }
+                alert.setNegativeButton("Cancel", null)
+                alert.show()
+                return@setOnLongClickListener true
+            }
         }
-        tmp = findViewById(R.id.pauseExercise)
-        tmp.text = "${exercise.pause} ${exercise.pauseFormat}"
+        timeOrRepat = findViewById(R.id.pauseExercise)
+        timeOrRepat.text = "${exercise.pause} ${exercise.pauseFormat}"
         id = exercise.id
         supportActionBar?.hide()
     }

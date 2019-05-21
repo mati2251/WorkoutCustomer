@@ -19,7 +19,7 @@ This class is main viewer workout
 
 | [deleteWorkout](delete-workout.md) | `fun deleteWorkout(view: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Delete Workout and Finish activity |
 | [newExercise](new-exercise.md) | `fun newExercise(view: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Start creator new Exercise |
-| [onCreate](on-create.md) | `fun onCreate(savedInstanceState: `[`Bundle`](https://developer.android.com/reference/android/os/Bundle.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>It gets id from intent. Next find workout by id in database. And print about workout info on TextView. It is get all exercise this workout and set in Adapter. Last recycleView set  adapter |
+| [onCreate](on-create.md) | `fun onCreate(savedInstanceState: `[`Bundle`](https://developer.android.com/reference/android/os/Bundle.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>It gets id from intent. Next find workout by id in database. And print about workout info on TextView. It gets all exercise this workout and set in Adapter. Last recycleView set  adapter |
 | [start](start.md) | `fun start(view: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>It starts current workout. And check if workout have exercise |
 
 ### Companion Object Properties
