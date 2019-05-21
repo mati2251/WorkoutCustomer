@@ -29,13 +29,13 @@ public class ExerciseDao_Impl implements ExerciseDao {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteByExerciseId;
 
+  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseTitle;
+
   private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseDescription;
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseInstruction;
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseSeries;
-
-  private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseTimeCheck;
 
   private final SharedSQLiteStatement __preparedStmtOfUpdateExerciseTime;
 
@@ -114,6 +114,13 @@ public class ExerciseDao_Impl implements ExerciseDao {
         return _query;
       }
     };
+    this.__preparedStmtOfUpdateExerciseTitle = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE exercise_table SET title=? WHERE _id LIKE ?";
+        return _query;
+      }
+    };
     this.__preparedStmtOfUpdateExerciseDescription = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
@@ -132,13 +139,6 @@ public class ExerciseDao_Impl implements ExerciseDao {
       @Override
       public String createQuery() {
         final String _query = "UPDATE exercise_table SET series=? WHERE _id LIKE ?";
-        return _query;
-      }
-    };
-    this.__preparedStmtOfUpdateExerciseTimeCheck = new SharedSQLiteStatement(__db) {
-      @Override
-      public String createQuery() {
-        final String _query = "UPDATE exercise_table SET timeCheck=? WHERE _id LIKE ?";
         return _query;
       }
     };
@@ -234,6 +234,27 @@ public class ExerciseDao_Impl implements ExerciseDao {
   }
 
   @Override
+  public void updateExerciseTitle(String title, int ID) {
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseTitle.acquire();
+    __db.beginTransaction();
+    try {
+      int _argIndex = 1;
+      if (title == null) {
+        _stmt.bindNull(_argIndex);
+      } else {
+        _stmt.bindString(_argIndex, title);
+      }
+      _argIndex = 2;
+      _stmt.bindLong(_argIndex, ID);
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfUpdateExerciseTitle.release(_stmt);
+    }
+  }
+
+  @Override
   public void updateExerciseDescription(String description, int ID) {
     final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseDescription.acquire();
     __db.beginTransaction();
@@ -293,25 +314,6 @@ public class ExerciseDao_Impl implements ExerciseDao {
   }
 
   @Override
-  public void updateExerciseTimeCheck(boolean timeCheck, int ID) {
-    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseTimeCheck.acquire();
-    __db.beginTransaction();
-    try {
-      int _argIndex = 1;
-      final int _tmp;
-      _tmp = timeCheck ? 1 : 0;
-      _stmt.bindLong(_argIndex, _tmp);
-      _argIndex = 2;
-      _stmt.bindLong(_argIndex, ID);
-      _stmt.executeUpdateDelete();
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-      __preparedStmtOfUpdateExerciseTimeCheck.release(_stmt);
-    }
-  }
-
-  @Override
   public void updateExerciseTime(int time, int ID) {
     final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseTime.acquire();
     __db.beginTransaction();
@@ -350,16 +352,12 @@ public class ExerciseDao_Impl implements ExerciseDao {
   }
 
   @Override
-  public void updateExerciseRepeat(String repeat, int ID) {
+  public void updateExerciseRepeat(int repeat, int ID) {
     final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExerciseRepeat.acquire();
     __db.beginTransaction();
     try {
       int _argIndex = 1;
-      if (repeat == null) {
-        _stmt.bindNull(_argIndex);
-      } else {
-        _stmt.bindString(_argIndex, repeat);
-      }
+      _stmt.bindLong(_argIndex, repeat);
       _argIndex = 2;
       _stmt.bindLong(_argIndex, ID);
       _stmt.executeUpdateDelete();
@@ -371,16 +369,12 @@ public class ExerciseDao_Impl implements ExerciseDao {
   }
 
   @Override
-  public void updateExercisePause(String pause, int ID) {
+  public void updateExercisePause(int pause, int ID) {
     final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateExercisePause.acquire();
     __db.beginTransaction();
     try {
       int _argIndex = 1;
-      if (pause == null) {
-        _stmt.bindNull(_argIndex);
-      } else {
-        _stmt.bindString(_argIndex, pause);
-      }
+      _stmt.bindLong(_argIndex, pause);
       _argIndex = 2;
       _stmt.bindLong(_argIndex, ID);
       _stmt.executeUpdateDelete();
