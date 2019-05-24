@@ -73,6 +73,7 @@ class TimeViewerActivity : AppCompatActivity() {
             override fun onFinish() {
                 var intent: Intent = Intent(applicationContext, PauseActivity::class.java)
                 intent.putExtra(TimeViewerActivity.pause, exercise.pause)
+                intent.putExtra(pauseFormat, exercise.pauseFormat)
                 startActivity(intent)
                 var mediaPlayer: MediaPlayer? = MediaPlayer.create(applicationContext, R.raw.bell)
                 mediaPlayer?.start()

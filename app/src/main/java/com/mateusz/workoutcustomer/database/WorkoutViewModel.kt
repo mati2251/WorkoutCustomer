@@ -160,12 +160,13 @@ open class WorkoutViewModel(application: Application) : AndroidViewModel(applica
         repositoryExercise.updateExercisePauseFormat(id,pauseFormat)
     }
 
-    fun changeExerciseID( toID: Int, fromID: Int){
-        var tmp = allWorkout?.value?.size
+    fun changeExerciseID( fromID : Int, toID: Int) = scope.launch(Dispatchers.IO) {
+        repositoryExercise.changeExerciseId(200000, fromID)
         if(toID>fromID){
-            for(i in fromID..toID){
-
+            for(i in fromID until toID){
+                repositoryExercise.changeExerciseId(i+1, i)
             }
+            repositoryExercise.changeExerciseId(200000, toID)
         }
     }
 }
