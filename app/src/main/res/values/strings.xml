@@ -53,6 +53,7 @@
     </string>
     <string name="source_code">Source code:</string>
     <string name="https_github_com_mati2251_workoutcustomer">https://github.com/mati2251/WorkoutCustomer</string>
+    <string name="next_exercise">Next exercise:</string>
     <string-array name="time_formats">
         <item>seconds</item>
         <item>minutes</item>
