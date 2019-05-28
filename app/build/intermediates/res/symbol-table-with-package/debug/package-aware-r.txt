@@ -1190,6 +1190,7 @@ id navigation_history
 id navigation_home
 id navigation_settings
 id never
+id nextExercise
 id next_button_set_activity
 id next_exercise_activity
 id none
@@ -1526,6 +1527,7 @@ string my_name_is_mateusz_i_am_student_who_in_free_time_learn_programming_i_hope
 string name
 string name_exercise
 string next
+string next_exercise
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

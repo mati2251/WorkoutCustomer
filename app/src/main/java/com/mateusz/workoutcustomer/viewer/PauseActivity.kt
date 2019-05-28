@@ -20,6 +20,13 @@ class PauseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pause)
+        var nextExericse: TextView= findViewById(R.id.nextExercise)
+        try {
+            nextExericse.text = "Next exercise: ${StartActivity.workoutExercise[StartActivity.position].title}"
+        }
+        catch (e: Exception){
+            nextExericse.text = ""
+        }
         var time: TextView = findViewById(R.id.time_pause_view)
         var progresBar: ProgressBar = findViewById(R.id.progressBar2)
         var timeSeconds = intent.getIntExtra(TimeViewerActivity.pause, 0)

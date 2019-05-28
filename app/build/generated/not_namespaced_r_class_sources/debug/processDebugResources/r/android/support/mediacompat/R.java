@@ -104,20 +104,20 @@ public final class R {
         public static final int line1 = 0x7f0a007d;
         public static final int line3 = 0x7f0a007e;
         public static final int media_actions = 0x7f0a0085;
-        public static final int normal = 0x7f0a0095;
-        public static final int notification_background = 0x7f0a0096;
-        public static final int notification_main_column = 0x7f0a0097;
-        public static final int notification_main_column_container = 0x7f0a0098;
-        public static final int right_icon = 0x7f0a00b3;
-        public static final int right_side = 0x7f0a00b4;
-        public static final int status_bar_latest_event_content = 0x7f0a00e2;
-        public static final int tag_transition_group = 0x7f0a00e7;
-        public static final int tag_unhandled_key_event_manager = 0x7f0a00e8;
-        public static final int tag_unhandled_key_listeners = 0x7f0a00e9;
-        public static final int text = 0x7f0a00ea;
-        public static final int text2 = 0x7f0a00eb;
-        public static final int time = 0x7f0a010c;
-        public static final int title = 0x7f0a0112;
+        public static final int normal = 0x7f0a0096;
+        public static final int notification_background = 0x7f0a0097;
+        public static final int notification_main_column = 0x7f0a0098;
+        public static final int notification_main_column_container = 0x7f0a0099;
+        public static final int right_icon = 0x7f0a00b4;
+        public static final int right_side = 0x7f0a00b5;
+        public static final int status_bar_latest_event_content = 0x7f0a00e3;
+        public static final int tag_transition_group = 0x7f0a00e8;
+        public static final int tag_unhandled_key_event_manager = 0x7f0a00e9;
+        public static final int tag_unhandled_key_listeners = 0x7f0a00ea;
+        public static final int text = 0x7f0a00eb;
+        public static final int text2 = 0x7f0a00ec;
+        public static final int time = 0x7f0a010d;
+        public static final int title = 0x7f0a0113;
     }
     public static final class integer {
         private integer() {}
@@ -147,7 +147,7 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int status_bar_notification_info_overflow = 0x7f110059;
+        public static final int status_bar_notification_info_overflow = 0x7f11005a;
     }
     public static final class style {
         private style() {}

@@ -111,8 +111,4 @@ class ExerciseRepository(private val exerciseDao: ExerciseDao) {
         exerciseDao.changeExerciseID(toID,fromID)
     }
 
-
-
-
-
 }
